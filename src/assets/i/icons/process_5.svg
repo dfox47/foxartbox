@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60.805" height="61.566" viewBox="0 0 60.805 61.566">
+  <g id="Group_268" data-name="Group 268" transform="translate(-611.5 -614)">
+    <g id="Group_266" data-name="Group 266">
+      <path id="Path_667" data-name="Path 667" d="M612,625.576V614.5h39.5v40H612V634.157" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="Line_53" data-name="Line 53" x2="40" transform="translate(612 619.457)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_51" data-name="Ellipse 51" cx="1" cy="1" r="1" transform="translate(614.5 616)"/>
+      <circle id="Ellipse_52" data-name="Ellipse 52" cx="1" cy="1" r="1" transform="translate(617.5 616)"/>
+      <circle id="Ellipse_53" data-name="Ellipse 53" cx="1" cy="1" r="1" transform="translate(620.5 616)"/>
+    </g>
+    <g id="Group_267" data-name="Group 267">
+      <line id="Line_54" data-name="Line 54" x2="11.701" y2="13.678" transform="translate(658.704 660.263)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="Line_55" data-name="Line 55" x2="7.151" y2="8.359" transform="translate(663.255 665.582)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5"/>
+      <path id="Path_668" data-name="Path 668" d="M651.268,637.37a13.053,13.053,0,1,1-14.028,12A13.014,13.014,0,0,1,651.268,637.37Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <path id="Path_669" data-name="Path 669" d="M641.485,628.5l-11.314,11.314-5.657-5.657" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_56" data-name="Line 56" y2="2.615" transform="translate(612 628.692)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

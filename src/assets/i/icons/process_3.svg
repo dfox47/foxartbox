@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58.512" height="59.012" viewBox="0 0 58.512 59.012">
+  <g id="Group_273" data-name="Group 273" transform="translate(-753.5 -440)">
+    <path id="Path_682" data-name="Path 682" d="M754,453V440.5h39.5v40H754V461" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Line_59" data-name="Line 59" x2="40" transform="translate(754 445.457)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_57" data-name="Ellipse 57" cx="1" cy="1" r="1" transform="translate(756.5 442)"/>
+    <circle id="Ellipse_58" data-name="Ellipse 58" cx="1" cy="1" r="1" transform="translate(759.5 442)"/>
+    <circle id="Ellipse_59" data-name="Ellipse 59" cx="1" cy="1" r="1" transform="translate(762.5 442)"/>
+    <line id="Line_60" data-name="Line 60" y2="2.615" transform="translate(754 455.792)" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_683" data-name="Path 683" d="M805.977,478.835l5.535,5.535L797.37,498.512l-26.87-26.87V457.5h14.142l15.669,15.669" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Line_61" data-name="Line 61" x2="2.156" y2="2.156" transform="translate(802.071 474.929)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Line_62" data-name="Line 62" y1="14.142" x2="14.142" transform="translate(770.5 457.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Line_63" data-name="Line 63" y1="2.794" x2="2.794" transform="translate(770.888 457.854)" fill="none" stroke="#000" stroke-linecap="square" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_272" data-name="Group 272">
+      <line id="Line_64" data-name="Line 64" x2="26.87" y2="26.87" transform="translate(780.046 462.096)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="Line_65" data-name="Line 65" x2="26.87" y2="26.87" transform="translate(775.096 467.046)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

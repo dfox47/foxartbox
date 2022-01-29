@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.072" height="50.499" viewBox="0 0 62.072 50.499">
+  <g id="Group_260" data-name="Group 260" transform="translate(-611.428 -264.5)">
+    <g id="Group_257" data-name="Group 257">
+      <circle id="Ellipse_36" data-name="Ellipse 36" cx="2.123" cy="2.123" r="2.123" transform="translate(620.617 295.377)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_37" data-name="Ellipse 37" cx="2.123" cy="2.123" r="2.123" transform="translate(629.377 295.377)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_38" data-name="Ellipse 38" cx="2.123" cy="2.123" r="2.123" transform="translate(638.136 295.377)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <text id="HELLO_" data-name="HELLO!" transform="translate(641.782 280.208)" font-size="6.446" font-family="GothamPro-Medium, Gotham Pro" font-weight="500"><tspan x="0" y="0">HELLO!</tspan></text>
+    <g id="Group_258" data-name="Group 258">
+      <path id="Path_656" data-name="Path 656" d="M624.626,284.842q1.01-.258,2.069-.441" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_657" data-name="Path 657" d="M629.265,284.084q1.083-.084,2.2-.084c10.79,0,19.536,5.985,19.536,13.367s-8.746,13.368-19.536,13.368c-.382,0-.755-.025-1.132-.04-2.619,5.924-9.9,3.158-9.9,3.158s3.655.694,5.08-3.756c-7.875-1.724-13.58-6.769-13.58-12.73,0-3.452,1.913-6.6,5.054-8.971a20.327,20.327,0,0,1,5.188-2.789" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Group_259" data-name="Group 259">
+      <path id="Path_658" data-name="Path 658" d="M660.3,265.842c-.672-.172-1.363-.32-2.068-.441" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_659" data-name="Path 659" d="M655.663,265.084q-1.083-.084-2.2-.084c-10.789,0-19.536,5.985-19.536,13.367s8.747,13.368,19.536,13.368c.382,0,.755-.025,1.132-.04,2.619,5.924,9.9,3.158,9.9,3.158s-3.654.694-5.08-3.756c7.875-1.724,13.58-6.769,13.58-12.73,0-3.452-1.913-6.6-5.053-8.971a20.334,20.334,0,0,0-5.189-2.789" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
