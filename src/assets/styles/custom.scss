@@ -1,8 +1,274 @@
 
 
 
-body {
-	background-color: #000;
+
+
+
+// Elements hierarchy:
+// Standard class
+// ID
+// Other classes
+// Different screen sizes
+
+
+
+// Standart class [START]
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
 }
+
+
+
+body {
+	font-family: $font_main;
+}
+
+h1 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300;
+	margin: 0 0 1em;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: $c_title;
+	display: block;
+	font-size: 70px;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0;
+	padding: 1em 0 .8em;
+	position: relative;
+	text-align: center;
+}
+
+h3 {
+	color: $c_text;
+	font-size: 29px;
+	font-weight: 700;
+	padding: 0 0 .1em;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: 500;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+
+
+html {
+	font-family: $font_main;
+}
+// Standart class [END]
+
+
+
+// ID [START]
+// ID [END]
+
+
+
+// help classes [START]
+.checkbox {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+
+	input {
+		left: -9999px;
+		position: absolute;
+
+		&:checked {
+			+ span {
+				&::after,
+				&::before {
+					display: block;
+				}
+			}
+		}
+	}
+
+	span {
+		background-color: #fff;
+		border: 2px solid $c_text;
+		border-radius: 6px;
+		display: inline-block;
+		height: 40px;
+		position: relative;
+		width: 40px;
+
+		&::after,
+		&::before {
+			background-color: $c_text;
+			content: "";
+			display: none;
+			height: 4px;
+			position: absolute;
+		}
+
+		&::after {
+			left: 11px;
+			transform: rotate(-45deg);
+			top: 15px;
+			width: 24px;
+		}
+
+		&::before {
+			left: 3px;
+			transform: rotate(45deg);
+			top: 18px;
+			width: 16px;
+		}
+	}
+}
+
+.checkbox_radio {
+	cursor: pointer;
+	margin: 0 20px 20px 0;
+
+	input {
+		left: -9999px;
+		position: absolute;
+
+		&:checked {
+			+ span {
+				&::after {
+					border-color: $c_selected;
+				}
+			}
+		}
+	}
+
+	> span {
+		border-radius: 50%;
+		display: block;
+		height: 40px;
+		width: 40px;
+		position: relative;
+
+		&::after {
+			border: 5px solid rgba(#000, 0);
+			border-radius: 50%;
+			content: "";
+			height: calc(100% + 8px);
+			left: -4px;
+			position: absolute;
+			top: -4px;
+			width: calc(100% + 8px);
+		}
+	}
+}
+
+.home {
+	h1 {
+		display: none;
+	}
+}
+
+.gotop,
+.gotop:visited {
+	background-color: $c_gotop;
+	border-radius: 50%;
+	border: 2px solid $c_gradient_home_end;
+	cursor: pointer;
+	display: block;
+	height: 70px;
+	left: 50%;
+	outline: 0 none;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	transform: translate(-50%,-50%);
+	transition: $transition;
+	width: 70px;
+	z-index: 3;
+
+	&::after,
+	&::before {
+		background-color: $c_text;
+		content: "";
+		display: block;
+		height: 5px;
+		position: absolute;
+		top: 30px;
+		transition: $transition;
+		width: 20px;
+	}
+
+	&::after {
+		left: 17px;
+		transform: rotate(-35deg);
+	}
+
+	&::before {
+		left: 31px;
+		transform: rotate(35deg);
+	}
+
+	&:hover {
+		background-color: #000;
+
+		&::after,
+		&::before {
+			background-color: #fff;
+		}
+	}
+}
+
+.js-img-scroll {
+	height: 1px;
+	width: 1px;
+}
+
+.logo {
+	display: inline-block;
+	height: 330px;
+	margin: 70px 0 25px;
+	position: relative;
+	width: 330px;
+
+	@media #{$mobile} {
+		height: 290px;
+		width: 290px;
+	}
+}
+
+.page-id-138 {
+	.entry-header {
+		display: none;
+	}
+}
+
+.singular {
+	.topmenu {
+		background-color: #fff;
+	}
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 30px;
+	width: 100%;
+}
+// help classes [END]
 
 

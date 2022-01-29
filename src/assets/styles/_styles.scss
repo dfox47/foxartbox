@@ -1,7 +1,20 @@
 
 
 
-@import "custom";
+// should be FIRST
 @import "vars";
+@import "defaults";
+
+@import "footer";
+@import "home_block";
+@import "owl.carousel";
+@import "process";
+@import "project";
+//@import "table";
+@import "team";
+@import "topmenu";
+
+// should be LAST
+@import "custom";
 
 

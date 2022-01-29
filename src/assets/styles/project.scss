@@ -1,0 +1,266 @@
+
+
+
+@keyframes projects_loading {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+.project {
+	color: #000;
+	position: relative;
+
+	h3 {
+		color: #000;
+		font-size: 29px;
+		font-weight: 600;
+		margin: 0;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	&__content {
+		min-height: 600px;
+		padding: 160px 0 30px;
+		position: relative;
+
+		&::after {
+			bottom: 0;
+			content: "";
+			height: 45%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+		}
+
+		&::before {
+			content: "";
+			height: 55%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+.project__desc {
+	font-size: 20px;
+	padding: 30px 0 0;
+
+	a,
+	a:visited {
+		color: #000;
+		display: inline-block;
+		font-style: italic;
+		opacity: .4;
+		text-decoration: underline;
+		transition: $transition;
+
+		&:hover {
+			opacity: 1;
+			text-decoration: none;
+		}
+	}
+
+	p {
+		line-height: 1.7;
+	}
+}
+
+.project__img {
+	display: block;
+	width: 100%;
+}
+
+.project__price {
+	opacity: .5;
+}
+
+.project__title {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@media #{$tablet} {
+	.project__desc {
+		font-size: 16px;
+	}
+
+	.project__title {
+		h3 {
+			padding: 0 0 .3em;
+			width: 100%;
+		}
+	}
+}
+
+
+
+.project_bg_type_1 {
+	&::after {
+		background: linear-gradient(to right, $c_gradient_3, $c_gradient_4);
+	}
+
+	&::before {
+		background: linear-gradient(to right, $c_gradient_1, $c_gradient_2);
+	}
+}
+
+.project_bg_type_2 {
+	&::after {
+		background: linear-gradient(to right, $c_gradient_7, $c_gradient_8);
+	}
+
+	&::before {
+		background: linear-gradient(to right, $c_gradient_5, $c_gradient_6);
+	}
+}
+
+.project_bg_type_3 {
+	&::after {
+		background: linear-gradient(to right, $c_gradient_11, $c_gradient_12);
+	}
+
+	&::before {
+		background: linear-gradient(to right, $c_gradient_9, $c_gradient_10);
+	}
+}
+
+.project_bg_type_4 {
+	&::after {
+		background: linear-gradient(to right, $c_gradient_16, $c_gradient_15);
+	}
+
+	&::before {
+		background: linear-gradient(to right, $c_gradient_13, $c_gradient_14);
+	}
+}
+
+.project_bg_type_5 {
+	&::after {
+		background: linear-gradient(to right, $c_gradient_19, $c_gradient_20);
+	}
+
+	&::before {
+		background: linear-gradient(to right, $c_gradient_17, $c_gradient_18);
+	}
+}
+
+
+
+.project_more {
+	align-items: center;
+	display: none;
+	flex-direction: column;
+	min-height: calc(100vh - 70px);
+	position: relative;
+
+	&::after {
+		animation: projects_loading 2s linear infinite;
+		background: url(#{$i}/loading.svg) no-repeat center scroll transparent;
+		background-size: contain;
+		content: "";
+		display: block;
+		height: 40px;
+		left: 50%;
+		margin: -20px 0 0 -20px;
+		position: absolute;
+		top: 50%;
+		width: 40px;
+		z-index: -1;
+	}
+
+	&.active {
+		display: flex;
+	}
+
+	.owl-carousel {
+		min-height: calc(100vh - 70px);
+
+		button {
+			&.owl-dot {
+				border: 2px solid #000;
+				border-radius: 50%;
+				height: 16px;
+				margin: 0 8px;
+				position: relative;
+				width: 16px;
+
+				span {
+					border: 1px solid #fff;
+					border-radius: 50%;
+					display: block;
+					height: 18px;
+					left: -3px;
+					position: absolute;
+					top: -3px;
+					width: 18px;
+				}
+
+				&.active {
+					background-color: #000;
+				}
+			}
+		}
+	}
+
+	.owl-dots {
+		bottom: 30px;
+		display: flex;
+		justify-content: center;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 3;
+	}
+
+	.owl-item {
+		background-color: #fff;
+		min-height: calc(100vh - 70px);
+	}
+
+	.owl-nav {
+		position: absolute;
+	}
+
+	.owl-stage {
+		min-height: calc(100vh - 70px);
+	}
+
+	.owl-stage-outer {
+		min-height: calc(100vh - 70px);
+	}
+
+	@media #{$tablet} {
+		min-height: 340px;
+
+		.owl-carousel,
+		.owl-item,
+		.owl-stage,
+		.owl-stage-outer {
+			min-height: 340px;
+		}
+	}
+}
+
+.project_more_item {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+

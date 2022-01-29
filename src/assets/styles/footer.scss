@@ -1,0 +1,60 @@
+
+
+@keyframes footer_gradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+.footer {
+	animation: footer_gradient 10s ease infinite;
+	background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_footer_1, $c_gradient_footer_2);
+	background-size: 400% 400%;
+	color: #fff;
+	padding: 200px 0;
+	position: relative;
+	text-align: center;
+
+	a,
+	a:visited {
+		color: #fff;
+		display: inline-block;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__desc {
+		text-transform: uppercase;
+	}
+
+	&__links {
+		margin: 0 0 40px;
+
+		a,
+		a:visited {
+			display: inline-block;
+			margin: 0 20px;
+			transition: $transition;
+
+			&:hover {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.footer_copyright {
+	font-size: 12px;
+	opacity: .7;
+}
+
+
