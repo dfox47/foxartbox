@@ -1,0 +1,199 @@
+
+
+
+.contacts {
+	color: $c_text;
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 30px 50px;
+	position: relative;
+	transition: $transition;
+	width: 100%;
+	z-index: 3;
+
+	form {
+		display: block;
+
+		input {
+			&[type="email"],
+			&[type="text"] {
+				background-color: $c_gotop;
+				display: block;
+				font-size: 16px;
+				font-style: normal;
+				margin: 0 0 12px;
+				padding: .9em 1em;
+				text-align: center;
+				width: 100%;
+			}
+
+			&[type="submit"] {
+				left: -9999px;
+				position: absolute;
+			}
+		}
+
+		textarea {
+			background-color: $c_gotop;
+			display: block;
+			font-size: 16px;
+			font-style: normal;
+			margin: 0 0 12px;
+			min-height: 140px;
+			padding: .9em 1em;
+			width: 100%;
+		}
+	}
+
+	.wp-block-column {
+		flex-basis: auto;
+		flex-grow: unset;
+
+		&:nth-child(2) {
+			margin: 0;
+			padding: 0 0 0 30px;
+			width: 40%;
+		}
+	}
+
+	.wp-block-columns {
+		justify-content: center;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 73px 23px 0;
+	}
+}
+
+.contacts_form {
+	display: none;
+	width: 58.6%;
+
+	input {
+		&[type="email"],
+		&[type="text"] {
+			background-color: $c_gotop;
+			display: block;
+			font-size: 16px;
+			font-style: normal;
+			margin: 0 0 12px;
+			padding: .9em 1em;
+			text-align: center;
+			width: 100%;
+		}
+
+		&[type="submit"] {
+			left: -9999px;
+			position: absolute;
+		}
+	}
+
+	textarea {
+		background-color: $c_gotop;
+		display: block;
+		font-size: 16px;
+		font-style: normal;
+		margin: 0 0 12px;
+		min-height: 140px;
+		padding: .9em 1em;
+		width: 100%;
+	}
+
+	&__file {
+		margin: 0 19px 0 0;
+		position: relative;
+
+		&::after {
+			background-color: #000;
+			content: "";
+			display: block;
+			height: 100%;
+			left: 100%;
+			position: absolute;
+			top: 0;
+			width: 1px;
+		}
+	}
+
+	&__submit {
+		text-transform: uppercase;
+
+		span {
+			background-color: #000;
+			color: #fff;
+			display: block;
+			padding: 10px 35px;
+		}
+	}
+
+	&__submit__wrap {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		padding: 2px 0 0;
+		width: 100%;
+	}
+}
+
+.contacts_icon {
+	&__email {
+		background: url(#{$i}/email.svg) left center no-repeat scroll transparent;
+	}
+
+	&__phone {
+		background: url(#{$i}/phone.svg) left center no-repeat scroll transparent;
+	}
+
+	&__skype {
+		background: url(#{$i}/skype.svg) left center no-repeat scroll transparent;
+	}
+}
+
+.contacts_links {
+	display: block;
+	margin: 30px 0 0;
+
+	a,
+	a:visited {
+		align-items: center;
+		color: #000;
+		display: flex;
+		min-height: 23px;
+		padding: 0 0 0 43px;
+		position: relative;
+		text-decoration: none;
+		width: 100%;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	img {
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	li {
+		display: block;
+		margin: 0 0 11px;
+		position: relative;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+.contacts_subtitle {
+	font-size: 15px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+

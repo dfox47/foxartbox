@@ -11,11 +11,11 @@
 
 					<ul class="contacts_links">
 						<li>
-							<a rel="noopener noreferrer" href="mailto:info@foxartbox.com" target="_blank"><img src="../assets/i/icons/email.svg" class="js-img-scroll" alt="" /><span>info@foxartbox.com</span> </a>
+							<a href="mailto:info@foxartbox.com" target="_blank"><img src="../assets/i/icons/email.svg" alt="" /><span>info@foxartbox.com</span></a>
 						</li>
 
 						<li>
-							<a href="javascript:void(0);"><img src="../assets/i/icons/skype.svg" class="js-img-scroll" alt="" /><span>Skype: foxartbox</span> </a>
+							<a href="javascript:void(0);"><img src="../assets/i/icons/skype.svg" alt="" /><span>Skype: foxartbox</span></a>
 						</li>
 					</ul>
 				</div>
