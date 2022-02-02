@@ -1,18 +1,30 @@
 
 <template>
 	<Header />
-	<HelloWorld msg="Welcome to Your Vue.js App"/>
+	<HomeBlock />
+	<Projects />
+	<Process />
+	<Crew />
+	<Contacts />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue'
+import Contacts from "@/components/Contacts";
+import Crew from "@/components/Crew";
+import Header from './components/Header.vue';
+import HomeBlock from './components/HomeBlock.vue';
+import Process from "@/components/Process";
+import Projects from './components/Projects.vue';
 
 export default {
 	name: 'App',
 	components: {
+		Contacts,
+		Crew,
 		Header,
-		HelloWorld
+		HomeBlock,
+		Process,
+		Projects
 	}
 }
 </script>

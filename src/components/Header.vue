@@ -11,7 +11,7 @@
 
 			<div class="topmenu_mobile">
 				<a class="topmenu_mobile__logo js-scroll-to js-topmenu-mobile-close" href="/#top">
-					<img class="" src="assets/i/icons/logo_2.svg" data-img-src="assets/i/icons/logo_2.svg" alt="" />
+					<img class="" src="../assets/i/icons/logo_2.svg" alt="" />
 					<span>foxartbox</span>
 				</a>
 
