@@ -19,8 +19,6 @@
 
 				<div class="topmenu_mobile__toggle js-topmenu-mobile-toggle">
 					<span></span>
-					<span></span>
-					<span></span>
 				</div>
 			</div>
 		</div>

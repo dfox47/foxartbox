@@ -1,8 +1,8 @@
 <template>
 	<HomeBlock />
+	<Projects />
 	<Process />
 	<Crew />
-	<Projects />
 	<Contacts />
 </template>
 

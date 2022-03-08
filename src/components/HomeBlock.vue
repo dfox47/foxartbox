@@ -7,7 +7,19 @@
 
 			<div class="home_block_desc js-home-block-desc">foxartbox</div>
 			<div class="home_block_slogan js-random-slogan">fast websites</div>
-			<a class="btn btn__link js-scroll-to" href="/#projects">Projects</a>
+			<a class="btn btn__link js-scroll-to" @click="scroll('projects')">Projects</a>
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	methods: {
+		scroll(id) {
+			document.getElementById(id).scrollIntoView({
+				behavior: 'smooth'
+			});
+		}
+	}
+}
+</script>
