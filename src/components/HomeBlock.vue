@@ -14,12 +14,12 @@
 
 <script>
 export default {
-	methods: {
-		scroll(id) {
-			document.getElementById(id).scrollIntoView({
-				behavior: 'smooth'
-			});
-		}
-	}
+	// methods: {
+	// 	scroll(id) {
+	// 		document.getElementById(id).scrollIntoView({
+	// 			behavior: 'smooth'
+	// 		});
+	// 	}
+	// }
 }
 </script>
