@@ -1,8 +1,9 @@
+
 <template>
 	<div>
 		<div id="top"></div>
 
-		<div class="topmenu">
+		<div class="topmenu" :class="{'active' : showMobileMenu}">
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="(menuItem, index) in menuItems" :key="menuItem.id">
@@ -12,11 +13,11 @@
 
 				<div class="topmenu_mobile">
 					<a class="topmenu_mobile__logo js-topmenu-mobile-close" @click="scroll('top')">
-						<img class="" src="../assets/i/icons/logo_2.svg" alt=""/>
+						<img class="" src="../assets/i/icons/logo_2.svg" alt="" />
 						<span>foxartbox</span>
 					</a>
 
-					<div class="topmenu_mobile__toggle js-topmenu-mobile-toggle">
+					<div :class="{'active': isActive}" class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="showMobileMenu">
 						<span></span>
 					</div>
 				</div>
@@ -27,15 +28,17 @@
 
 <script>
 export default {
+	name: 'Header',
 	data() {
 		return {
 			menuItems: [
 				{id: 'top', title: 'Home'},
 				{id: 'projects', title: 'Projects'},
 				{id: 'process', title: 'Process'},
-				{id: 'crew', title: 'Crew'},
+				// {id: 'crew', title: 'Crew'},
 				{id: 'contacts', title: 'Contacts'}
-			]
+			],
+			isActive: false
 		}
 	},
 	methods: {
@@ -43,6 +46,9 @@ export default {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
 			});
+		},
+		showMobileMenu() {
+			this.isActive = !this.isActive;
 		}
 	}
 }

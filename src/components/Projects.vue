@@ -166,45 +166,45 @@
 		</div>
 
 		<!-- vaast -->
-		<div id="project-5" class="project">
-			<div class="project__content project_bg_type_5">
-				<div class="wrap">
-					<img class="project__img js-img-scroll" src="../assets/i/projects/haast/0.png" alt="" />
+<!--		<div id="project-5" class="project">-->
+<!--			<div class="project__content project_bg_type_5">-->
+<!--				<div class="wrap">-->
+<!--					<img class="project__img js-img-scroll" src="../assets/i/projects/haast/0.png" alt="" />-->
 
-					<div class="project__desc">
-						<div class="project__title">
-							<h3>Vaast architect</h3>
+<!--					<div class="project__desc">-->
+<!--						<div class="project__title">-->
+<!--							<h3>Vaast architect</h3>-->
 
-							<div class="project__price">5000 € | 2 months</div>
-						</div>
+<!--							<div class="project__price">5000 € | 2 months</div>-->
+<!--						</div>-->
 
-						<p>
-							A laconic style web-site, presenting an architectural bureau projects.
-						</p>
-					</div>
+<!--						<p>-->
+<!--							A laconic style web-site, presenting an architectural bureau projects.-->
+<!--						</p>-->
+<!--					</div>-->
 
-					<div class="text-center">
-						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-5-more" data-show-id="5"><span class="js-btn-3d">Show more</span></a>
-					</div>
-				</div>
-			</div>
+<!--					<div class="text-center">-->
+<!--						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-5-more" data-show-id="5"><span class="js-btn-3d">Show more</span></a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
 
-			<div id="project-5-more"></div>
+<!--			<div id="project-5-more"></div>-->
 
-			<div class="project_more js-project-more" data-hidden-id="5">
-				<a class="btn btn__close js-project-close js-scroll-to" href="#project-5"><span></span><span></span></a>
+<!--			<div class="project_more js-project-more" data-hidden-id="5">-->
+<!--				<a class="btn btn__close js-project-close js-scroll-to" href="#project-5"><span></span><span></span></a>-->
 
-				<div class="owl-carousel">
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/1.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/2.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/3.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/4.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/5.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/6.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/7.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/8.jpg)"></div>
-				</div>
-			</div>
-		</div>
+<!--				<div class="owl-carousel">-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/1.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/2.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/3.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/4.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/5.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/6.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/7.jpg)"></div>-->
+<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/8.jpg)"></div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
 	</div>
 </template>
