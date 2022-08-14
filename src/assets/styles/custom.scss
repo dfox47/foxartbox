@@ -1,13 +1,9 @@
 
-
-
 // Elements hierarchy:
 // Standard class
 // ID
 // Other classes
 // Different screen sizes
-
-
 
 // Standart class [START]
 @keyframes glowing {
@@ -21,8 +17,6 @@
 		background-position: 0 0;
 	}
 }
-
-
 
 body {
 	font-family: $font_main;
@@ -68,8 +62,6 @@ h5 {
 	text-align: left;
 	text-transform: uppercase;
 }
-
-
 
 html {
 	font-family: $font_main;
@@ -260,6 +252,20 @@ html {
 	}
 }
 
+.social_links {
+	margin: 0 0 40px;
+
+	&__item {
+		display: inline-block;
+		margin: 0 20px;
+		transition: $transition;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
 .wrap {
 	margin: 0 auto;
 	max-width: 980px;
@@ -267,5 +273,3 @@ html {
 	width: 100%;
 }
 // help classes [END]
-
-

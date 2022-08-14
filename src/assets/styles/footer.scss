@@ -35,21 +35,6 @@
 	&__desc {
 		text-transform: uppercase;
 	}
-
-	&__links {
-		margin: 0 0 40px;
-
-		a,
-		a:visited {
-			display: inline-block;
-			margin: 0 20px;
-			transition: $transition;
-
-			&:hover {
-				opacity: .7;
-			}
-		}
-	}
 }
 
 .footer_copyright {
