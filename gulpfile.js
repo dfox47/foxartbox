@@ -5,15 +5,15 @@
 'use strict';
 
 let fs              = require('fs')
-let cssMinify       = require('gulp-csso')
-let concat          = require('gulp-concat')
+// let cssMinify       = require('gulp-csso')
+// let concat          = require('gulp-concat')
 let config          = JSON.parse(fs.readFileSync('../../config.json'))
 let ftp             = require('vinyl-ftp')
 let gulp            = require('gulp')
 let gutil           = require('gulp-util')
-let rename          = require('gulp-rename')
-let sass            = require('gulp-sass')
-let uglify          = require('gulp-uglify')
+// let rename          = require('gulp-rename')
+// let sass            = require('gulp-sass')
+// let uglify          = require('gulp-uglify')
 
 // FTP config
 let host            = config.host
