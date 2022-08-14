@@ -2,50 +2,6 @@
 	<div id="projects">
 		<h2>Projects</h2>
 
-		<!-- chaletbansko -->
-		<div id="project-1" class="project">
-			<div class="project__content project_bg_type_1">
-				<div class="wrap">
-					<img class="project__img" src="../assets/i/projects/chalet_bansko/0.png" alt="" />
-
-					<div class="project__desc">
-						<div class="project__title">
-							<h3>Chalet Bansko</h3>
-
-							<div class="project__price">3400 € | 2 months</div>
-						</div>
-
-						<p>
-							Villa in Balkans obtained a unique face. FOXARTBOX team made a compact landing page with booking option, recognizable logo and facilities icons. <a href="//chaletbansko.com/" target="_blank">www.chaletbansko.com</a>
-						</p>
-					</div>
-
-					<div class="text-center">
-						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-1-more" data-show-id="1"><span class="js-btn-3d">Show more</span></a>
-					</div>
-				</div>
-			</div>
-
-			<div id="project-1-more"></div>
-
-			<div class="project_more js-project-more" data-hidden-id="1">
-				<a class="btn btn__close js-project-close js-scroll-to" href="#project-1"><span></span><span></span></a>
-
-				<div class="project_more_loading">
-					<span></span>
-				</div>
-
-				<div class="owl-carousel">
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/1.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/2.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/3.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/4.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/5.jpg)"></div>
-					<div class="project_more_item" style="background-image: url(../assets/i/projects/chalet_bansko/6.jpg)"></div>
-				</div>
-			</div>
-		</div>
-
 		<!-- chocolana -->
 		<div id="project-2" class="project">
 			<div class="project__content project_bg_type_2">
@@ -164,47 +120,5 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- vaast -->
-<!--		<div id="project-5" class="project">-->
-<!--			<div class="project__content project_bg_type_5">-->
-<!--				<div class="wrap">-->
-<!--					<img class="project__img js-img-scroll" src="../assets/i/projects/haast/0.png" alt="" />-->
-
-<!--					<div class="project__desc">-->
-<!--						<div class="project__title">-->
-<!--							<h3>Vaast architect</h3>-->
-
-<!--							<div class="project__price">5000 € | 2 months</div>-->
-<!--						</div>-->
-
-<!--						<p>-->
-<!--							A laconic style web-site, presenting an architectural bureau projects.-->
-<!--						</p>-->
-<!--					</div>-->
-
-<!--					<div class="text-center">-->
-<!--						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-5-more" data-show-id="5"><span class="js-btn-3d">Show more</span></a>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-
-<!--			<div id="project-5-more"></div>-->
-
-<!--			<div class="project_more js-project-more" data-hidden-id="5">-->
-<!--				<a class="btn btn__close js-project-close js-scroll-to" href="#project-5"><span></span><span></span></a>-->
-
-<!--				<div class="owl-carousel">-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/1.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/2.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/3.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/4.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/5.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/6.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/7.jpg)"></div>-->
-<!--					<div class="project_more_item" style="background-image: url(../assets/i/projects/haast/8.jpg)"></div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
 	</div>
 </template>
