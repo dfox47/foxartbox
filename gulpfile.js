@@ -7,7 +7,7 @@
 let fs              = require('fs')
 // let cssMinify       = require('gulp-csso')
 // let concat          = require('gulp-concat')
-let config          = JSON.parse(fs.readFileSync('../../config.json'))
+let config          = JSON.parse(fs.readFileSync('../config.json'))
 let ftp             = require('vinyl-ftp')
 let gulp            = require('gulp')
 let gutil           = require('gulp-util')
