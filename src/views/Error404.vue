@@ -1,12 +1,12 @@
 <template>
-    <h1>
-        404 Error :(((
-    </h1>
+	<h1>
+		404 Error :(((
+	</h1>
 </template>
 
 <script>
 export default {
-    name: "Error404"
+	name: "Error404"
 }
 </script>
 
