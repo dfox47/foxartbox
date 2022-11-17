@@ -3,12 +3,6 @@
 		<h2>Contacts</h2>
 
 		<div class="contacts__content">
-			<h3>Let’s get in touch</h3>
-
-			<p>Want to discuss your ideas for a new project — or just say hello?</p>
-
-			<p>It’s all good, we’d love to connect with you.</p>
-
 			<ul class="contacts_links">
 				<li class="contacts_links__item">
 					<a class="contacts_links__link" href="mailto:info@foxartbox.com" target="_blank"><img class="contacts_links__img" src="../assets/i/icons/email.svg" alt="" /><span>info@foxartbox.com</span></a>
