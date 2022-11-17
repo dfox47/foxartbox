@@ -4,18 +4,24 @@
 
 		<div class="contacts__content">
 			<ul class="contacts_links">
-				<li class="contacts_links__item">
-					<a class="contacts_links__link" href="mailto:info@foxartbox.com" target="_blank"><img class="contacts_links__img" src="../assets/i/icons/email.svg" alt="" /><span>info@foxartbox.com</span></a>
-				</li>
-
-				<li class="contacts_links__item">
-					<a class="contacts_links__link" href="javascript:void(0);"><img class="contacts_links__img" src="../assets/i/icons/skype.svg" alt="" /><span>foxartbox</span></a>
-				</li>
-
-				<li class="contacts_links__item">
-					<a class="contacts_links__link" href="//t.me/dfoxweb" target="_blank"><img class="contacts_links__img" src="../assets/i/icons/telegram.svg" alt="" /><span>@dfoxweb</span></a>
+				<li class="contacts_links__item" v-for="(contactsLink) in contactsLinks" :key="contactsLink.href">
+					<a class="contacts_links__link" :href="contactsLink.href" target="_blank"><img class="contacts_links__img" :src="contactsLink.icon" alt="" /><span>{{ contactsLink.title }}</span></a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			contactsLinks: [
+				{href: 'mailto:info@foxartbox.com', icon: require('../assets/i/icons/email.svg'), title: 'info@foxartbox.com'},
+				{href: 'javascript:void(0);', icon: require('../assets/i/icons/skype.svg'), title: 'foxartbox'},
+				{href: '//t.me/dfoxweb', icon: require('../assets/i/icons/telegram.svg'), title: '@dfoxweb'}
+			]
+		}
+	}
+}
+</script>
