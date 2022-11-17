@@ -1,4 +1,3 @@
-
 <template>
 	<div>
 		<div id="top"></div>
@@ -13,13 +12,11 @@
 
 				<div class="topmenu_mobile">
 					<a class="topmenu_mobile__logo js-topmenu-mobile-close" @click="scroll('top')">
-						<img class="" src="../assets/i/icons/logo_2.svg" alt="" />
+						<img src="../assets/i/icons/logo_2.svg" alt="" />
 						<span>foxartbox</span>
 					</a>
 
-					<div :class="{'active': isActive}" class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="showMobileMenu">
-						<span></span>
-					</div>
+					<div :class="{'active': isActive}" class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="showMobileMenu"><span></span></div>
 				</div>
 			</div>
 		</div>
@@ -29,6 +26,9 @@
 <script>
 export default {
 	name: 'Header',
+	created () {
+		window.addEventListener('scroll', this.handleScroll);
+	},
 	data() {
 		return {
 			menuItems: [
@@ -49,7 +49,13 @@ export default {
 		},
 		showMobileMenu() {
 			this.isActive = !this.isActive;
+		},
+		handleScroll () {
+			// Any code to be executed when the window is scrolled
 		}
+	},
+	unmounted () {
+		window.removeEventListener('scroll', this.handleScroll);
 	}
 }
 </script>
