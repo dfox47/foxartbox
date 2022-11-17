@@ -1,5 +1,5 @@
 .topmenu {
-	background-color: rgba(#fff, .3);
+	background-color: #fff;
 	box-shadow: 0 0 7px $c_gradient_home_end;
 	font-size: 16px;
 	left: 0;
@@ -11,8 +11,6 @@
 	z-index: 9;
 
 	&:hover {
-		background-color: #fff;
-
 		.topmenu_list {
 			a,
 			a:visited {
@@ -133,7 +131,7 @@
 		display: block;
 		opacity: .7;
 		outline: 0 none;
-		padding: 26px 39px;
+		padding: 10px 39px;
 		position: relative;
 		text-decoration: none;
 
@@ -237,60 +235,58 @@
 		}
 	}
 
+	&__logo {
+		align-items: center;
+		color: #fff;
+		display: flex;
+		padding: 4px 0;
+		text-decoration: none;
+		transition: $transition;
+
+		img {
+			height: 40px;
+			margin: 0 10px 0 0;
+			width: 40px;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&__toggle {
+		display: block;
+		cursor: pointer;
+		height: 40px;
+		position: relative;
+		text-decoration: none;
+		width: 40px;
+
+		&::after,
+		&::before,
+		> span {
+			background-color: #fff;
+			content: "";
+			display: block;
+			height: 2px;
+			left: 8px;
+			margin: 0 0 4px;
+			position: absolute;
+			top: 16px;
+			transition: $transition;
+			width: 22px;
+		}
+
+		&::after {
+			top: 10px;
+		}
+
+		&::before {
+			top: 22px;
+		}
+	}
+
 	@media #{$mobile} {
 		display: flex;
-	}
-}
-
-.topmenu_mobile__logo,
-.topmenu_mobile__logo:visited {
-	align-items: center;
-	color: #fff;
-	display: flex;
-	padding: 4px 0;
-	text-decoration: none;
-	transition: $transition;
-
-	img {
-		height: 40px;
-		margin: 0 10px 0 0;
-		width: 40px;
-	}
-
-	&:hover {
-		opacity: .7;
-	}
-}
-
-.topmenu_mobile__toggle,
-.topmenu_mobile__toggle:visited {
-	display: block;
-	cursor: pointer;
-	height: 40px;
-	position: relative;
-	text-decoration: none;
-	width: 40px;
-
-	&::after,
-	&::before,
-	> span {
-		background-color: #fff;
-		content: "";
-		display: block;
-		height: 2px;
-		left: 8px;
-		margin: 0 0 4px;
-		position: absolute;
-		top: 16px;
-		transition: $transition;
-		width: 22px;
-	}
-
-	&::after {
-		top: 10px;
-	}
-
-	&::before {
-		top: 22px;
 	}
 }
