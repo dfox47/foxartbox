@@ -1,27 +1,3 @@
-@keyframes blur {
-	0% {
-		filter: blur(0px);
-	}
-	50% {
-		filter: blur(4px);
-	}
-	100% {
-		filter: blur(0px);
-	}
-}
-
-@keyframes bg_gradient {
-	0% {
-		background-position: 0 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
-}
-
 .home {
 	h1 {
 		display: none;
@@ -30,8 +6,8 @@
 
 .home_block {
 	align-items: center;
-	animation: bg_gradient 7s ease infinite;
-	background: linear-gradient(90deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_home_start);
+	animation: bg_gradient 10s ease infinite;
+	background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_home_start);
 	background-size: 400% 400%;
 	border-bottom: 1px solid $c_border;
 	color: #fff;
