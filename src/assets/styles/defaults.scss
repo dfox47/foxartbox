@@ -1,8 +1,6 @@
 @charset "utf-8";
 // sCSS Document
 
-
-
 // Standart class [START]
 * {
 	border: 0 none;
@@ -47,8 +45,6 @@ fieldset {
 	padding: 0;
 }
 
-
-
 h1 {
 	font-size: 2.2em;
 	line-height: 1.2;
@@ -81,8 +77,6 @@ h4 {
 	margin: 0 0 5%;
 	text-align: center;
 }
-
-
 
 hr {
 	height: 2px;
@@ -171,13 +165,9 @@ ul {
 	position: absolute;
 }
 
-
-
 .bold {
 	font-weight: 700;
 }
-
-
 
 .clear {
 	clear: both;
@@ -186,8 +176,6 @@ ul {
 .clr {
 	@extend .clear;
 }
-
-
 
 .fl,
 .floatleft {
@@ -198,8 +186,6 @@ ul {
 .floatright {
 	float: right;
 }
-
-
 
 // font-sizes [START]
 .fs0 {
@@ -269,8 +255,6 @@ ul {
 	font-size: 30px;
 }
 // font-sizes [END]
-
-
 
 .h100 {
 	height: 100%;
@@ -358,5 +342,4 @@ ul {
 .w100 {
 	width: 100%;
 }
-
 // help classes [END]

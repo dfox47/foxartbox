@@ -1,6 +1,3 @@
-
-
-
 .table {
 	background-color: rgba(#000, .1);
 	min-height: 100vh;
@@ -10,8 +7,6 @@
 		color: $c_text;
 	}
 }
-
-
 
 .table_charger {
 	background-color: $c_text;
@@ -52,8 +47,6 @@
 	display: flex;
 }
 
-
-
 .table_cooler {
 	background: url(#{$i}/wp-content/uploads/2021/03/cooler.png) center center no-repeat scroll transparent;
 	background-size: contain;
@@ -85,8 +78,6 @@
 	}
 }
 
-
-
 .table_grill {
 	background: url(#{$i}/wp-content/uploads/2021/03/grill.png) center center no-repeat scroll transparent;
 	background-size: cover;
@@ -102,8 +93,6 @@
 		padding: 50% 0 0;
 	}
 }
-
-
 
 .table_options {
 	align-items: flex-start;
@@ -272,5 +261,3 @@
 		padding: 141% 0 0;
 	}
 }
-
-
