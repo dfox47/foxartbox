@@ -10,6 +10,18 @@
 	}
 }
 
+@keyframes bg_gradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
 .home {
 	h1 {
 		display: none;
@@ -18,7 +30,9 @@
 
 .home_block {
 	align-items: center;
-	background: linear-gradient(to left, $c_gradient_home_start, $c_gradient_home_end);
+	animation: bg_gradient 7s ease infinite;
+	background: linear-gradient(90deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_home_start);
+	background-size: 400% 400%;
 	border-bottom: 1px solid $c_border;
 	color: #fff;
 	display: flex;
@@ -30,6 +44,7 @@
 	perspective: 1000px;
 	position: relative;
 	text-align: center;
+	transition: $transition;
 
 	&__bg {
 		height: 100%;

@@ -1,4 +1,4 @@
-@keyframes footer_gradient {
+@keyframes bg_gradient {
 	0% {
 		background-position: 0 50%;
 	}
@@ -11,7 +11,7 @@
 }
 
 .footer {
-	animation: footer_gradient 10s ease infinite;
+	animation: bg_gradient 10s ease infinite;
 	background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_footer_1, $c_gradient_footer_2);
 	background-size: 400% 400%;
 	color: #fff;
