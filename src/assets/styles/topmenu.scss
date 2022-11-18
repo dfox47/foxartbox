@@ -10,34 +10,6 @@
 	width: 100%;
 	z-index: 9;
 
-	&:hover {
-		.topmenu_list {
-			a,
-			a:visited {
-				color: #000;
-
-				&:hover,
-				&.active {
-					color: #fff;
-					opacity: 1;
-					text-decoration: none;
-
-					&::after {
-						top: 0;
-					}
-				}
-			}
-		}
-
-		.topmenu_mobile__toggle {
-			&::after,
-			&::before,
-			> span {
-				background-color: #000;
-			}
-		}
-	}
-
 	&__bg {
 		background-color: rgba($c_gradient_home_start, .8);
 		display: none;
@@ -48,31 +20,6 @@
 		transition: $transition;
 		width: 100%;
 		z-index: 8;
-	}
-
-	@media #{$mobile} {
-		.topmenu_list {
-			background-color: #fff;
-			display: none;
-			left: 0;
-			position: absolute;
-			top: 100%;
-			width: 100%;
-
-			a,
-			a:visited {
-				padding: 20px 30px;
-				text-align: center;
-
-				&::after {
-					display: none;
-				}
-
-				&:hover {
-					background-color: #000;
-				}
-			}
-		}
 	}
 }
 
@@ -152,76 +99,36 @@
 	&__item {
 		display: block;
 	}
+
+	@media #{$mobile} {
+		background-color: #fff;
+		display: none;
+		left: 0;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+
+		a {
+			padding: 20px 30px;
+			text-align: center;
+
+			&::after {
+				display: none;
+			}
+
+			&:hover,
+			&.active {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+	}
 }
 
 .topmenu_mobile {
 	align-items: center;
 	display: none;
 	justify-content: space-between;
-
-	&__active {
-		.topmenu {
-			background-color: #fff;
-
-			a,
-			a:visited {
-				color: #000;
-
-				&:hover,
-				&.active {
-					color: #fff;
-					opacity: 1;
-				}
-			}
-		}
-
-		.topmenu_mobile {
-			&__logo {
-				color: #000;
-
-				img {
-					filter: invert(100%);
-				}
-			}
-
-			&__toggle {
-				> span {
-					background-color: #000;
-				}
-			}
-		}
-
-		@media #{$mobile} {
-			.topmenu {
-				ul {
-					display: block;
-				}
-
-				&__bg {
-					display: block;
-				}
-			}
-
-			.topmenu_mobile__toggle {
-				> span {
-					&:nth-child(1) {
-						top: 16px;
-						transform: rotate(45deg);
-					}
-
-					&:nth-child(2) {
-						left: 100px;
-						opacity: 0;
-					}
-
-					&:nth-child(3) {
-						transform: rotate(-45deg);
-						top: 16px;
-					}
-				}
-			}
-		}
-	}
 
 	&__logo {
 		align-items: center;
@@ -277,5 +184,42 @@
 
 	@media #{$mobile} {
 		display: flex;
+	}
+}
+
+.topmenu_mobile_active {
+	.topmenu {
+
+	}
+
+	@media #{$mobile} {
+		.topmenu {
+			ul {
+				display: block;
+			}
+
+			&__bg {
+				display: block;
+			}
+		}
+
+		.topmenu_mobile {
+			&__toggle {
+				&::after {
+					top: 16px;
+					transform: rotate(-45deg);
+				}
+
+				&::before {
+					top: 16px;
+					transform: rotate(45deg);
+				}
+
+				> span {
+					left: 100px;
+					opacity: 0;
+				}
+			}
+		}
 	}
 }

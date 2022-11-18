@@ -27,7 +27,7 @@
 export default {
 	name: 'Header',
 	created () {
-		window.addEventListener('scroll', this.handleScroll);
+		window.addEventListener('scroll', this.handleScroll)
 	},
 	data() {
 		return {
@@ -45,10 +45,10 @@ export default {
 		scroll(id) {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
-			});
+			})
 		},
 		showMobileMenu() {
-			this.isActive = !this.isActive;
+			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		},
 		handleScroll () {
 			// Any code to be executed when the window is scrolled
