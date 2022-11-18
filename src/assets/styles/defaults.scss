@@ -1,7 +1,9 @@
 @charset "utf-8";
 // sCSS Document
 
-@keyframes bg_gradient {
+
+
+@keyframes bgGradient {
 	0% {
 		background-position: 0 50%;
 	}
@@ -24,6 +26,32 @@
 		filter: blur(0px);
 	}
 }
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@keyframes letterSpacing {
+	0% {
+		letter-spacing: .1em;
+	}
+	50% {
+		letter-spacing: .3em;
+	}
+	100% {
+		letter-spacing: .1em;
+	}
+}
+
+
 
 // Standart class [START]
 * {

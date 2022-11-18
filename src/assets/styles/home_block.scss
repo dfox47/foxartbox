@@ -6,7 +6,7 @@
 
 .home_block {
 	align-items: center;
-	animation: bg_gradient 10s ease infinite;
+	animation: bgGradient 10s ease infinite;
 	background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_home_start);
 	background-size: 400% 400%;
 	border-bottom: 1px solid $c_border;
