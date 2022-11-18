@@ -155,7 +155,7 @@
 
 	&::after {
 		animation: projects_loading 2s linear infinite;
-		background: url(#{$i}/loading.svg) no-repeat center scroll transparent;
+		background: url(#{$icons}/loading.svg) no-repeat center scroll transparent;
 		background-size: contain;
 		content: "";
 		display: block;

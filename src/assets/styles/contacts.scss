@@ -25,15 +25,15 @@
 
 .contacts_icon {
 	&__email {
-		background: url(#{$i}/email.svg) left center no-repeat scroll transparent;
+		background: url(#{$icons}/email.svg) left center no-repeat scroll transparent;
 	}
 
 	&__phone {
-		background: url(#{$i}/phone.svg) left center no-repeat scroll transparent;
+		background: url(#{$icons}/phone.svg) left center no-repeat scroll transparent;
 	}
 
 	&__skype {
-		background: url(#{$i}/skype.svg) left center no-repeat scroll transparent;
+		background: url(#{$icons}/skype.svg) left center no-repeat scroll transparent;
 	}
 }
 

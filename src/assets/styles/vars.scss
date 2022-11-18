@@ -39,7 +39,8 @@ $c_text_shadow_2:           #070449;
 $c_title:                   #413c3c;
 
 $fontsFolder:               'assets/fonts/';
-$i:                         'assets/i/icons';
+$i:                         'assets/i';
+$icons:                     $i + '/icons';
 $themeFolder:               '/wp-content/themes/foxartbox/';
 
 $transition:                all .3s ease-in-out;
