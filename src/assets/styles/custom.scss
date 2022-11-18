@@ -30,6 +30,18 @@ h2 {
 	padding: .3em 0;
 	position: relative;
 	text-align: center;
+
+	@media #{$tablet} {
+		font-size: 70px;
+	}
+
+	@media #{$mobile} {
+		font-size: 50px;
+	}
+
+	@media #{$mobile_s} {
+		font-size: 30px;
+	}
 }
 
 h3 {
