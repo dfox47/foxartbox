@@ -2,11 +2,11 @@
 	<div>
 		<div id="top"></div>
 
-		<div class="topmenu" :class="{'active' : toggleMobileMenu}">
+		<div class="topmenu">
 			<div class="wrap">
 				<ul class="topmenu_list">
-					<li class="topmenu_list__item" v-for="(menuItem, index) in menuItems" :key="menuItem.id">
-						<a :class="{'active': index === 0}" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
+					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
+						<a :class="{ active: (menuItem.id === activeId) }" class="js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
@@ -36,7 +36,8 @@ export default {
 				{id: 'projects', title: 'Projects'},
 				{id: 'process', title: 'Process'},
 				{id: 'contacts', title: 'Contacts'}
-			]
+			],
+			activeId : 0
 		}
 	},
 	methods: {
@@ -47,6 +48,12 @@ export default {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
 			})
+
+			// change url to current menu item
+			history.pushState(null, null, '/#' + id)
+
+			// make selected menu item active
+			this.activeId = id
 		},
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
