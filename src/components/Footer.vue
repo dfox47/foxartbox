@@ -9,7 +9,7 @@
 				<a class="social_links__item" href="//www.instagram.com/foxartbox/" target="_blank" title="Instagram"><img src="../assets/i/icons/inst.svg" alt="Instagram"></a>
 			</div>
 
-<!--			<p class="footer__desc">Connect with us</p>-->
+			<p class="footer_slogan">stay true</p>
 
 			<p class="footer_copyright">© 2010 - {{ new Date().getFullYear() }}</p>
 		</div>
