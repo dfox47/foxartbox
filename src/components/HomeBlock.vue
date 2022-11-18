@@ -13,16 +13,7 @@
 
 <script>
 export default {
-	created () {
-		window.addEventListener('scroll', this.handleScroll);
-	},
-	unmounted () {
-		window.removeEventListener('scroll', this.handleScroll);
-	},
 	methods: {
-		handleScroll () {
-			// Any code to be executed when the window is scrolled
-		},
 		scroll(id) {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
