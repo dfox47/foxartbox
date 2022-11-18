@@ -19,13 +19,14 @@ h1 {
 
 h2 {
 	animation: letterSpacing 7s ease infinite;
-	color: $c_title;
+	color: #000;
 	display: block;
 	font-size: 110px;
 	font-weight: 700;
 	letter-spacing: .1em;
 	line-height: 1.2;
 	margin: 0;
+	opacity: .8;
 	padding: .3em 0;
 	position: relative;
 	text-align: center;
