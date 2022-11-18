@@ -3,11 +3,11 @@
 		<div class="wrap">
 			<a class="gotop js-scroll-to" href="/#top"></a>
 
-			<div class="social_links">
-				<a class="social_links__item" href="//web.facebook.com/foxartbox/" target="_blank" title="Facebook"><img src="../assets/i/icons/fb.svg" alt="Facebook"></a>
-
-				<a class="social_links__item" href="//www.instagram.com/foxartbox/" target="_blank" title="Instagram"><img src="../assets/i/icons/inst.svg" alt="Instagram"></a>
-			</div>
+			<ul class="social_links">
+				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
+					<a class="social_links__link" :href="footerLink.href" target="_blank" title="{{ footerLink.title }}"><img :src="footerLink.icon" alt="" /></a>
+				</li>
+			</ul>
 
 			<p class="footer_slogan">stay true</p>
 
@@ -15,3 +15,16 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			footerLinks: [
+				{href: '//web.facebook.com/foxartbox/', icon: require('../assets/i/icons/fb.svg'), title: 'Facebook'},
+				{href: '//www.instagram.com/foxartbox/', icon: require('../assets/i/icons/inst.svg'), title: 'Instagram'}
+			]
+		}
+	}
+}
+</script>

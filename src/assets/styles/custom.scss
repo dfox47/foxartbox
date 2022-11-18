@@ -251,6 +251,10 @@ html {
 		display: inline-block;
 		margin: 0 20px;
 		transition: $transition;
+	}
+
+	&__link {
+		text-decoration: none;
 
 		&:hover {
 			opacity: .7;
