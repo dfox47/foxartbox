@@ -41,14 +41,10 @@
 		animation: blur 5s infinite;
 		font-size: 98px;
 		font-weight: 700;
+		letter-spacing: .05em;
 		margin: 0 0 .25em;
 		position: relative;
 		text-transform: uppercase;
-
-		span {
-			display: inline-block;
-			margin: 0 .4em;
-		}
 
 		@media #{$tablet} {
 			font-size: 55px;
