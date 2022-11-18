@@ -16,7 +16,7 @@
 						<span>foxartbox</span>
 					</a>
 
-					<div class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="toggleMobileMenu"><span></span></div>
+					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
 			</div>
 		</div>
