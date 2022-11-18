@@ -40,6 +40,9 @@ export default {
 		}
 	},
 	methods: {
+		handleScroll () {
+			// Any code to be executed when the window is scrolled
+		},
 		scroll(id) {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
@@ -47,9 +50,6 @@ export default {
 		},
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
-		},
-		handleScroll () {
-			// Any code to be executed when the window is scrolled
 		}
 	},
 	unmounted () {
