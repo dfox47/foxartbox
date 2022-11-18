@@ -45,6 +45,11 @@
 		position: relative;
 		text-transform: uppercase;
 
+		span {
+			display: inline-block;
+			margin: 0 .4em;
+		}
+
 		@media #{$tablet} {
 			font-size: 55px;
 		}

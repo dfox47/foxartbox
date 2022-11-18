@@ -5,7 +5,7 @@
 		<div class="home_block__content js-home-block-content">
 			<img class="logo" src="../assets/i/icons/logo_2.svg" alt="" />
 
-			<div class="home_block__desc js-home-block-desc">Foxartbox</div>
+			<div class="home_block__desc js-home-block-desc">Fox<span>art</span>box</div>
 			<div class="home_block__slogan js-random-slogan">Let's make it fast</div>
 			<a class="btn btn__link js-scroll-to" @click="scroll('projects')">Projects</a>
 		</div>
