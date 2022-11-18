@@ -2,21 +2,21 @@
 	<div>
 		<div id="top"></div>
 
-		<div class="topmenu" :class="{'active' : showMobileMenu}">
+		<div class="topmenu" :class="{'active' : toggleMobileMenu}">
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="(menuItem, index) in menuItems" :key="menuItem.id">
-						<a :class="{'active': index === 0}" class="js-topmenu-mobile-close js-topmenu-link" @click="scroll(menuItem.id)" href="javascript:void(0);">{{ menuItem.title }}</a>
+						<a :class="{'active': index === 0}" class="js-topmenu-mobile-close js-topmenu-link" @click="scroll(menuItem.id), toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo js-topmenu-mobile-close" @click="scroll('top')">
+					<a class="topmenu_mobile__logo js-topmenu-mobile-close" @click="scroll('top'), toggleMobileMenu()">
 						<img src="../assets/i/icons/logo_2.svg" alt="" />
 						<span>foxartbox</span>
 					</a>
 
-					<div :class="{'active': isActive}" class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="showMobileMenu"><span></span></div>
+					<div class="topmenu_mobile__toggle js-topmenu-mobile-toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
 			</div>
 		</div>
@@ -35,10 +35,8 @@ export default {
 				{id: 'top', title: 'Home'},
 				{id: 'projects', title: 'Projects'},
 				{id: 'process', title: 'Process'},
-				// {id: 'crew', title: 'Crew'},
 				{id: 'contacts', title: 'Contacts'}
-			],
-			isActive: false
+			]
 		}
 	},
 	methods: {
@@ -47,7 +45,7 @@ export default {
 				behavior: 'smooth'
 			})
 		},
-		showMobileMenu() {
+		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		},
 		handleScroll () {
