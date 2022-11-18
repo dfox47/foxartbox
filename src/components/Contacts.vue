@@ -18,7 +18,7 @@ export default {
 		return {
 			contactsLinks: [
 				{href: 'mailto:info@foxartbox.com', icon: require('../assets/i/icons/email.svg'), title: 'info@foxartbox.com'},
-				{href: 'javascript:void(0);', icon: require('../assets/i/icons/skype.svg'), title: 'foxartbox'},
+				// {href: 'javascript:void(0);', icon: require('../assets/i/icons/skype.svg'), title: 'foxartbox'},
 				{href: '//t.me/dfoxweb', icon: require('../assets/i/icons/telegram.svg'), title: '@dfoxweb'}
 			]
 		}
