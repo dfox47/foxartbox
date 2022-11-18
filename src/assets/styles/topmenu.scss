@@ -29,17 +29,7 @@
 			}
 		}
 
-		.topmenu_mobile__logo,
-		.topmenu_mobile__logo:visited {
-			color: #000;
-
-			img {
-				filter: invert(100%);
-			}
-		}
-
-		.topmenu_mobile__toggle,
-		.topmenu_mobile__toggle:visited {
+		.topmenu_mobile__toggle {
 			&::after,
 			&::before,
 			> span {
@@ -125,8 +115,7 @@
 	justify-content: center;
 	width: 100%;
 
-	a,
-	a:visited {
+	a {
 		color: #000;
 		display: block;
 		opacity: .7;
@@ -186,19 +175,19 @@
 			}
 		}
 
-		.topmenu_mobile__logo,
-		.topmenu_mobile__logo:visited {
-			color: #000;
+		.topmenu_mobile {
+			&__logo {
+				color: #000;
 
-			img {
-				filter: invert(100%);
+				img {
+					filter: invert(100%);
+				}
 			}
-		}
 
-		.topmenu_mobile__toggle,
-		.topmenu_mobile__toggle:visited {
-			> span {
-				background-color: #000;
+			&__toggle {
+				> span {
+					background-color: #000;
+				}
 			}
 		}
 
@@ -207,10 +196,10 @@
 				ul {
 					display: block;
 				}
-			}
 
-			.topmenu__bg {
-				display: block;
+				&__bg {
+					display: block;
+				}
 			}
 
 			.topmenu_mobile__toggle {
@@ -231,13 +220,12 @@
 					}
 				}
 			}
-
 		}
 	}
 
 	&__logo {
 		align-items: center;
-		color: #fff;
+		color: #000;
 		display: flex;
 		padding: 4px 0;
 		text-decoration: none;
@@ -245,6 +233,7 @@
 
 		img {
 			height: 40px;
+			filter: invert(100%);
 			margin: 0 10px 0 0;
 			width: 40px;
 		}
@@ -265,7 +254,7 @@
 		&::after,
 		&::before,
 		> span {
-			background-color: #fff;
+			background-color: #000;
 			content: "";
 			display: block;
 			height: 2px;
