@@ -32,10 +32,10 @@ export default {
 	data() {
 		return {
 			menuItems: [
-				{id: 'top', title: 'Home'},
-				{id: 'projects', title: 'Projects'},
-				{id: 'process', title: 'Process'},
-				{id: 'contacts', title: 'Contacts'}
+				{id: 'top',         title: 'Home'},
+				{id: 'projects',    title: 'Projects'},
+				{id: 'process',     title: 'Process'},
+				{id: 'contacts',    title: 'Contacts'}
 			],
 			activeId : 0
 		}
