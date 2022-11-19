@@ -6,7 +6,7 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
-						<a :class="{ active: (menuItem.id === activeId) }" class="js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.id === activeId)}" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
@@ -31,13 +31,13 @@ export default {
 	},
 	data() {
 		return {
+			activeId : 0,
 			menuItems: [
 				{id: 'top',         title: 'Home'},
 				{id: 'projects',    title: 'Projects'},
 				{id: 'process',     title: 'Process'},
 				{id: 'contacts',    title: 'Contacts'}
 			],
-			activeId : 0
 		}
 	},
 	methods: {
@@ -45,6 +45,7 @@ export default {
 			// Any code to be executed when the window is scrolled
 		},
 		scroll(id) {
+			// scroll to element
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
 			})
