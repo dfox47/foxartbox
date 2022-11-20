@@ -31,7 +31,7 @@ export default {
 	},
 	data() {
 		return {
-			activeId : 0,
+			activeId : 'top',
 			menuItems: [
 				{id: 'top',         title: 'Home'},
 				{id: 'projects',    title: 'Projects'},
