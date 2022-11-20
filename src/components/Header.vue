@@ -50,10 +50,9 @@ export default {
 				itemsProcessed++
 
 				// change block ID if it's in viewport
-				if (window.scrollY > e.offsetTop) {
-					blockId = e.getAttribute('id')
-
-					this.activeId = blockId
+				if (window.scrollY > e.offsetTop - 200) {
+					blockId         = e.getAttribute('id')
+					this.activeId   = blockId
 				}
 
 				// get to end of array | change url | change active menu item
@@ -77,12 +76,6 @@ export default {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
 			})
-
-			// change url to current menu item
-			history.pushState(null, null, '/#' + id)
-
-			// make selected menu item active
-			this.activeId = id
 		},
 		// show/hide mobile menu
 		toggleMobileMenu() {
