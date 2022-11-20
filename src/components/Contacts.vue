@@ -1,5 +1,5 @@
 <template>
-	<div id="contacts" class="contacts">
+	<div id="contacts" class="contacts js-block-scroll">
 		<h2>Contacts</h2>
 
 		<div class="contacts__content">

@@ -6,7 +6,7 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
-						<a :class="{active: (menuItem.id === activeId)}" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.id === activeId)}" class="js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
@@ -41,8 +41,24 @@ export default {
 		}
 	},
 	methods: {
+		// On scroll
 		handleScroll () {
-			// Any code to be executed when the window is scrolled
+			document.querySelectorAll('.js-block-scroll').forEach((e) => {
+				const blockId = e.getAttribute('id')
+
+				if (window.scrollY > e.offsetTop) {
+					this.activeId = blockId
+
+					// change url to current menu item
+					history.pushState(null, null, '/#' + blockId)
+
+					document.querySelectorAll('.js-topmenu-link').forEach((link) => {
+						link.classList.remove('active')
+					})
+
+					document.querySelector('[data-link="' + blockId + '"]').classList.add('active')
+				}
+			})
 		},
 		scroll(id) {
 			// scroll to element

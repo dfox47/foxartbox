@@ -1,5 +1,5 @@
 <template>
-	<div id="projects">
+	<div id="projects" class="js-block-scroll">
 		<h2>Projects</h2>
 
 		<!-- chocolana -->
