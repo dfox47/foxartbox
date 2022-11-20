@@ -1,17 +1,11 @@
-
 // npm install -g gulp-cli
-// npm install gulp gulp-csso gulp-concat vinyl-ftp gulp-util gulp-rename gulp-sass gulp-uglify --save-dev
+// npm install gulp vinyl-ftp gulp-util --save-dev
 
 const fs              = require('fs')
-// const cssMinify       = require('gulp-csso')
-// const concat          = require('gulp-concat')
 const config          = JSON.parse(fs.readFileSync('../config.json'))
 const ftp             = require('vinyl-ftp')
 const gulp            = require('gulp')
 const gutil           = require('gulp-util')
-// const rename          = require('gulp-rename')
-// const sass            = require('gulp-sass')
-// const uglify          = require('gulp-uglify')
 
 // FTP config
 const host            = config.host
