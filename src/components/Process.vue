@@ -1,6 +1,6 @@
 <template>
-	<div class="entry-content">
-		<h2 class="process_title" id="process">Process</h2>
+	<div>
+		<h2 class="process_title js-block-scroll" id="process">Process</h2>
 
 		<div class="wp-block-group">
 			<div class="wp-block-group__inner-container">
