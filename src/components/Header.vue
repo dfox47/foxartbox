@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div id="top"></div>
+		<div id="top" class="js-block-scroll"></div>
 
-		<div class="topmenu">
+		<div class="topmenu js-topmenu">
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
@@ -43,23 +43,35 @@ export default {
 	methods: {
 		// On scroll
 		handleScroll () {
-			document.querySelectorAll('.js-block-scroll').forEach((e) => {
-				const blockId = e.getAttribute('id')
+			let blockId         = 'top'
+			let itemsProcessed  = 0
 
+			document.querySelectorAll('.js-block-scroll').forEach((e, index, array) => {
+				itemsProcessed++
+
+				// change block ID if it's in viewport
 				if (window.scrollY > e.offsetTop) {
-					this.activeId = blockId
+					blockId = e.getAttribute('id')
 
+					this.activeId = blockId
+				}
+
+				// get to end of array | change url | change active menu item
+				if (itemsProcessed === array.length) {
 					// change url to current menu item
 					history.pushState(null, null, '/#' + blockId)
 
+					// remove active class from all menu items
 					document.querySelectorAll('.js-topmenu-link').forEach((link) => {
 						link.classList.remove('active')
 					})
 
-					document.querySelector('[data-link="' + blockId + '"]').classList.add('active')
+					// add active class to scrolled block
+					document.querySelector('.js-topmenu').querySelector('[data-link="' + blockId + '"]').classList.add('active')
 				}
 			})
 		},
+		// scroll to the block with ID
 		scroll(id) {
 			// scroll to element
 			document.getElementById(id).scrollIntoView({
@@ -72,6 +84,7 @@ export default {
 			// make selected menu item active
 			this.activeId = id
 		},
+		// show/hide mobile menu
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		}
