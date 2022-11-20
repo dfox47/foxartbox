@@ -1,5 +1,5 @@
 <template>
-	<div class="home_block js-home-block" @scroll="onScroll">
+	<div class="home_block js-home-block">
 		<canvas id="projector" class="home_block__bg" width="1266" height="941"></canvas>
 
 		<div class="home_block__content js-home-block-content">
