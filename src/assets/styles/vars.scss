@@ -5,7 +5,15 @@
 
 // colors
 $c_border:                  #444;
-$c_gotop:                   #f4f4f4;
+$c_gradient_1:              #85dcfe;
+$c_gradient_2:              #5ccefb;
+$c_gradient_3:              #c9effe;
+$c_gradient_4:              #99e1fe;
+$c_gradient_5:              #feb5b8;
+$c_gradient_6:              #fe8389;
+$c_gradient_7:              #fed7d9;
+$c_gradient_8:              #feb9bd;
+$c_gradient_9:              #dba0de;
 $c_gradient_10:             #d59bd8;
 $c_gradient_11:             #e6c2e8;
 $c_gradient_12:             #e6c2e8;
@@ -16,16 +24,7 @@ $c_gradient_16:             #e93555;
 $c_gradient_17:             #a7d7d7;
 $c_gradient_18:             #8fbfbf;
 $c_gradient_19:             #c0f0f0;
-$c_gradient_1:              #85dcfe;
 $c_gradient_20:             #addddd;
-$c_gradient_2:              #5ccefb;
-$c_gradient_3:              #c9effe;
-$c_gradient_4:              #99e1fe;
-$c_gradient_5:              #feb5b8;
-$c_gradient_6:              #fe8389;
-$c_gradient_7:              #fed7d9;
-$c_gradient_8:              #feb9bd;
-$c_gradient_9:              #dba0de;
 $c_gradient_footer_1:       #ee0979;
 $c_gradient_footer_2:       #ff6a00;
 $c_gradient_home_end:       #730043;
@@ -51,4 +50,4 @@ $mobile_s:              'only screen and (max-width: 500px)';
 $tablet:                'only screen and (max-width: 1023px)';
 
 // fonts
-$font_main:             'Open Sans',        Arial, Helvetica, sans-serif;
+$font_main:             'Open Sans', Arial, Helvetica, sans-serif;
