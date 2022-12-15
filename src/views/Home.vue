@@ -7,7 +7,6 @@
 
 <script>
 import Contacts from '@/components/Contacts'
-// import Crew from '@/components/Crew'
 import HomeBlock from '@/components/HomeBlock'
 import Process from '@/components/Process'
 import Projects from '@/components/Projects'
