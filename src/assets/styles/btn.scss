@@ -1,5 +1,4 @@
-.btn,
-.btn:visited {
+.btn {
 	border-radius: 30px;
 	cursor: pointer;
 	display: inline-block;
@@ -13,123 +12,117 @@
 	&:hover {
 		text-decoration: none;
 	}
-}
 
-.btn__close,
-.btn__close:visited {
-	border-radius: 0;
-	border: 1px solid rgba(#000, .99);
-	height: 40px;
-	padding: 0;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	transition: $transition;
-	width: 40px;
-	z-index: 7;
-
-	> span {
-		background-color: #000;
-		display: block;
-		height: 2px;
-		left: 7px;
-		position: relative;
-		width: 25px;
-
-		&:first-child {
-			top: 18px;
-			transform: rotate(45deg);
-		}
-
-		&:last-child {
-			top: 16px;
-			transform: rotate(-45deg);
-		}
-	}
-
-	&:hover {
-		background-color: #000;
+	&__close {
+		border-radius: 0;
+		border: 1px solid rgba(#000, .99);
+		height: 40px;
+		padding: 0;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		transition: $transition;
+		width: 40px;
+		z-index: 7;
 
 		> span {
-			background-color: #fff;
+			background-color: #000;
+			display: block;
+			height: 2px;
+			left: 7px;
+			position: relative;
+			width: 25px;
+
+			&:first-child {
+				top: 18px;
+				transform: rotate(45deg);
+			}
+
+			&:last-child {
+				top: 16px;
+				transform: rotate(-45deg);
+			}
+		}
+
+		&:hover {
+			background-color: #000;
+
+			> span {
+				background-color: #fff;
+			}
 		}
 	}
-}
 
-.btn__link,
-.btn__link:visited {
-	border: 1px solid rgba(#fff, .99);
-	color: #fff;
-	font-size: 15px;
-	letter-spacing: .26em;
-
-	&:hover {
-		background-color: #fff;
-		color: #000;
-	}
-}
-
-.btn__main,
-.btn__main:visited {
-	border-radius: 0;
-	color: #000;
-	font-size: 15px;
-	letter-spacing: .26em;
-	padding: 30px 0;
-	z-index: 0;
-
-	&:hover {
+	&__link {
+		border: 1px solid rgba(#fff, .99);
 		color: #fff;
+		font-size: 15px;
+		letter-spacing: .26em;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+
+	&__main {
+		border-radius: 0;
+		color: #000;
+		font-size: 15px;
+		letter-spacing: .26em;
+		padding: 30px 0;
+		z-index: 0;
+
+		&:hover {
+			color: #fff;
+
+			span {
+				&::after,
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+
+		&:focus {
+			background-color: #000;
+			color: #fff;
+		}
 
 		span {
+			border: 1px solid rgba(#000, .99);
+			display: inline-block;
+			padding: 16px 42px;
+			position: relative;
+
+			&::after,
+			&::before {
+				content: "";
+				opacity: 0;
+				position: absolute;
+				z-index: -1;
+			}
+
 			&::after {
-				opacity: 1;
+				background-color: #000;
+				height: 100%;
+				left: 0;
+				top: 0;
+				transition: $transition;
+				width: 100%;
 			}
 
 			&::before {
-				opacity: 1;
+				animation: glowing 20s linear infinite;
+				background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+				background-size: 400%;
+				filter: blur(5px);
+				height: calc(100% + 4px);
+				left: -2px;
+				top: -2px;
+				transition: $transition;
+				width: calc(100% + 4px);
 			}
-		}
-	}
-
-	&:focus {
-		background-color: #000;
-		color: #fff;
-	}
-
-	span {
-		border: 1px solid rgba(#000, .99);
-		display: inline-block;
-		padding: 16px 42px;
-		position: relative;
-
-		&::after {
-			background-color: #000;
-			content: "";
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			transition: $transition;
-			width: 100%;
-			z-index: -1;
-		}
-
-		&::before {
-			animation: glowing 20s linear infinite;
-			background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-			background-size: 400%;
-			content: '';
-			filter: blur(5px);
-			height: calc(100% + 4px);
-			left: -2px;
-			opacity: 0;
-			position: absolute;
-			top: -2px;
-			transition: $transition;
-			width: calc(100% + 4px);
-			z-index: -1;
 		}
 	}
 }
