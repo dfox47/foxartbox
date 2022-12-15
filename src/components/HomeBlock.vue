@@ -23,6 +23,7 @@ export default {
 					"Design, Programming, SEO",
 					"Fast websites",
 					"Mobile friendly",
+					"Modern technologies",
 					"Smart solutions",
 					"W3C standards",
 					"Websites support",
