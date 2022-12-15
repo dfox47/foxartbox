@@ -19,10 +19,13 @@ export default {
 
 			const randomSlogan = () => {
 				const slogans = [
+					"Checked with Google pagespeed",
+					"Design, Programming, SEO",
 					"Fast websites",
-					"More than you expect",
-					"We keep it simple",
-					"Let's make it fast"
+					"Mobile friendly",
+					"Smart solutions",
+					"W3C standards",
+					"Websites support",
 				]
 
 				e.innerHTML = slogans[Math.floor(Math.random() * slogans.length)]
