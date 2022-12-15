@@ -9,6 +9,8 @@
 				</li>
 			</ul>
 
+			<p class="footer__phone"><a href="tel:+359882744430">+359 (88) 27-444-30</a></p>
+
 			<p class="footer_slogan">stay true</p>
 
 			<p class="footer_copyright">© 2010 - {{ new Date().getFullYear() }}</p>
@@ -21,8 +23,8 @@ export default {
 	data() {
 		return {
 			footerLinks: [
-				{href: '//web.facebook.com/foxartbox/', icon: require('../assets/i/icons/fb.svg'), title: 'Facebook'},
-				{href: '//www.instagram.com/foxartbox/', icon: require('../assets/i/icons/inst.svg'), title: 'Instagram'}
+				{href: '//web.facebook.com/foxartbox/',     icon: require('../assets/i/icons/fb.svg'),      title: 'Facebook'},
+				{href: '//www.instagram.com/foxartbox/',    icon: require('../assets/i/icons/inst.svg'),    title: 'Instagram'}
 			]
 		}
 	},
