@@ -10,6 +10,10 @@
 					<p class="process__desc">{{ processItem.desc }}</p>
 				</li>
 			</ol>
+
+			<p class="text-center">
+				<a class="btn btn__main" href="mailto:info@foxartbox.com"><span>Contact us</span></a>
+			</p>
 		</div>
 	</div>
 </template>
