@@ -26,7 +26,7 @@ export default {
 			processItems: [
 				{title: 'Connect',      desc: "The project begins with a discussion of your needs and ideas."},
 				{title: 'Development',  desc: "Design, programming, SEO - that's our part of work"},
-				{title: 'Support',      desc: "You can manage your project independently, but if you need help we will happy to provide a support."}
+				{title: 'Support',      desc: "You can manage your project independently. And if you need help we will be happy to provide a support."}
 			],
 		}
 	},
