@@ -22,6 +22,8 @@
 
 			<a class="topmenu_phone" href="tel:+359882744430" target="_blank">+359 (88) 27-444-30</a>
 		</div>
+
+		<div class="topmenu_fade" @click="toggleMobileMenu"></div>
 	</div>
 </template>
 

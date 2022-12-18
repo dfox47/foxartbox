@@ -56,6 +56,18 @@
 	}
 }
 
+.topmenu_fade {
+	background-color: #000;
+	display: none;
+	height: 100%;
+	left: 0;
+	opacity: .7;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 7;
+}
+
 .topmenu_list {
 	align-items: center;
 	display: flex;
@@ -102,6 +114,7 @@
 
 	@media #{$mobile} {
 		background-color: #fff;
+		box-shadow: 0 4px 7px #000;
 		display: none;
 		left: 0;
 		position: absolute;
@@ -197,6 +210,10 @@
 			&__bg {
 				display: block;
 			}
+		}
+
+		.topmenu_fade {
+			display: block;
 		}
 
 		.topmenu_mobile {
