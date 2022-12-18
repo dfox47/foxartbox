@@ -19,12 +19,8 @@ export default {
 
 			const randomSlogan = () => {
 				const slogans = [
-					"Checked with Google pagespeed",
-					"Design, Programming, SEO",
 					"Fast websites",
 					"Mobile friendly",
-					"Modern technologies",
-					"Smart solutions",
 					"W3C standards",
 					"Websites support",
 				]
