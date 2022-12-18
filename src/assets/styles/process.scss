@@ -5,6 +5,7 @@
 	list-style: none;
 	grid-gap: 30px;
 	justify-content: center;
+	padding: 30px 0 0;
 	text-align: center;
 
 	h3 {
@@ -17,18 +18,19 @@
 		counter-increment: process_counter;
 		max-width: 300px;
 		margin: 0 auto;
-		padding: 90px 0 0;
 		position: relative;
 
 		&::before {
 			content: '' counter(process_counter);
 			font-size: 80px;
 			font-weight: 700;
-			left: 0;
 			line-height: 1;
-			position: absolute;
-			top: 0;
+			position: relative;
 			width: 100%;
+
+			@media #{$tablet} {
+				font-size: 60px;
+			}
 		}
 	}
 
