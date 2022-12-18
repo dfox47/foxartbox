@@ -6,7 +6,7 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
-						<a :class="{active: (menuItem.id === activeId)}" class="js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
