@@ -168,17 +168,17 @@
 			left: 8px;
 			margin: 0 0 4px;
 			position: absolute;
-			top: 16px;
+			top: 19px;
 			transition: $transition;
 			width: 22px;
 		}
 
 		&::after {
-			top: 10px;
+			top: 13px;
 		}
 
 		&::before {
-			top: 22px;
+			top: 25px;
 		}
 	}
 
@@ -188,10 +188,6 @@
 }
 
 .topmenu_mobile_active {
-	.topmenu {
-
-	}
-
 	@media #{$mobile} {
 		.topmenu {
 			ul {
@@ -206,12 +202,12 @@
 		.topmenu_mobile {
 			&__toggle {
 				&::after {
-					top: 16px;
+					top: 18px;
 					transform: rotate(-45deg);
 				}
 
 				&::before {
-					top: 16px;
+					top: 18px;
 					transform: rotate(45deg);
 				}
 
@@ -236,5 +232,13 @@
 
 	&:hover {
 		opacity: 1;
+	}
+
+	@media #{$mobile} {
+		right: 90px;
+	}
+
+	@media #{$mobile_s} {
+		display: none;
 	}
 }
