@@ -1,10 +1,11 @@
 .process {
 	counter-reset: process_counter;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	list-style: none;
+	font-size: 18px;
 	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: center;
+	list-style: none;
 	padding: 30px 0 0;
 	text-align: center;
 
