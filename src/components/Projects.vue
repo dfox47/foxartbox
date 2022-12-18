@@ -21,7 +21,7 @@
 					</div>
 
 					<div class="text-center">
-						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-2-more" data-show-id="2"><span class="js-btn-3d">Show more</span></a>
+<!--						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-2-more" data-show-id="2"><span class="js-btn-3d">Show more</span></a>-->
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 					</div>
 
 					<div class="text-center">
-						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-3-more" data-show-id="3"><span class="js-btn-3d">Show more</span></a>
+<!--						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-3-more" data-show-id="3"><span class="js-btn-3d">Show more</span></a>-->
 					</div>
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 					</div>
 
 					<div class="text-center">
-						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-4-more" data-show-id="4"><span class="js-btn-3d">Show more</span></a>
+<!--						<a class="btn btn__main js-scroll-to js-show-hidden js-btn-3d-wrap" href="#project-4-more" data-show-id="4"><span class="js-btn-3d">Show more</span></a>-->
 					</div>
 				</div>
 			</div>
