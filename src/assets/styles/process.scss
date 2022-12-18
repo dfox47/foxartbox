@@ -16,11 +16,11 @@
 	&__item {
 		counter-increment: process_counter;
 		max-width: 300px;
+		margin: 0 auto;
 		padding: 90px 0 0;
 		position: relative;
 
 		&::before {
-			color: $c_gradient_footer_1;
 			content: '' counter(process_counter);
 			font-size: 80px;
 			font-weight: 700;
@@ -30,5 +30,9 @@
 			top: 0;
 			width: 100%;
 		}
+	}
+
+	@media #{$tablet} {
+		grid-template-columns: 1fr;
 	}
 }
