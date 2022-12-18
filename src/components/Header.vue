@@ -19,6 +19,8 @@
 					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
 			</div>
+
+			<a class="topmenu_phone" href="tel:+359882744430" target="_blank">+359 (88) 27-444-30</a>
 		</div>
 	</div>
 </template>
