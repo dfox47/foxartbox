@@ -22,7 +22,7 @@ export default {
 					"Fast websites",
 					"Mobile friendly",
 					"W3C standards",
-					"Websites support",
+					"Websites support"
 				]
 
 				e.innerHTML = slogans[Math.floor(Math.random() * slogans.length)]
