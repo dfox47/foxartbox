@@ -106,6 +106,21 @@
 			width: 100%;
 			z-index: -1;
 		}
+
+		@media #{$mobile} {
+			padding: 20px 30px;
+			text-align: center;
+
+			&::after {
+				display: none;
+			}
+
+			&:hover,
+			&.active {
+				background-color: #000;
+				color: #fff;
+			}
+		}
 	}
 
 	&__item {
@@ -120,21 +135,6 @@
 		position: absolute;
 		top: 100%;
 		width: 100%;
-
-		a {
-			padding: 20px 30px;
-			text-align: center;
-
-			&::after {
-				display: none;
-			}
-
-			&:hover,
-			&.active {
-				background-color: #000;
-				color: #fff;
-			}
-		}
 	}
 }
 
