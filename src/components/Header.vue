@@ -4,17 +4,9 @@
 
 		<div class="topmenu js-topmenu">
 			<ul class="theme_change">
-				<li class="theme_change__item">
-					<a class="theme_change__link theme_change__link--type-1" @click="themeChange('')" href="javascript:void(0);" title="Standart"></a>
+				<li class="theme_change__item" v-for="themeItem in themeItems" :key="themeItem.name">
+					<a class="theme_change__link" :class="'theme_change__link--type-' + themeItem.class" @click="themeChange(themeItem.name)" href="javascript:void(0);" :title="themeItem.title"></a>
 				</li>
-
-				<li class="theme_change__item">
-					<a class="theme_change__link theme_change__link--type-2" @click="themeChange('theme_black_and_white')" href="javascript:void(0);" title="Black & white theme"></a>
-				</li>
-
-<!--				<li class="theme_change__item">-->
-<!--					<a class="theme_change__link theme_change__link&#45;&#45;type-3" @click="themeChange('theme_cyperpunk')" href="javascript:void(0);" title="Cyberpunk theme"></a>-->
-<!--				</li>-->
 			</ul>
 
 			<div class="wrap">
@@ -50,6 +42,11 @@ export default {
 	data() {
 		return {
 			activeId : 'top',
+			themeItems: [
+				{name: 'theme_standart',        title: 'Default theme',         class: '1'},
+				{name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
+				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'}
+			],
 			menuItems: [
 				{id: 'top',         title: 'Home'},
 				{id: 'projects',    title: 'Projects'},
