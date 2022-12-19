@@ -78,6 +78,56 @@ html {
 
 
 // help classes [START]
+[data-theme="theme_black_and_white"] {
+	.btn {
+		&__main {
+			span {
+				&::before {
+					background: #000;
+				}
+			}
+		}
+	}
+
+	.contacts_links {
+		&__img {
+			filter: grayscale(100%);
+		}
+	}
+
+	.home_block {
+		background: linear-gradient(-45deg, #000, #fff, #000);
+		background-size: 400% 400%;
+	}
+
+	.footer {
+		background: linear-gradient(-45deg, #000, #fff, #000, #fff);
+		background-size: 400% 400%;
+	}
+
+	.gotop {
+		border: 2px solid #000;
+	}
+
+	.project {
+		&__img {
+			filter: grayscale(100%);
+		}
+	}
+
+	.project_bg_type_2,
+	.project_bg_type_3,
+	.project_bg_type_4 {
+		&::after {
+			background: linear-gradient(to right, #fff, #000);
+		}
+
+		&::before {
+			background: linear-gradient(to right, #000, #fff);
+		}
+	}
+}
+
 .checkbox {
 	cursor: pointer;
 	display: inline-block;
@@ -261,6 +311,47 @@ html {
 
 		&:hover {
 			opacity: .7;
+		}
+	}
+}
+
+.theme_change {
+	display: flex;
+	font-size: 12px;
+	left: 8px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	&__item {
+		margin: 0 8px 0 0;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		background-color: #000;
+		border-radius: 50%;
+		display: block;
+		height: 24px;
+		width: 24px;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&--type-1 {
+			background: $c_gradient_footer_1;
+		}
+
+		&--type-2 {
+			background: linear-gradient(-45deg, #000, #fff);
+		}
+
+		&--type-3 {
+			background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_footer_1);
 		}
 	}
 }

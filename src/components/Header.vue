@@ -1,8 +1,22 @@
 <template>
-	<div>
+	<div class="header">
 		<div id="top" class="js-block-scroll"></div>
 
 		<div class="topmenu js-topmenu">
+			<ul class="theme_change">
+				<li class="theme_change__item">
+					<a class="theme_change__link theme_change__link--type-1" @click="themeChange('')" href="javascript:void(0);" title="Standart"></a>
+				</li>
+
+				<li class="theme_change__item">
+					<a class="theme_change__link theme_change__link--type-2" @click="themeChange('theme_black_and_white')" href="javascript:void(0);" title="Black & white theme"></a>
+				</li>
+
+<!--				<li class="theme_change__item">-->
+<!--					<a class="theme_change__link theme_change__link&#45;&#45;type-3" @click="themeChange('theme_cyperpunk')" href="javascript:void(0);" title="Cyberpunk theme"></a>-->
+<!--				</li>-->
+			</ul>
+
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
@@ -74,6 +88,14 @@ export default {
 				}
 			})
 		},
+
+		themeChange(themeName) {
+			console.log('themeName', themeName)
+
+			// document.querySelector('html').classList.toggle('topmenu_mobile_active')
+			document.querySelector('html').dataset.theme = themeName
+		},
+
 		// scroll to the block with ID
 		scroll(id) {
 			// scroll to element
@@ -81,6 +103,7 @@ export default {
 				behavior: 'smooth'
 			})
 		},
+
 		// show/hide mobile menu
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
