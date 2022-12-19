@@ -22,6 +22,7 @@ export default {
 					"Fast websites",
 					"Mobile friendly",
 					"W3C standards",
+					"Satisfied client. Always",
 					"Websites support"
 				]
 
