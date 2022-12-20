@@ -203,13 +203,13 @@
 .topmenu_mobile_active {
 	@media #{$mobile} {
 		.topmenu {
-			ul {
-				display: block;
-			}
-
 			&__bg {
 				display: block;
 			}
+		}
+
+		.topmenu_list {
+			display: block;
 		}
 
 		.topmenu_fade {

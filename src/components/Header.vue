@@ -17,10 +17,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()">
-						<img src="../assets/i/icons/logo_2.svg" alt="" />
-						<span>foxartbox</span>
-					</a>
+					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_2.svg" alt="" /></a>
 
 					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>

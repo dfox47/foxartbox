@@ -129,6 +129,10 @@ html {
 }
 
 [data-theme="theme_cyperpunk"] {
+	h2 {
+		color: $c_gradient_footer_1;
+	}
+
 	.btn {
 		&__link {
 			background-color: $c_gradient_footer_1;
@@ -204,7 +208,7 @@ html {
 	.process {
 		&__item {
 			&::before {
-				color: $c_gradient_footer_1;
+				color: $c_gradient_home_end;
 			}
 		}
 	}
@@ -220,6 +224,16 @@ html {
 
 			&::after {
 				background-color: $c_gradient_home_start;
+			}
+		}
+	}
+
+	.topmenu_mobile {
+		&__toggle {
+			&::after,
+			&::before,
+			> span {
+				background-color: #fff;
 			}
 		}
 	}
@@ -455,6 +469,15 @@ html {
 		&--type-3 {
 			background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_footer_1);
 		}
+	}
+
+	@media #{$mobile} {
+		left: 90px;
+	}
+
+	@media #{$mobile_s} {
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 }
 
