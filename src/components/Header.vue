@@ -38,6 +38,9 @@ export default {
 	name: 'Header',
 	created () {
 		window.addEventListener('scroll', this.handleScroll)
+
+		// check if there is theme at localStorage
+		this.themeFromLocalStorage()
 	},
 	data() {
 		return {
@@ -56,7 +59,7 @@ export default {
 		}
 	},
 	methods: {
-		// On scroll
+		// on scroll
 		handleScroll () {
 			let blockId         = 'top'
 			let itemsProcessed  = 0
@@ -86,11 +89,16 @@ export default {
 			})
 		},
 
+		// theme change
 		themeChange(themeName) {
-			console.log('themeName', themeName)
-
-			// document.querySelector('html').classList.toggle('topmenu_mobile_active')
 			document.querySelector('html').dataset.theme = themeName
+
+			localStorage.setItem('theme', themeName)
+		},
+
+		// set theme from localStorage
+		themeFromLocalStorage: function() {
+			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
 		},
 
 		// scroll to the block with ID
