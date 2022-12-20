@@ -89,16 +89,16 @@ export default {
 			})
 		},
 
+		// set theme from localStorage
+		themeFromLocalStorage() {
+			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
+		},
+
 		// theme change
 		themeChange(themeName) {
 			document.querySelector('html').dataset.theme = themeName
 
 			localStorage.setItem('theme', themeName)
-		},
-
-		// set theme from localStorage
-		themeFromLocalStorage: function() {
-			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
 		},
 
 		// scroll to the block with ID
