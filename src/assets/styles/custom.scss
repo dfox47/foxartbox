@@ -128,6 +128,107 @@ html {
 	}
 }
 
+[data-theme="theme_cyperpunk"] {
+	.btn {
+		&__link {
+			background-color: $c_gradient_footer_1;
+			border: 1px solid rgba(#fff, .99);
+			color: #fff;
+			font-size: 15px;
+			letter-spacing: .26em;
+
+			&:hover {
+				background-color: $c_gradient_home_start;
+			}
+		}
+
+		&__main {
+			border-radius: 0;
+			color: #fff;
+			font-size: 15px;
+			padding: 30px 0;
+			z-index: 0;
+
+			&:hover {
+				color: #fff;
+
+				span {
+					&::after {
+						background-color: $c_gradient_home_start;
+						opacity: 1;
+					}
+				}
+			}
+
+			span {
+				border: 1px solid rgba($c_gradient_footer_1, .99);
+				display: inline-block;
+				padding: 16px 42px;
+				position: relative;
+
+				&::after {
+					background-color: $c_gradient_footer_1;
+					height: 100%;
+					left: 0;
+					top: 0;
+					transition: $transition;
+					width: 100%;
+				}
+
+				&::before {
+					animation: glowing 20s linear infinite;
+					background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+					background-size: 400%;
+					filter: blur(5px);
+					height: calc(100% + 4px);
+					left: -2px;
+					top: -2px;
+					transition: $transition;
+					width: calc(100% + 4px);
+				}
+			}
+		}
+
+	}
+
+	.gotop {
+		&::after,
+		&::before {
+			background-color: $c_gradient_footer_1;
+		}
+		&:hover {
+			background-color: $c_gradient_footer_1;
+		}
+	}
+
+	.process {
+		&__item {
+			&::before {
+				color: $c_gradient_footer_1;
+			}
+		}
+	}
+
+	.topmenu {
+		background-color: $c_gradient_footer_1;
+	}
+
+	.topmenu_list {
+		&__link {
+			color: #fff;
+			opacity: 1;
+
+			&::after {
+				background-color: $c_gradient_home_start;
+			}
+		}
+	}
+
+	.topmenu_phone {
+		color: #fff;
+	}
+}
+
 .checkbox {
 	cursor: pointer;
 	display: inline-block;
@@ -333,6 +434,7 @@ html {
 
 	&__link {
 		background-color: #000;
+		border: 1px solid #fff;
 		border-radius: 50%;
 		display: block;
 		height: 24px;
