@@ -20,7 +20,7 @@ export default {
 		scroll(id) {
 			document.getElementById(id).scrollIntoView({
 				behavior: 'smooth'
-			});
+			})
 		}
 	}
 }
