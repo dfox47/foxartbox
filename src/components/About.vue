@@ -13,7 +13,7 @@
 
 			<p>I'm a frontend developer.</p>
 
-			<p>I'm doing fast, adaptive websites by w3c standards.</p>
+			<p>I'm doing fast & adaptive websites by w3c standards.</p>
 
 			<h3>GITHUB</h3>
 
