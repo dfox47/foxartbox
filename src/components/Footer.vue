@@ -23,8 +23,8 @@ export default {
 	data() {
 		return {
 			footerLinks: [
-				{href: '//web.facebook.com/foxartbox/',     icon: require('../assets/i/icons/fb.svg'),      title: 'Facebook'},
-				{href: '//www.instagram.com/foxartbox/',    icon: require('../assets/i/icons/inst.svg'),    title: 'Instagram'}
+				{href: '//web.facebook.com/foxartbox/',         icon: require('../assets/i/icons/fb.svg'),      title: 'Facebook'},
+				{href: '//www.instagram.com/denis_fox_web/',    icon: require('../assets/i/icons/inst.svg'),    title: 'Instagram'}
 			]
 		}
 	},
