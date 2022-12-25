@@ -17,7 +17,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_2.svg" alt="" /></a>
+					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_2.svg" alt=""></a>
 
 					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
@@ -49,6 +49,7 @@ export default {
 			],
 			menuItems: [
 				{id: 'top',         title: 'Home'},
+				{id: 'about',       title: 'About'},
 				{id: 'projects',    title: 'Projects'},
 				{id: 'process',     title: 'Process'},
 				{id: 'contacts',    title: 'Contacts'}
@@ -65,7 +66,7 @@ export default {
 				itemsProcessed++
 
 				// change block ID if it's in viewport
-				if (window.scrollY > e.offsetTop - 200) {
+				if (window.scrollY > e.offsetTop - 100) {
 					blockId         = e.getAttribute('id')
 					this.activeId   = blockId
 				}
