@@ -11,7 +11,9 @@
 
 			<p>My name is Denis FOX.</p>
 
-			<p>I'm a frontend developer. I know how to make fast, adaptive websites.</p>
+			<p>I'm a frontend developer.</p>
+
+			<p>I'm doing fast, adaptive websites by w3c standards.</p>
 
 			<h3>GITHUB</h3>
 
