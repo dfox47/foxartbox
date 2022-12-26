@@ -31,18 +31,14 @@ export default {
 	methods: {
 		// scroll to the block with ID
 		scroll(id) {
-			const e = document.getElementById(id)
+			const e = document.getElementById(id.replace('/#', ''))
 
 			// if there is no element with ID to scroll
 			if (!e) {
-				window.location.href = '/#' + id
-
-				this.activeId = id
+				window.location.href = id
 
 				return
 			}
-
-			console.log('xxxxx')
 
 			// scroll to element
 			e.scrollIntoView({
