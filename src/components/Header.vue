@@ -41,7 +41,7 @@ export default {
 	},
 	data() {
 		return {
-			activeId : 'top',
+			activeId : '',
 			themeItems: [
 				{name: 'theme_standart',        title: 'Default theme',         class: '1'},
 				{name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
@@ -61,6 +61,9 @@ export default {
 	methods: {
 		// on scroll
 		handleScroll () {
+			// allow only on home page
+			if (window.location.pathname !== '/') return
+
 			let blockId         = 'top'
 			let itemsProcessed  = 0
 
@@ -89,22 +92,11 @@ export default {
 			})
 		},
 
-		// set theme from localStorage
-		themeFromLocalStorage() {
-			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
-		},
-
-		// theme change
-		themeChange(themeName) {
-			document.querySelector('html').dataset.theme = themeName
-
-			localStorage.setItem('theme', themeName)
-		},
-
 		// scroll to the block with ID
 		scroll(id) {
 			const e = document.getElementById(id)
 
+			// if there is no element with ID to scroll
 			if (!e) {
 				window.location.href = '/#' + id
 
@@ -117,6 +109,18 @@ export default {
 			e.scrollIntoView({
 				behavior: 'smooth'
 			})
+		},
+
+		// theme change
+		themeChange(themeName) {
+			document.querySelector('html').dataset.theme = themeName
+
+			localStorage.setItem('theme', themeName)
+		},
+
+		// set theme from localStorage
+		themeFromLocalStorage() {
+			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
 		},
 
 		// show/hide mobile menu
