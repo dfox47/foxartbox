@@ -65,7 +65,6 @@ export default {
 			if (window.location.pathname !== '/') return
 
 			let blockId         = 'top'
-			let blockHref       = ''
 			let itemsProcessed  = 0
 
 			document.querySelectorAll('.js-block-scroll').forEach((e, index, array) => {
@@ -74,10 +73,7 @@ export default {
 				// change block ID if it's in viewport
 				if (window.scrollY > e.offsetTop - 100) {
 					blockId         = e.getAttribute('id')
-					blockHref       = e.href
 					this.activeId   = blockId
-
-					console.log('blockHref | ', blockHref)
 				}
 
 				// get to end of array | change url | change active menu item
@@ -96,12 +92,8 @@ export default {
 			})
 		},
 
-		topmenuItemHighlight() {
-			const topmenuItem = document.querySelector('.js-topmenu-link[href="' + window.location.pathname + '"]')
-
-			if (!topmenuItem) return
-
-			topmenuItem.classList.add('active')
+		replace(e, rep, repWith) {
+			return e.split(rep).join(repWith)
 		},
 
 		// scroll to the block with ID
@@ -110,14 +102,10 @@ export default {
 
 			// if there is no element with ID to scroll
 			if (!e) {
-				// window.location.href = e.href
-
-				console.log('here 113')
+				window.location.href = id
 
 				return
 			}
-
-			console.log('here 117')
 
 			// scroll to element
 			e.scrollIntoView({
@@ -142,8 +130,12 @@ export default {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		},
 
-		replace(e, rep, repWith) {
-			return e.split(rep).join(repWith)
+		topmenuItemHighlight() {
+			const topmenuItem = document.querySelector('.js-topmenu-link[href="' + window.location.pathname + '"]')
+
+			if (!topmenuItem) return
+
+			topmenuItem.classList.add('active')
 		}
 	},
 	mounted() {
