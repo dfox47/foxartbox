@@ -5,14 +5,14 @@
 		<div class="topmenu js-topmenu">
 			<ul class="theme_change">
 				<li class="theme_change__item" v-for="themeItem in themeItems" :key="themeItem.name">
-					<a class="theme_change__link" :class="'theme_change__link--type-' + themeItem.class" @click="themeChange(themeItem.name)" href="javascript:void(0);" :title="themeItem.title"></a>
+					<a class="theme_change__link" :class="'theme_change__link--type-' + themeItem.class" @click.prevent="themeChange(themeItem.name)" href="javascript:void(0);" :title="themeItem.title"></a>
 				</li>
 			</ul>
 
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
-						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" @click="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" @click.prevent="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 

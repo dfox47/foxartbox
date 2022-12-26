@@ -1,7 +1,7 @@
 <template>
 	<div class="footer">
 		<div class="wrap">
-			<a class="gotop" href="javascript:void(0);" @click="scroll('top')"></a>
+			<a class="gotop" href="#top" @click.prevent="scroll('top')"></a>
 
 			<ul class="social_links">
 				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
@@ -41,6 +41,8 @@ export default {
 
 				return
 			}
+
+			console.log('xxxxx')
 
 			// scroll to element
 			e.scrollIntoView({
