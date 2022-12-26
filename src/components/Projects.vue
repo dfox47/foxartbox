@@ -3,7 +3,7 @@
 		<h2>Projects</h2>
 
 		<!-- chocolana -->
-		<div id="project-2" class="project">
+		<div class="project">
 			<div class="project__content project_bg_type_2">
 				<div class="wrap">
 					<img class="project__img" src="../assets/i/projects/chocolana/0.png" alt="" />
@@ -43,7 +43,7 @@
 		</div>
 
 		<!-- villabansko -->
-		<div id="project-3" class="project">
+		<div class="project">
 			<div class="project__content project_bg_type_3">
 				<div class="wrap">
 					<img class="project__img" src="../assets/i/projects/villabansko/0.png" alt="" />
@@ -81,7 +81,7 @@
 		</div>
 
 		<!-- p3week -->
-		<div id="project-4" class="project">
+		<div class="project">
 			<div class="project__content project_bg_type_4">
 				<div class="wrap">
 					<img class="project__img" src="../assets/i/projects/p3week/0.png" alt="" />
