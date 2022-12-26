@@ -11,13 +11,13 @@
 
 			<div class="wrap">
 				<ul class="topmenu_list">
-					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.id">
-						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" href="javascript:void(0);">{{ menuItem.title }}</a>
+					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
+						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_2.svg" alt=""></a>
+					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_3.svg" alt=""></a>
 
 					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
@@ -49,11 +49,12 @@ export default {
 				{name: 'theme_forest',          title: 'Forest theme',          class: '4'}
 			],
 			menuItems: [
-				{id: 'top',         title: 'Home'},
-				{id: 'about',       title: 'About'},
-				{id: 'projects',    title: 'Projects'},
-				{id: 'process',     title: 'Process'},
-				{id: 'contacts',    title: 'Contacts'}
+				{id: 'top',         title: 'Home',          href: '/#top'},
+				{id: 'blog',        title: 'Blog',          href: '/blog'},
+				{id: 'about',       title: 'About',         href: '/#about'},
+				{id: 'projects',    title: 'Projects',      href: '/#projects'},
+				{id: 'process',     title: 'Process',       href: '/#process'},
+				{id: 'contacts',    title: 'Contacts',      href: '/#contacts'}
 			],
 		}
 	},
@@ -102,8 +103,18 @@ export default {
 
 		// scroll to the block with ID
 		scroll(id) {
+			const e = document.getElementById(id)
+
+			if (!e) {
+				window.location.href = '/#' + id
+
+				this.activeId = id
+
+				return
+			}
+
 			// scroll to element
-			document.getElementById(id).scrollIntoView({
+			e.scrollIntoView({
 				behavior: 'smooth'
 			})
 		},
