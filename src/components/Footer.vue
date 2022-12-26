@@ -29,8 +29,21 @@ export default {
 		}
 	},
 	methods: {
+		// scroll to the block with ID
 		scroll(id) {
-			document.getElementById(id).scrollIntoView({
+			const e = document.getElementById(id)
+
+			// if there is no element with ID to scroll
+			if (!e) {
+				window.location.href = '/#' + id
+
+				this.activeId = id
+
+				return
+			}
+
+			// scroll to element
+			e.scrollIntoView({
 				behavior: 'smooth'
 			})
 		}
