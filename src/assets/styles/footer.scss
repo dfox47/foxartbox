@@ -1,6 +1,6 @@
 .footer {
 	animation: bgGradient 10s ease infinite;
-	background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_home_end, $c_gradient_footer_1, $c_gradient_footer_2);
+	background: linear-gradient(-45deg, $c_gradient_home_start, darken($c_theme_cyperpunk, 30%), $c_theme_cyperpunk, lighten($c_gradient_home_start, 30%));
 	background-size: 400% 400%;
 	color: #fff;
 	padding: 200px 0;

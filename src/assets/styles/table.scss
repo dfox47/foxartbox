@@ -35,7 +35,7 @@
 	}
 
 	&__pink {
-		background: linear-gradient(135deg, $c_gradient_footer_1, $c_gradient_home_end);
+		background: linear-gradient(135deg, $c_theme_cyperpunk, darken($c_theme_cyperpunk, 50%));
 	}
 
 	&__white {
@@ -106,7 +106,6 @@
 }
 
 .table_phone_holder {
-	background-color: $c_gradient_2;
 	display: none;
 	height: 1%;
 	left: 75%;

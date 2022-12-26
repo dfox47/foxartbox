@@ -134,16 +134,16 @@ html {
 
 [data-theme="theme_cyperpunk"] {
 	h2 {
-		color: $c_gradient_footer_1;
+		color: $c_theme_cyperpunk;
 	}
 
 	h3 {
-		color: $c_gradient_home_end;
+		color: darken($c_theme_cyperpunk, 50%);
 	}
 
 	.btn {
 		&__link {
-			background-color: $c_gradient_footer_1;
+			background-color: $c_theme_cyperpunk;
 			border: 1px solid rgba(#fff, .99);
 			color: #fff;
 			font-size: 15px;
@@ -173,13 +173,13 @@ html {
 			}
 
 			span {
-				border: 1px solid rgba($c_gradient_footer_1, .99);
+				border: 1px solid rgba($c_theme_cyperpunk, .99);
 				display: inline-block;
 				padding: 16px 42px;
 				position: relative;
 
 				&::after {
-					background-color: $c_gradient_footer_1;
+					background-color: $c_theme_cyperpunk;
 					height: 100%;
 					left: 0;
 					top: 0;
@@ -206,23 +206,23 @@ html {
 	.gotop {
 		&::after,
 		&::before {
-			background-color: $c_gradient_footer_1;
+			background-color: $c_theme_cyperpunk;
 		}
 		&:hover {
-			background-color: $c_gradient_footer_1;
+			background-color: $c_theme_cyperpunk;
 		}
 	}
 
 	.process {
 		&__item {
 			&::before {
-				color: $c_gradient_home_end;
+				color: darken($c_theme_cyperpunk, 50%);
 			}
 		}
 	}
 
 	.topmenu {
-		background-color: $c_gradient_footer_1;
+		background-color: $c_theme_cyperpunk;
 	}
 
 	.topmenu_list {
@@ -236,7 +236,7 @@ html {
 		}
 
 		@media #{$mobile} {
-			background-color: darken($c_gradient_footer_1, 20%);
+			background-color: darken($c_theme_cyperpunk, 20%);
 		}
 	}
 
@@ -492,7 +492,7 @@ html {
 .gotop {
 	background-color: #fff;
 	border-radius: 50%;
-	border: 2px solid $c_gradient_home_end;
+	border: 2px solid darken($c_theme_cyperpunk, 50%);
 	cursor: pointer;
 	display: block;
 	height: 70px;
@@ -615,7 +615,7 @@ html {
 		}
 
 		&--type-1 {
-			background: $c_gradient_footer_1;
+			background: $c_theme_cyperpunk;
 		}
 
 		&--type-2 {
@@ -623,7 +623,7 @@ html {
 		}
 
 		&--type-3 {
-			background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_footer_1);
+			background: linear-gradient(-45deg, $c_gradient_home_start, $c_theme_cyperpunk);
 		}
 
 		&--type-4 {

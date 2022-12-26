@@ -1,5 +1,5 @@
 .team {
-	background: linear-gradient(45deg, $c_gradient_home_end, $c_gradient_home_start);
+	background: linear-gradient(45deg, darken($c_theme_cyperpunk, 50%), $c_gradient_home_start);
 	display: flex;
 	justify-content: space-between;
 	padding: 0 0 120px;
