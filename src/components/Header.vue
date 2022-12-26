@@ -12,7 +12,7 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
-						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" :data-link="menuItem.id" @click="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" @click="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
@@ -33,11 +33,15 @@
 <script>
 export default {
 	name: 'Header',
-	created () {
+	created() {
 		window.addEventListener('scroll', this.handleScroll)
 
 		// check if there is theme at localStorage
 		this.themeFromLocalStorage()
+	},
+	mounted() {
+		// highlight menu item on inner pages
+		this.topmenuItemHighlight()
 	},
 	data() {
 		return {
@@ -60,7 +64,7 @@ export default {
 	},
 	methods: {
 		// on scroll
-		handleScroll () {
+		handleScroll() {
 			// allow only on home page
 			if (window.location.pathname !== '/') return
 
@@ -87,9 +91,17 @@ export default {
 					})
 
 					// add active class to scrolled block
-					document.querySelector('.js-topmenu').querySelector('[data-link="' + blockId + '"]').classList.add('active')
+					document.querySelector('.js-topmenu').querySelector('[href="/#' + blockId + '"]').classList.add('active')
 				}
 			})
+		},
+
+		topmenuItemHighlight() {
+			const topmenuItem = document.querySelector('.js-topmenu-link[href="' + window.location.pathname + '"]')
+
+			if (!topmenuItem) return
+
+			topmenuItem.classList.add('active')
 		},
 
 		// scroll to the block with ID
@@ -128,7 +140,7 @@ export default {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		}
 	},
-	unmounted () {
+	unmounted() {
 		window.removeEventListener('scroll', this.handleScroll);
 	}
 }
