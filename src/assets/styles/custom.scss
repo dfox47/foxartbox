@@ -269,7 +269,7 @@ html {
 			letter-spacing: .26em;
 
 			&:hover {
-				background-color: lighten($c_theme_forest, 15%);
+				background-color: lighten($c_theme_forest, 30%);
 			}
 		}
 
@@ -362,7 +362,7 @@ html {
 			opacity: 1;
 
 			&::after {
-				background-color: $c_theme_forest;
+				background-color: lighten($c_theme_forest, 20%);
 			}
 		}
 	}
