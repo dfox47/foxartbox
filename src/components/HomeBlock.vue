@@ -6,7 +6,7 @@
 			<img class="logo" src="../assets/i/icons/logo_3.svg" alt="" />
 			<div class="home_block__desc js-home-block-desc">Foxartbox</div>
 			<div class="home_block__slogan js-random-slogan"></div>
-			<a class="btn btn__link js-scroll-to" @click="scroll('projects')">Projects</a>
+			<a class="btn btn__link js-scroll-to" @click="scroll('about')">About</a>
 		</div>
 	</div>
 </template>

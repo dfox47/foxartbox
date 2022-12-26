@@ -45,7 +45,8 @@ export default {
 			themeItems: [
 				{name: 'theme_standart',        title: 'Default theme',         class: '1'},
 				{name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
-				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'}
+				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'},
+				{name: 'theme_forest',          title: 'Forest theme',          class: '4'}
 			],
 			menuItems: [
 				{id: 'top',         title: 'Home'},

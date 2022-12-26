@@ -46,8 +46,8 @@ h2 {
 
 h3 {
 	color: #000;
-	font-size: 27px;
-	font-weight: 700;
+	font-size: 24px;
+	font-weight: 900;
 	padding: 1em 0 0;
 	position: relative;
 	text-align: left;
@@ -232,6 +232,137 @@ html {
 
 			&::after {
 				background-color: $c_gradient_home_start;
+			}
+		}
+	}
+
+	.topmenu_mobile {
+		&__toggle {
+			&::after,
+			&::before,
+			> span {
+				background-color: #fff;
+			}
+		}
+	}
+
+	.topmenu_phone {
+		color: #fff;
+	}
+}
+
+[data-theme="theme_forest"] {
+	h2 {
+		color: lighten($c_theme_forest, 10%);
+	}
+
+	h3 {
+		color: lighten($c_theme_forest, 20%);
+	}
+
+	.btn {
+		&__link {
+			background-color: lighten($c_theme_forest, 15%);
+			border: 1px solid rgba(#fff, .99);
+			color: #fff;
+			font-size: 15px;
+			letter-spacing: .26em;
+
+			&:hover {
+				background-color: lighten($c_theme_forest, 15%);
+			}
+		}
+
+		&__main {
+			border-radius: 0;
+			color: #fff;
+			font-size: 15px;
+			padding: 30px 0;
+			z-index: 0;
+
+			&:hover {
+				color: #fff;
+
+				span {
+					&::after {
+						background-color: lighten($c_theme_forest, 15%);
+						opacity: 1;
+					}
+				}
+			}
+
+			span {
+				border: 1px solid rgba($c_theme_forest, .99);
+				display: inline-block;
+				padding: 16px 42px;
+				position: relative;
+
+				&::after {
+					background-color: $c_theme_forest;
+					height: 100%;
+					left: 0;
+					top: 0;
+					transition: $transition;
+					width: 100%;
+				}
+
+				&::before {
+					animation: glowing 20s linear infinite;
+					background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+					background-size: 400%;
+					filter: blur(5px);
+					height: calc(100% + 4px);
+					left: -2px;
+					top: -2px;
+					transition: $transition;
+					width: calc(100% + 4px);
+				}
+			}
+		}
+	}
+
+	.footer {
+		background: linear-gradient(-45deg, $c_theme_forest, darken($c_theme_forest, 30%), lighten($c_theme_forest, 30%), $c_theme_forest);
+		background-size: 400% 400%;
+	}
+
+	.gotop {
+		border-color: $c_theme_forest;
+
+		&::after,
+		&::before {
+			background-color: $c_theme_forest;
+		}
+
+		&:hover {
+			background-color: $c_theme_forest;
+		}
+	}
+
+	.home_block {
+		background: linear-gradient(-45deg, $c_theme_forest, lighten($c_theme_forest, 50%), $c_theme_forest);
+		background-size: 400% 400%;
+	}
+
+	.process {
+		&__item {
+			&::before {
+				color: $c_theme_forest;
+			}
+		}
+	}
+
+	.topmenu {
+		background-color: $c_theme_forest;
+	}
+
+	.topmenu_list {
+		&__link {
+			color: #fff;
+			opacity: 1;
+
+			&::after {
+				background-color: $c_theme_forest;
 			}
 		}
 	}
@@ -476,6 +607,10 @@ html {
 
 		&--type-3 {
 			background: linear-gradient(-45deg, $c_gradient_home_start, $c_gradient_footer_1);
+		}
+
+		&--type-4 {
+			background: linear-gradient(-45deg, $c_theme_forest, lighten($c_theme_forest, 50%));
 		}
 	}
 
