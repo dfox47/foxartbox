@@ -12,7 +12,7 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
-						<a :class="{active: (menuItem.id === activeId)}" class="topmenu_list__link js-topmenu-link" @click.prevent="scroll(menuItem.id); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}" class="topmenu_list__link js-topmenu-link" @click.prevent="scroll(menuItem.href); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
 					</li>
 				</ul>
 
@@ -49,12 +49,12 @@ export default {
 				{name: 'theme_forest',          title: 'Forest theme',          class: '4'}
 			],
 			menuItems: [
-				{id: 'top',         title: 'Home',          href: '/#top'},
-				{id: 'about',       title: 'About',         href: '/#about'},
-				{id: 'projects',    title: 'Projects',      href: '/#projects'},
-				{id: 'process',     title: 'Process',       href: '/#process'},
-				{id: 'contacts',    title: 'Contacts',      href: '/#contacts'},
-				{id: 'blog',        title: 'Blog',          href: '/blog'}
+				{title: 'Home',         href: '/#top'},
+				{title: 'About',        href: '/#about'},
+				{title: 'Projects',     href: '/#projects'},
+				{title: 'Process',      href: '/#process'},
+				{title: 'Contacts',     href: '/#contacts'},
+				{title: 'Blog',         href: '/blog'}
 			],
 		}
 	},
@@ -65,6 +65,7 @@ export default {
 			if (window.location.pathname !== '/') return
 
 			let blockId         = 'top'
+			let blockHref       = ''
 			let itemsProcessed  = 0
 
 			document.querySelectorAll('.js-block-scroll').forEach((e, index, array) => {
@@ -73,7 +74,10 @@ export default {
 				// change block ID if it's in viewport
 				if (window.scrollY > e.offsetTop - 100) {
 					blockId         = e.getAttribute('id')
+					blockHref       = e.href
 					this.activeId   = blockId
+
+					console.log('blockHref | ', blockHref)
 				}
 
 				// get to end of array | change url | change active menu item
@@ -102,16 +106,18 @@ export default {
 
 		// scroll to the block with ID
 		scroll(id) {
-			const e = document.getElementById(id)
+			const e = document.getElementById(id.replace('/#', ''))
 
 			// if there is no element with ID to scroll
 			if (!e) {
-				window.location.href = '/#' + id
+				// window.location.href = e.href
 
-				this.activeId = id
+				console.log('here 113')
 
 				return
 			}
+
+			console.log('here 117')
 
 			// scroll to element
 			e.scrollIntoView({
@@ -134,6 +140,10 @@ export default {
 		// show/hide mobile menu
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
+		},
+
+		replace(e, rep, repWith) {
+			return e.split(rep).join(repWith)
 		}
 	},
 	mounted() {
