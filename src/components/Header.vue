@@ -39,10 +39,6 @@ export default {
 		// check if there is theme at localStorage
 		this.themeFromLocalStorage()
 	},
-	mounted() {
-		// highlight menu item on inner pages
-		this.topmenuItemHighlight()
-	},
 	data() {
 		return {
 			activeId : '',
@@ -54,11 +50,11 @@ export default {
 			],
 			menuItems: [
 				{id: 'top',         title: 'Home',          href: '/#top'},
-				{id: 'blog',        title: 'Blog',          href: '/blog'},
 				{id: 'about',       title: 'About',         href: '/#about'},
 				{id: 'projects',    title: 'Projects',      href: '/#projects'},
 				{id: 'process',     title: 'Process',       href: '/#process'},
-				{id: 'contacts',    title: 'Contacts',      href: '/#contacts'}
+				{id: 'contacts',    title: 'Contacts',      href: '/#contacts'},
+				{id: 'blog',        title: 'Blog',          href: '/blog'}
 			],
 		}
 	},
@@ -139,6 +135,10 @@ export default {
 		toggleMobileMenu() {
 			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		}
+	},
+	mounted() {
+		// highlight menu item on inner pages
+		this.topmenuItemHighlight()
 	},
 	unmounted() {
 		window.removeEventListener('scroll', this.handleScroll);
