@@ -7,24 +7,23 @@
 		padding: 160px 0 30px;
 		position: relative;
 
-		&::after {
-			bottom: 0;
+		&::after,
+		&::before {
 			content: "";
-			height: 45%;
 			left: 0;
 			position: absolute;
 			width: 100%;
 			z-index: -1;
 		}
 
+		&::after {
+			bottom: 0;
+			height: 45%;
+		}
+
 		&::before {
-			content: "";
 			height: 55%;
-			left: 0;
-			position: absolute;
 			top: 0;
-			width: 100%;
-			z-index: -1;
 		}
 	}
 
@@ -32,8 +31,7 @@
 		font-size: 20px;
 		padding: 30px 0 0;
 
-		a,
-		a:visited {
+		a {
 			color: #000;
 			display: inline-block;
 			font-style: italic;
@@ -62,7 +60,7 @@
 	}
 
 	&__price {
-		display: none;
+		display: block;
 		opacity: .5;
 	}
 
@@ -85,19 +83,11 @@
 	&::after {
 		background: linear-gradient(to right, $c_gradient_3, $c_gradient_4);
 	}
-
-	&::before {
-		background: linear-gradient(to right, $c_gradient_1, $c_gradient_2);
-	}
 }
 
 .project_bg_type_2 {
 	&::after {
 		background: linear-gradient(to right, $c_gradient_7, $c_gradient_8);
-	}
-
-	&::before {
-		background: linear-gradient(to right, $c_gradient_5, $c_gradient_6);
 	}
 }
 
@@ -105,29 +95,17 @@
 	&::after {
 		background: linear-gradient(to right, $c_gradient_11, $c_gradient_12);
 	}
-
-	&::before {
-		background: linear-gradient(to right, $c_gradient_9, $c_gradient_10);
-	}
 }
 
 .project_bg_type_4 {
 	&::after {
 		background: linear-gradient(to right, $c_gradient_16, $c_gradient_15);
 	}
-
-	&::before {
-		background: linear-gradient(to right, $c_gradient_13, $c_gradient_14);
-	}
 }
 
 .project_bg_type_5 {
 	&::after {
 		background: linear-gradient(to right, $c_gradient_19, $c_gradient_20);
-	}
-
-	&::before {
-		background: linear-gradient(to right, $c_gradient_17, $c_gradient_18);
 	}
 }
 
