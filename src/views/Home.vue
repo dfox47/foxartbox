@@ -24,7 +24,7 @@ export default {
 		Projects
 	},
 	created() {
-		// document.title = "About Us"
+		document.title = "Home | Foxartbox"
 	}
 }
 </script>
