@@ -234,6 +234,10 @@ html {
 				background-color: $c_gradient_home_start;
 			}
 		}
+
+		@media #{$mobile} {
+			background-color: darken($c_gradient_footer_1, 20%);
+		}
 	}
 
 	.topmenu_mobile {
@@ -364,6 +368,10 @@ html {
 			&::after {
 				background-color: lighten($c_theme_forest, 20%);
 			}
+		}
+
+		@media #{$mobile} {
+			background-color: lighten($c_theme_forest, 20%);
 		}
 	}
 
