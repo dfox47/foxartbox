@@ -1,8 +1,6 @@
 <template>
 	<Header />
-
 	<router-view />
-
 	<Footer />
 </template>
 
@@ -15,13 +13,6 @@ export default {
 	components: {
 		Footer,
 		Header
-	},
-	methods: {
-		scroll(id) {
-			document.getElementById(id).scrollIntoView({
-				behavior: 'smooth'
-			})
-		}
 	}
 }
 </script>
