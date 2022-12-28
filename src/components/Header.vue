@@ -52,9 +52,9 @@ export default {
 				{title: 'Home',         href: '/#top'},
 				{title: 'About',        href: '/#about'},
 				{title: 'Projects',     href: '/#projects'},
-				{title: 'Process',      href: '/#process'},
+				// {title: 'Process',      href: '/#process'},
 				{title: 'Contacts',     href: '/#contacts'},
-				{title: 'Blog',         href: '/blog'}
+				// {title: 'Blog',         href: '/blog'}
 			],
 		}
 	},
