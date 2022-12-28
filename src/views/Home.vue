@@ -3,7 +3,7 @@
 		<HomeBlock />
 		<About />
 		<Projects />
-		<Process />
+<!--		<Process />-->
 		<Contacts />
 	</div>
 </template>
@@ -12,7 +12,7 @@
 import About        from '@/components/About'
 import Contacts     from '@/components/Contacts'
 import HomeBlock    from '@/components/HomeBlock'
-import Process      from '@/components/Process'
+// import Process      from '@/components/Process'
 import Projects     from '@/components/Projects'
 
 export default {
@@ -20,7 +20,7 @@ export default {
 		About,
 		Contacts,
 		HomeBlock,
-		Process,
+		// Process,
 		Projects
 	},
 	created() {
