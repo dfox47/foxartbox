@@ -14,6 +14,7 @@
 
 <script>
 export default {
+	name: 'Contacts',
 	data() {
 		return {
 			contactsLinks: [
