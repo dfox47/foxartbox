@@ -32,15 +32,14 @@
 		padding: 30px 0 0;
 
 		a {
-			color: #000;
+			color: #fff;
 			display: inline-block;
 			font-style: italic;
-			opacity: .4;
 			text-decoration: underline;
 			transition: $transition;
 
 			&:hover {
-				opacity: 1;
+				opacity: .5;
 				text-decoration: none;
 			}
 		}
@@ -94,6 +93,12 @@
 .project_bg_type_4 {
 	&::after {
 		background: linear-gradient(to right, $c_gradient_1, darken($c_gradient_1, 50%));
+	}
+}
+
+.project_bg_type_5 {
+	&::after {
+		background: linear-gradient(to right, $c_project_type_5, darken($c_project_type_5, 50%));
 	}
 }
 
