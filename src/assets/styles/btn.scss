@@ -25,29 +25,31 @@
 		width: 40px;
 		z-index: 7;
 
-		> span {
+		&::after,
+		&::before {
 			background-color: #000;
+			content: "";
 			display: block;
 			height: 2px;
 			left: 7px;
-			position: relative;
+			position: absolute;
+			top: 16px;
 			width: 25px;
+		}
 
-			&:first-child {
-				top: 18px;
-				transform: rotate(45deg);
-			}
+		&::after {
+			transform: rotate(45deg);
+		}
 
-			&:last-child {
-				top: 16px;
-				transform: rotate(-45deg);
-			}
+		&::before {
+			transform: rotate(-45deg);
 		}
 
 		&:hover {
 			background-color: #000;
 
-			> span {
+			&::after,
+			&::before {
 				background-color: #fff;
 			}
 		}

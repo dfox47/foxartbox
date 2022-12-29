@@ -13,6 +13,7 @@
 
 <script>
 export default {
+	name: 'HomeBlock',
 	mounted () {
 		document.querySelectorAll('.js-random-slogan').forEach((e) => {
 			const delay = 3000
