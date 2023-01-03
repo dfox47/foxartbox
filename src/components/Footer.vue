@@ -1,7 +1,7 @@
 <template>
 	<div class="footer">
 		<div class="wrap">
-			<a class="gotop" href="#top" @click.prevent="scroll('top')"></a>
+			<a class="gotop" href="#top" @click.prevent="scrollTo('top')"></a>
 
 			<ul class="social_links">
 				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import scrollTo from '../assets/js/scrollTo'
+
 export default {
 	data() {
 		return {
@@ -29,22 +31,7 @@ export default {
 		}
 	},
 	methods: {
-		// scroll to the block with ID
-		scroll(id) {
-			const e = document.getElementById(id.replace('/#', ''))
-
-			// if there is no element with ID to scroll
-			if (!e) {
-				window.location.href = id
-
-				return
-			}
-
-			// scroll to element
-			e.scrollIntoView({
-				behavior: 'smooth'
-			})
-		}
+		scrollTo
 	}
 }
 </script>
