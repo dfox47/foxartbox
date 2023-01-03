@@ -27,7 +27,7 @@
 				</div>
 			</div>
 
-			<a class="topmenu_phone" href="tel:+359882744430" target="_blank">+359 (88) 27-444-30</a>
+			<a class="topmenu_phone" :href="'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', '')">{{ phone }}</a>
 		</div>
 
 		<div class="topmenu_fade" @click="toggleMobileMenu"></div>
@@ -36,6 +36,7 @@
 
 <script>
 import scrollTo from '../assets/js/scrollTo'
+import {phone} from '../assets/js/config'
 
 export default {
 	name: 'Header',
@@ -62,6 +63,7 @@ export default {
 				{title: 'Contacts',     href: '/#contacts'},
 				// {title: 'Blog',         href: '/blog'}
 			],
+			phone
 		}
 	},
 	methods: {
