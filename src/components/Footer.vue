@@ -9,7 +9,7 @@
 				</li>
 			</ul>
 
-			<p class="footer__phone"><a href="tel:+359882744430">+359 (88) 27-444-30</a></p>
+			<p class="footer__phone"><a :href="'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', '')">{{ phone }}</a></p>
 
 			<p class="footer_slogan">stay true</p>
 
@@ -20,6 +20,7 @@
 
 <script>
 import scrollTo from '../assets/js/scrollTo'
+import {phone} from '../assets/js/config'
 
 export default {
 	data() {
@@ -27,7 +28,8 @@ export default {
 			footerLinks: [
 				{href: '//web.facebook.com/foxartbox/',         icon: require('../assets/i/icons/fb.svg'),      title: 'Facebook'},
 				{href: '//www.instagram.com/denis_fox_web/',    icon: require('../assets/i/icons/inst.svg'),    title: 'Instagram'}
-			]
+			],
+			phone
 		}
 	},
 	methods: {
