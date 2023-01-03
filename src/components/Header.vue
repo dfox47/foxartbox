@@ -12,12 +12,16 @@
 			<div class="wrap">
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
-						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}" class="topmenu_list__link js-topmenu-link" @click.prevent="scroll(menuItem.href); toggleMobileMenu()" :href="menuItem.href">{{ menuItem.title }}</a>
+						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
+                           class="topmenu_list__link js-topmenu-link"
+                           @click.prevent="scrollTo(menuItem.href); toggleMobileMenu()"
+                           :href="menuItem.href">{{ menuItem.title }}
+						</a>
 					</li>
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click="scroll('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_3.svg" alt=""></a>
+					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_3.svg" alt=""></a>
 
 					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
 				</div>
@@ -31,6 +35,8 @@
 </template>
 
 <script>
+import scrollTo from '../assets/js/scrollTo'
+
 export default {
 	name: 'Header',
 	created() {
@@ -59,6 +65,7 @@ export default {
 		}
 	},
 	methods: {
+		scrollTo,
 		// on scroll
 		handleScroll() {
 			// allow only on home page
@@ -94,23 +101,6 @@ export default {
 
 		replace(e, rep, repWith) {
 			return e.split(rep).join(repWith)
-		},
-
-		// scroll to the block with ID
-		scroll(id) {
-			const e = document.getElementById(id.replace('/#', ''))
-
-			// if there is no element with ID to scroll
-			if (!e) {
-				window.location.href = id
-
-				return
-			}
-
-			// scroll to element
-			e.scrollIntoView({
-				behavior: 'smooth'
-			})
 		},
 
 		// theme change
