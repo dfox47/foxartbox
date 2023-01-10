@@ -9,6 +9,10 @@
 	width: 100%;
 	z-index: 9;
 
+	&.active {
+		display: flex;
+	}
+
 	&__bg {
 		background-color: #000;
 		height: 100%;
@@ -28,6 +32,8 @@
 	}
 
 	&__content {
+		margin: 0 auto;
+		max-width: 94%;
 		position: relative;
 		z-index: 3;
 	}
