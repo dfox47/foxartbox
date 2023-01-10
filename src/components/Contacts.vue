@@ -22,7 +22,7 @@ export default {
 			contactsLinks: [
 				{href: 'mailto:info@foxartbox.com', icon: require('../assets/i/icons/email.svg'),       title: 'info@foxartbox.com'},
 				{href: '//t.me/dfoxweb',            icon: require('../assets/i/icons/telegram.svg'),    title: '@dfoxweb'},
-				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',   title: phone}
+				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',           title: phone}
 			]
 		}
 	}
