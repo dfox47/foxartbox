@@ -78,6 +78,15 @@
 	}
 }
 
+.project_slider {
+	display: none;
+
+	&.active {
+		display: block;
+		width: 100%;
+	}
+}
+
 .project_bg_type_2 {
 	&::after {
 		background: linear-gradient(to right, $c_gradient_8, darken($c_gradient_8, 50%));
