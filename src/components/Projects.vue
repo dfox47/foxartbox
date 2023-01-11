@@ -2,6 +2,14 @@
 	<div id="projects" class="js-block-scroll">
 		<h2>Projects</h2>
 
+		<div class="wrap">
+			<div class="projects_list">
+				<a class="projects_list__link" href="javascript:void(0);" v-for="project in projects" :key="project.name" :style="'background-image: url(' + project.mainImg + ');'">
+					<span class="projects_list__title">{{ project.name }}</span>
+				</a>
+			</div>
+		</div>
+
 		<div class="project" v-for="project in projects" :key="project.name">
 			<div class="project__content" :class="'project_bg_type_' + project.id">
 				<div class="wrap">
@@ -16,63 +24,39 @@
 
 						<p>{{ project.desc }}</p>
 
-						<p>
-							<a :href="'//' + project.href" target="_blank">www.{{ project.href }}</a>
-						</p>
+						<p><a :href="'//' + project.href" target="_blank">www.{{ project.href }}</a></p>
 					</div>
 
-					<div class="text-center">
+					<p class="text-center">
 						<a class="btn btn__main js-popup-show" @click="popupShow(project.id)" href="javascript:void(0);" :data-popup="project.id"><span>Show more</span></a>
-					</div>
+					</p>
 				</div>
 			</div>
 
-			<div class="project_more" :data-popup-content="project.id">
-				<!-- examples -->
-				<!-- https://ismail9k.github.io/vue3-carousel/examples.html -->
-				<carousel :items-to-show="1">
-					<slide v-for="slide in project.imgs" :key="slide.img">
-						<img class="carousel__item" :src="slide.img" alt="">
-					</slide>
+			<!--			<div class="popupX active js-popup" :data-popup-id="'project_id_' + project.id">-->
+			<!--				<div class="popup__bg" @click="popupHide()"></div>-->
 
-					<template #addons>
-						<navigation />
-						<pagination />
-					</template>
-				</carousel>
+			<div class="popup__content_wrapX">
+				<!--					<a class="btn btn__close popup__close" href="javascript:void(0);" @click="popupHide()"></a>-->
+
+				<div class="popup__content">
+					<!-- examples -->
+					<!-- https://ismail9k.github.io/vue3-carousel/examples.html -->
+				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- popup -->
-	<div class="popup js-popup">
-		<div class="popup__bg" @click="popupHide()"></div>
-
-		<div class="popup__content_wrap">
-			<a class="btn btn__close popup__close" href="javascript:void(0);" @click="popupHide()"></a>
-
-			<div class="popup__content js-popup-content"></div>
+			<!--			</div>-->
 		</div>
 	</div>
 </template>
 
 <script>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
 export default {
 	name: 'Projects',
-	components: {
-		Carousel,
-		Slide,
-		Pagination,
-		Navigation
-	},
 	data() {
 		return {
 			projects: [
 				{
-					name: 'brokertop',
+					name: 'Brokertop',
 					desc: 'Rent or sale commercial and private objects of real estate.',
 					href: 'brokertop.ru',
 					id: 5,
@@ -86,7 +70,7 @@ export default {
 					]
 				},
 				{
-					name: 'chocolana',
+					name: 'Chocolana',
 					desc: 'Website for the pastry shop «Chocolana» with the ability to create a personalized chocolate set. Food photography, design and programming.',
 					href: 'chocolana.com',
 					id: 2,
@@ -100,7 +84,7 @@ export default {
 					]
 				},
 				{
-					name: 'villabansko',
+					name: 'Villabansko',
 					desc: 'Elegant design solution for a premium villa booking. Web-site presents facilities and gives an overview of the main features.',
 					href: 'villabansko.com',
 					id: 3,
@@ -115,7 +99,7 @@ export default {
 					]
 				},
 				{
-					name: 'p3week',
+					name: 'P3week',
 					desc: 'International forum web site on the topic of cooperation between the state and private business (public-private enterprise). A redesign of the existing site was made in order to improve usability.',
 					href: 'p3week.ru',
 					id: 4,
@@ -138,23 +122,24 @@ export default {
 	methods: {
 		// hide popup
 		popupHide() {
-			document.querySelector('html').classList.remove('popup_active')
+			// document.querySelector('html').classList.remove('popup_active')
+
+			document.querySelectorAll('.js-popup').forEach((e) => {
+				e.classList.remove('active')
+			})
 		},
 		// show popup and put content from template
 		popupShow(id) {
-			const $popup        = document.querySelector('.js-popup')
-			const $popupContent = document.querySelector('.js-popup-content')
-			const $contentData  = document.querySelector('[data-popup-content="' + id + '"]')
+			document.querySelector('[data-popup-id="project_id_' + id + '"]').classList.add('active')
 
-			if (!$popup || !$popupContent || !$contentData) return
+			// if (!$popup || !$popupContent || !$contentData) return
 
-			$popupContent.innerHTML = $contentData.innerHTML
-			// $popupContent.appendChild($contentData)
+			// $popupContent.innerHTML = $contentData.innerHTML
 
 			// show popup
-			document.querySelector('html').classList.add('popup_active')
+			// document.querySelector('html').classList.add('popup_active')
 
-			console.log('popupId | ', id)
+			// console.log('popupId | ', id)
 		}
 	}
 }
