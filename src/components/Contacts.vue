@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import {email} from '../assets/js/config'
 import {phone} from '../assets/js/config'
 
 export default {
@@ -20,9 +21,9 @@ export default {
 	data() {
 		return {
 			contactsLinks: [
-				{href: 'mailto:info@foxartbox.com', icon: require('../assets/i/icons/email.svg'),       title: 'info@foxartbox.com'},
+				{href: 'mailto:' + email,           icon: require('../assets/i/icons/email.svg'),       title: email},
 				{href: '//t.me/dfoxweb',            icon: require('../assets/i/icons/telegram.svg'),    title: '@dfoxweb'},
-				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',           title: phone}
+				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',   title: phone}
 			]
 		}
 	}
