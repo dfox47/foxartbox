@@ -98,6 +98,9 @@ export default {
 
 					// add active class to scrolled block
 					document.querySelector('.js-topmenu').querySelector('[href="/#' + blockId + '"]').classList.add('active')
+
+					// change title
+					document.title = blockId.charAt(0).toUpperCase() + blockId.slice(1) + ' | Foxartbox'
 				}
 			})
 		},
