@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import {popupHide, popupShow} from '../assets/js/popup'
+
 export default {
 	name: 'Projects',
 	data() {
@@ -55,7 +57,7 @@ export default {
 					name: 'Brokertop',
 					desc: 'Rent or sale commercial and private objects of real estate.',
 					href: 'brokertop.ru',
-					id: 5,
+					id: 4,
 					mainImg: require('../assets/i/projects/brokertop/0.jpg'),
 					price: '5000 € | 3 months',
 					title: 'Brokertop | Real estate agency',
@@ -69,7 +71,7 @@ export default {
 					name: 'Chocolana',
 					desc: 'Website for the pastry shop «Chocolana» with the ability to create a personalized chocolate set. Food photography, design and programming.',
 					href: 'chocolana.com',
-					id: 2,
+					id: 3,
 					mainImg: require('../assets/i/projects/chocolana/0.png'),
 					price: '3500 € | 3 months',
 					title: 'Chocolana online shop',
@@ -83,7 +85,7 @@ export default {
 					name: 'Villabansko',
 					desc: 'Elegant design solution for a premium villa booking. Web-site presents facilities and gives an overview of the main features.',
 					href: 'villabansko.com',
-					id: 3,
+					id: 2,
 					mainImg: require('../assets/i/projects/villabansko/0.png'),
 					price: '2500 € | 1 month',
 					title: 'Villa Pirin Golf',
@@ -98,7 +100,7 @@ export default {
 					name: 'P3week',
 					desc: 'International forum web site on the topic of cooperation between the state and private business (public-private enterprise). A redesign of the existing site was made in order to improve usability.',
 					href: 'p3week.ru',
-					id: 4,
+					id: 1,
 					mainImg: require('../assets/i/projects/p3week/0.png'),
 					price: '7800 € | 4 months',
 					title: 'P3week forum',
@@ -116,22 +118,8 @@ export default {
 		}
 	},
 	methods: {
-		// hide popup
-		popupHide() {
-			document.querySelector('html').classList.remove('popup_active')
-		},
-		// show popup and put content from template
-		popupShow(id) {
-			const $contentData  = document.querySelector('.js-project-desc[data-popup="' + id + '"]')
-			const $popupContent = document.querySelector('.js-popup-content')
-
-			if (!$popupContent || !$contentData) return
-
-			$popupContent.innerHTML = $contentData.innerHTML
-
-			// show popup
-			document.querySelector('html').classList.add('popup_active')
-		}
+		popupHide,
+		popupShow,
 	}
 }
 </script>
