@@ -15,6 +15,8 @@
 
 			<p>I'm doing fast & adaptive websites by w3c standards.</p>
 
+			<p>Love to make different projects with simple solutions</p>
+
 			<h3>GITHUB</h3>
 
 			<p><a href="//github.com/dfox47" target="_blank">github.com/dfox47</a></p>
