@@ -14,28 +14,32 @@
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
 						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
                            class="topmenu_list__link js-topmenu-link"
-                           @click.prevent="scrollTo(menuItem.href); toggleMobileMenu()"
+                           @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()"
                            :href="menuItem.href">{{ menuItem.title }}
 						</a>
 					</li>
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); toggleMobileMenu()"><img src="../assets/i/icons/logo_3.svg" alt=""></a>
+					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><img src="../assets/i/icons/logo_3.svg" alt=""></a>
 
-					<div class="topmenu_mobile__toggle" @click="toggleMobileMenu"><span></span></div>
+					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
 			</div>
 
 			<a class="topmenu_phone" :href="'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', '')">{{ phone }}</a>
 		</div>
 
-		<div class="topmenu_fade" @click="toggleMobileMenu"></div>
+		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
 	</div>
 </template>
 
 <script>
+import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
+import themeChange from '../assets/js/themeChange'
+import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
+
 import {phone} from '../assets/js/config'
 
 export default {
@@ -68,7 +72,11 @@ export default {
 		}
 	},
 	methods: {
+		mobileMenuToggle,
 		scrollTo,
+		themeChange,
+		themeFromLocalStorage,
+
 		// on scroll
 		handleScroll() {
 			// allow only on home page
@@ -107,23 +115,6 @@ export default {
 
 		replace(e, rep, repWith) {
 			return e.split(rep).join(repWith)
-		},
-
-		// theme change
-		themeChange(themeName) {
-			document.querySelector('html').dataset.theme = themeName
-
-			localStorage.setItem('theme', themeName)
-		},
-
-		// set theme from localStorage
-		themeFromLocalStorage() {
-			document.querySelector('html').dataset.theme = localStorage.getItem('theme') ?? ''
-		},
-
-		// show/hide mobile menu
-		toggleMobileMenu() {
-			document.querySelector('html').classList.toggle('topmenu_mobile_active')
 		},
 
 		topmenuItemHighlight() {
