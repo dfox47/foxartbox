@@ -6,7 +6,7 @@
 			<img class="about_main_img" src="../assets/i/avatar.jpg" alt="Denis FOX">
 
 			<ul class="about_list">
-				<li class="about_list__item" v-for="aboutItem in aboutItems" :key="aboutItem.title"><img class="about_list__img" :src="aboutItem.img" alt="" :title="aboutItem.title"></li>
+				<li class="about_list__item" v-for="aboutItem in aboutItems" :key="aboutItem.title"><a class="about_list__link" :href="aboutItem.link" target="_blank"><img class="about_list__img" :src="aboutItem.img" alt="" :title="aboutItem.title"></a></li>
 			</ul>
 
 			<p>My name is Denis FOX.</p>
@@ -36,23 +36,23 @@ export default {
 	data() {
 		return {
 			aboutItems: [
-				{title: 'vue',                  img: require('../assets/i/icons/vue.svg')},
-				{title: 'JS',                   img: require('../assets/i/icons/js.svg')},
-				{title: 'git',                  img: require('../assets/i/icons/git.svg')},
-				{title: 'HTML',                 img: require('../assets/i/icons/html.svg')},
-				{title: 'CSS',                  img: require('../assets/i/icons/css.svg')},
-				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg')},
-				{title: 'LESS',                 img: require('../assets/i/icons/less.svg')},
-				{title: 'Figma',                img: require('../assets/i/icons/figma.svg')},
-				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg')},
-				{title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg')},
-				{title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg')},
-				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg')},
-				{title: 'Python',               img: require('../assets/i/icons/python.svg')},
-				{title: 'Wordpress',            img: require('../assets/i/icons/wordpress.svg')},
-				{title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg')},
-				{title: 'MacOS',                img: require('../assets/i/icons/macos.svg')},
-				{title: 'Linux',                img: require('../assets/i/icons/linux.svg')},
+				{title: 'vue',                  img: require('../assets/i/icons/vue.svg'),              link: '//vuejs.org/'},
+				{title: 'JS',                   img: require('../assets/i/icons/js.svg'),               link: '//www.javascript.com/'},
+				{title: 'git',                  img: require('../assets/i/icons/git.svg'),              link: '//en.wikipedia.org/wiki/Git'},
+				{title: 'HTML',                 img: require('../assets/i/icons/html.svg'),             link: '//en.wikipedia.org/wiki/HTML'},
+				{title: 'CSS',                  img: require('../assets/i/icons/css.svg'),              link: '//en.wikipedia.org/wiki/CSS'},
+				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg'),             link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
+				{title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
+				{title: 'Figma',                img: require('../assets/i/icons/figma.svg'),            link: '//en.wikipedia.org/wiki/Figma_(software)'},
+				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg'),             link: '//en.wikipedia.org/wiki/Gulp.js'},
+				{title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
+				{title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
+				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg'),        link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
+				{title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
+				{title: 'Wordpress',            img: require('../assets/i/icons/wordpress.svg'),        link: '//en.wikipedia.org/wiki/WordPress'},
+				{title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
+				{title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
+				{title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
 			],
 		}
 	}
