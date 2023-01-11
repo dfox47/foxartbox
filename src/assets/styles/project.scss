@@ -29,24 +29,8 @@
 
 	&__desc {
 		font-size: 20px;
+		line-height: 1.7;
 		padding: 30px 0 0;
-
-		a {
-			color: #fff;
-			display: inline-block;
-			font-style: italic;
-			text-decoration: underline;
-			transition: $transition;
-
-			&:hover {
-				opacity: .5;
-				text-decoration: none;
-			}
-		}
-
-		p {
-			line-height: 1.7;
-		}
 
 		@media #{$tablet} {
 			font-size: 16px;
@@ -75,6 +59,13 @@
 				width: 100%;
 			}
 		}
+	}
+}
+
+.project_images {
+	&__item {
+		display: block;
+		margin: 30px auto;
 	}
 }
 
