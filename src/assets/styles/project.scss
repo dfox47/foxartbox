@@ -42,11 +42,6 @@
 		width: 100%;
 	}
 
-	&__price {
-		display: block;
-		opacity: .5;
-	}
-
 	&__title {
 		align-items: center;
 		display: flex;
@@ -66,39 +61,6 @@
 	&__item {
 		display: block;
 		margin: 30px auto;
-	}
-}
-
-.project_slider {
-	display: none;
-
-	&.active {
-		display: block;
-		width: 100%;
-	}
-}
-
-.project_bg_type_2 {
-	&::after {
-		background: linear-gradient(to right, $c_gradient_8, darken($c_gradient_8, 50%));
-	}
-}
-
-.project_bg_type_3 {
-	&::after {
-		background: linear-gradient(to right, $c_gradient_11, darken($c_gradient_11, 50%));
-	}
-}
-
-.project_bg_type_4 {
-	&::after {
-		background: linear-gradient(to right, $c_gradient_1, darken($c_gradient_1, 50%));
-	}
-}
-
-.project_bg_type_5 {
-	&::after {
-		background: linear-gradient(to right, $c_project_type_5, darken($c_project_type_5, 50%));
 	}
 }
 
