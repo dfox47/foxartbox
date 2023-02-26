@@ -156,6 +156,10 @@
 			filter: invert(100%);
 			margin: 0 10px 0 0;
 			width: 40px;
+
+			@media #{$mobile} {
+				filter: invert(0);
+			}
 		}
 
 		&:hover {
