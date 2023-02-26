@@ -233,4 +233,8 @@
 		transition: $transition;
 		z-index: 5;
 	}
+
+	@media #{$mobile} {
+		grid-template-columns: 1fr;
+	}
 }
