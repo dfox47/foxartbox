@@ -154,6 +154,23 @@
 	}
 }
 
+.table_preview {
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 4px #000;
+	position: relative;
+	margin: 0 0 30px;
+	max-width: 1400px;
+	width: 100%;
+
+	&::after {
+		content: "";
+		display: block;
+		padding: 50% 0 0;
+		position: relative;
+	}
+}
+
 .table_question {
 	background-color: #fff;
 	border-radius: 50%;
@@ -181,22 +198,6 @@
 
 	&.active {
 		display: block;
-	}
-}
-
-.table_top {
-	background-color: #fff;
-	border-radius: 4px;
-	box-shadow: 0 0 4px #000;
-	position: relative;
-	max-width: 1400px;
-	width: 100%;
-
-	&::after {
-		content: "";
-		display: block;
-		padding: 50% 0 0;
-		position: relative;
 	}
 }
 

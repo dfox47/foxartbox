@@ -3,7 +3,7 @@
 		<div class="wrap">
 			<h1>Table</h1>
 
-			<div class="table_top js-table-preview">
+			<div class="table_preview js-table-preview">
 				<!-- Base price -->
 				<label class="hidden">
 					<input class="js-table-price" type="checkbox" data-price="200" checked>
