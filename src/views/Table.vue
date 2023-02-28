@@ -6,7 +6,7 @@
 			<div class="table_top js-table-top">
 				<!-- Base price -->
 				<label class="hidden">
-					<input class="js-table-price" type="checkbox" data-price="200" checked />
+					<input class="js-table-price" type="checkbox" data-price="200" checked>
 				</label>
 
 				<!-- Whiteboard -->
@@ -32,86 +32,74 @@
 			</div>
 
 			<div class="table_options">
-<!--				Color -->
+				<!-- Color -->
 				<div class="table_options__item">
-					<h2>Table color:</h2>
+					<div class="table_title">Table color:</div>
 
 					<div class="table_color_list">
-						<label class="checkbox_radio">
-							<input class="js-table-color" type="radio" value="1" name="table_color" data-color="#000" />
+						<label class="checkbox_radio" @click="tableColor">
+							<input class="js-table-color" type="radio" value="1" name="table_color" data-color="#000" checked>
 							<span class="table_color_item__black"></span>
 						</label>
 
-						<label class="checkbox_radio">
-							<input class="js-table-color" type="radio" value="2" name="table_color" data-color="#ee0979" />
+						<label class="checkbox_radio" @click="tableColor">
+							<input class="js-table-color" type="radio" value="2" name="table_color" data-color="#ee0979">
 							<span class="table_color_item__pink"></span>
 						</label>
 
-						<label class="checkbox_radio">
-							<input class="js-table-color" type="radio" value="3" name="table_color" data-color="#fff" />
+						<label class="checkbox_radio" @click="tableColor">
+							<input class="js-table-color" type="radio" value="3" name="table_color" data-color="#fff">
 							<span class="table_color_item__white"></span>
 						</label>
 					</div>
 				</div>
 
-<!--				Whiteboard -->
+				<!-- Whiteboard -->
 				<div class="table_options__item">
-					<h2>Whiteboard</h2>
+					<div class="table_title">Whiteboard</div>
 
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="whiteboard" data-price="10" />
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="whiteboard" data-price="10" @change="tablePrice()">
 						<span></span>
 					</label>
 
 					<div class="table_question js-table-question" data-type="whiteboard">?</div>
 				</div>
 
-<!--				Wireless charger -->
+				<!-- Wireless charger -->
 				<div class="table_options__item">
-					<h2>Wireless charger</h2>
+					<div>Wireless charger</div>
 
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="charger" data-price="10" />
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="charger" data-price="10" @change="tablePrice()">
 						<span></span>
 					</label>
 
 					<div class="table_question js-table-question" data-type="charger">?</div>
 				</div>
 
-<!--				Phone holder -->
+				<!-- Phone holder -->
 				<div class="table_options__item">
-					<h2>Phone holder</h2>
+					<div class="table_title">Phone holder</div>
 
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="phone_holder" data-price="5" />
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="phone_holder" data-price="5" @change="tablePrice()">
 						<span></span>
 					</label>
 
 					<div class="table_question js-table-question" data-type="phone_holder">?</div>
 				</div>
 
-<!--				Tablet holder -->
+				<!-- Tablet holder -->
 				<div class="table_options__item">
-					<h2>Tablet holder</h2>
+					<div class="table_title">Tablet holder</div>
 
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" data-price="5" />
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" data-price="5" @change="tablePrice()">
 						<span></span>
 					</label>
 
 					<div class="table_question js-table-question" data-type="tablet_holder">?</div>
-				</div>
-
-<!--				Coolers -->
-				<div class="table_options__item">
-					<h2>Coolers</h2>
-
-					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="coolers" data-price="25" />
-						<span></span>
-					</label>
-
-					<div class="table_question js-table-question" data-type="coolers">?</div>
 				</div>
 			</div>
 
@@ -123,11 +111,36 @@
 </template>
 
 <script>
-// import About        from '@/components/About'
-
 export default {
 	created() {
 		document.title = "Table | Foxartbox"
+	},
+	methods: {
+		tableColor() {
+			document.querySelectorAll('.js-table-color').forEach((e) => {
+				if (e.checked) {
+					document.querySelector('.js-table-top').style.backgroundColor = e.dataset.color
+				}
+			})
+
+			this.tablePrice()
+		},
+		tablePrice() {
+			let totalPrice = 0
+
+			document.querySelectorAll('.js-table-price').forEach((e) => {
+				if (e.checked) {
+					totalPrice += +e.dataset.price
+				}
+			})
+
+			document.querySelectorAll('.js-table-price-total').forEach((e) => {
+				e.innerHTML = totalPrice
+			})
+		}
+	},
+	mounted() {
+		this.tableColor()
 	}
 }
 </script>
