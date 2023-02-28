@@ -38,7 +38,7 @@
 		<div class="popup__bg" @click="popupHide()"></div>
 
 		<div class="popup__content_wrap">
-			<a class="btn btn__close popup__close" href="javascript:void(0);" @click="popupHide()"></a>
+			<a class="btn btn__close" href="javascript:void(0);" @click="popupHide()"></a>
 
 			<div class="popup__content js-popup-content"></div>
 		</div>
