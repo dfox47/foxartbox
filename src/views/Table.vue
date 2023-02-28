@@ -37,7 +37,7 @@
 
 				<!-- Whiteboard -->
 				<div class="table_options__item">
-					<div class="table_title">Whiteboard</div>
+					<div class="table_title">Whiteboard <sup>(+10€)</sup></div>
 
 					<label class="checkbox">
 						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="whiteboard" data-price="10" @change="tablePrice()">
@@ -49,7 +49,7 @@
 
 				<!-- Wireless charger -->
 				<div class="table_options__item">
-					<div>Wireless charger</div>
+					<div class="table_title">Wireless charger <sup>(+10€)</sup></div>
 
 					<label class="checkbox">
 						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="charger" data-price="10" @change="tablePrice()">
@@ -61,7 +61,7 @@
 
 				<!-- Phone holder -->
 				<div class="table_options__item">
-					<div class="table_title">Phone holder</div>
+					<div class="table_title">Phone holder <sup>(+5€)</sup></div>
 
 					<label class="checkbox">
 						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="phone_holder" data-price="5" @change="tablePrice()">
@@ -73,7 +73,7 @@
 
 				<!-- Tablet holder -->
 				<div class="table_options__item">
-					<div class="table_title">Tablet holder</div>
+					<div class="table_title">Tablet holder <sup>(+5€)</sup></div>
 
 					<label class="checkbox">
 						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" data-price="5" @change="tablePrice()">
