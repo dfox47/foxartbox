@@ -17,36 +17,31 @@
 		background-color: #000;
 		height: 100%;
 		left: 0;
-		opacity: .5;
+		opacity: .8;
 		position: absolute;
 		top: 0;
 		width: 100%;
 		z-index: 1;
 	}
 
-	&__close {
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 5;
-	}
-
 	&__content {
+		background-color: #fff;
+		height: 100%;
 		margin: 0 auto;
 		max-width: 900px;
-		padding: 0 30px;
+		overflow-y: auto;
+		padding: 30px;
 		position: relative;
 		width: 100%;
 		z-index: 3;
 	}
 
 	&__content_wrap {
-		background-color: #fff;
-		max-height: 100%;
+		height: 100%;
 		max-width: 100%;
-		min-height: 300px;
 		min-width: 300px;
-		overflow-y: auto;
+		overflow: hidden;
+		padding: 30px;
 		position: relative;
 		z-index: 3;
 	}
