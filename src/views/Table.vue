@@ -20,15 +20,6 @@
 
 				<!-- Charger -->
 				<div class="table_charger js-table-checkbox-selector" title="Hidden charger" data-type="charger"></div>
-
-				<!-- Tablet coolers -->
-				<div class="table_coolers js-table-checkbox-selector" data-type="coolers">
-					<div class="table_cooler table_cooler__cooler_1" title="cooler 1"></div>
-
-					<div class="table_cooler table_cooler__cooler_2" title="cooler 2"></div>
-
-					<div class="table_grill"></div>
-				</div>
 			</div>
 
 			<div class="table_options">
