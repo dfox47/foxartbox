@@ -20,6 +20,8 @@
 
 				<!-- Charger -->
 				<div class="table_charger js-table-checkbox-selector" title="Hidden charger" data-type="charger"></div>
+
+				<div class="table_logo"></div>
 			</div>
 
 			<div class="table_options">
