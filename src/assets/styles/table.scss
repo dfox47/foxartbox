@@ -47,37 +47,6 @@
 	display: flex;
 }
 
-.table_cooler {
-	background: url(/wp-content/uploads/2021/03/cooler.png) center center no-repeat scroll transparent;
-	background-size: contain;
-	position: absolute;
-	top: 23.8%;
-	width: 11.6%;
-	z-index: 3;
-
-	&::after {
-		content: "";
-		display: block;
-		padding: 100% 0 0;
-	}
-
-	&__cooler_1 {
-		left: 38.25%;
-	}
-
-	&__cooler_2 {
-		left: 50%;
-	}
-}
-
-.table_coolers {
-	display: none;
-
-	&.active {
-		display: block;
-	}
-}
-
 .table_grill {
 	background: url(/wp-content/uploads/2021/03/grill.png) center center no-repeat scroll transparent;
 	background-size: cover;
