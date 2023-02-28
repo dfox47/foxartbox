@@ -50,6 +50,10 @@
 		}
 	}
 
+	&__price {
+		color: $c_shadow;
+	}
+
 	&__title {
 		align-items: center;
 		display: flex;
@@ -246,4 +250,3 @@
 		grid-template-columns: 1fr;
 	}
 }
-
