@@ -34,53 +34,18 @@
 						</label>
 					</div>
 				</div>
+			</div>
 
-				<!-- Whiteboard -->
-				<div class="table_options__item">
-					<div class="table_title">Whiteboard <sup>(+10€)</sup></div>
-
+			<div class="table_options">
+				<div class="table_options__item" v-for="tableOption in tableOptions" :key="tableOption.name">
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="whiteboard" data-price="10" @change="tablePrice()">
-						<span></span>
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" :data-price="tableOption.price" @change="tablePrice()">
+						<span class="checkbox__box"></span>
+
+						<span class="checkbox__title">{{ tableOption.title }} <sup>(+{{ tableOption.price }}€)</sup></span>
 					</label>
 
-					<div class="table_question js-table-question" data-type="whiteboard">?</div>
-				</div>
-
-				<!-- Wireless charger -->
-				<div class="table_options__item">
-					<div class="table_title">Wireless charger <sup>(+10€)</sup></div>
-
-					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="charger" data-price="10" @change="tablePrice()">
-						<span></span>
-					</label>
-
-					<div class="table_question js-table-question" data-type="charger">?</div>
-				</div>
-
-				<!-- Phone holder -->
-				<div class="table_options__item">
-					<div class="table_title">Phone holder <sup>(+5€)</sup></div>
-
-					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="phone_holder" data-price="5" @change="tablePrice()">
-						<span></span>
-					</label>
-
-					<div class="table_question js-table-question" data-type="phone_holder">?</div>
-				</div>
-
-				<!-- Tablet holder -->
-				<div class="table_options__item">
-					<div class="table_title">Tablet holder <sup>(+5€)</sup></div>
-
-					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" data-price="5" @change="tablePrice()">
-						<span></span>
-					</label>
-
-					<div class="table_question js-table-question" data-type="tablet_holder">?</div>
+					<div class="table_question js-table-question" :data-type="tableOption.name">?</div>
 				</div>
 			</div>
 
@@ -105,6 +70,12 @@ export default {
 				{title: 'pink',     color: '#ee0979',   price: 2},
 				{title: 'white',    color: '#fff',      price: 3}
 			],
+			tableOptions: [
+				{title: 'Whiteboard',       price: '10',    name: 'whiteboard',         desc: ''},
+				{title: 'Wireless charger', price: '10',    name: 'wireless_charger',   desc: ''},
+				{title: 'Phone holder',     price: '5',     name: 'phone_holder',       desc: ''},
+				{title: 'Tablet holder',    price: '5',     name: 'tablet_holder',      desc: ''}
+			]
 		}
 	},
 	methods: {
