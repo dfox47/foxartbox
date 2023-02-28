@@ -3,7 +3,7 @@
 		<div class="wrap">
 			<h1>Table</h1>
 
-			<div class="table_top js-table-top">
+			<div class="table_top js-table-preview">
 				<!-- Base price -->
 				<label class="hidden">
 					<input class="js-table-price" type="checkbox" data-price="200" checked>
@@ -37,19 +37,9 @@
 					<div class="table_title">Table color:</div>
 
 					<div class="table_color_list">
-						<label class="checkbox_radio" @click="tableColor">
-							<input class="js-table-color" type="radio" value="1" name="table_color" data-color="#000" checked>
-							<span class="table_color_item__black"></span>
-						</label>
-
-						<label class="checkbox_radio" @click="tableColor">
-							<input class="js-table-color" type="radio" value="2" name="table_color" data-color="#ee0979">
-							<span class="table_color_item__pink"></span>
-						</label>
-
-						<label class="checkbox_radio" @click="tableColor">
-							<input class="js-table-color" type="radio" value="3" name="table_color" data-color="#fff">
-							<span class="table_color_item__white"></span>
+						<label class="checkbox_radio" v-for="tableColor in tableColors" :key="tableColor.title" @click="tableColorChanged()" :title="tableColor.title">
+							<input class="js-table-color js-table-price" type="radio" :value="tableColor.title" name="table_color" :data-color="tableColor.color" :data-price="tableColor.price">
+							<span :class="'table_color_item__' + tableColor.title"></span>
 						</label>
 					</div>
 				</div>
@@ -111,36 +101,28 @@
 </template>
 
 <script>
+import {tableColorChanged, tableColorFromStorage, tablePrice} from '../assets/js/table'
+
 export default {
 	created() {
 		document.title = "Table | Foxartbox"
 	},
-	methods: {
-		tableColor() {
-			document.querySelectorAll('.js-table-color').forEach((e) => {
-				if (e.checked) {
-					document.querySelector('.js-table-top').style.backgroundColor = e.dataset.color
-				}
-			})
-
-			this.tablePrice()
-		},
-		tablePrice() {
-			let totalPrice = 0
-
-			document.querySelectorAll('.js-table-price').forEach((e) => {
-				if (e.checked) {
-					totalPrice += +e.dataset.price
-				}
-			})
-
-			document.querySelectorAll('.js-table-price-total').forEach((e) => {
-				e.innerHTML = totalPrice
-			})
+	data() {
+		return {
+			tableColors: [
+				{title: 'black',    color: '#000',      price: 1},
+				{title: 'pink',     color: '#ee0979',   price: 2},
+				{title: 'white',    color: '#fff',      price: 3}
+			],
 		}
 	},
+	methods: {
+		tableColorChanged,
+		tablePrice
+	},
 	mounted() {
-		this.tableColor()
+		tableColorChanged()
+		tableColorFromStorage()
 	}
 }
 </script>
