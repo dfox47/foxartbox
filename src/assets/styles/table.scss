@@ -201,6 +201,16 @@
 		padding: 50% 0 0;
 		position: relative;
 	}
+
+	&[data-theme="black"] {
+		background-color: #000;
+	}
+
+	&[data-theme="pink"] {
+		background-color: $c_theme_cyperpunk;
+	}
+
+	&[data-theme="white"] {}
 }
 
 .table_question {
