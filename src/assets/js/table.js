@@ -29,6 +29,22 @@ const tableColorFromStorage = () => {
 	tablePrice()
 }
 
+const tableItemSelected = (name) => {
+	console.log('name | ', name)
+	console.log('-------------')
+
+	document.querySelectorAll('.js-table-item[data-type="' + name + '"]').forEach((e) => {
+		console.log('checked-- | ', e.checked)
+
+		if (e.checked == true) {
+			console.log('true')
+		}
+		else {
+			console.log('false')
+		}
+	})
+}
+
 const tablePrice = () => {
 	let totalPrice = 0
 
@@ -46,5 +62,6 @@ const tablePrice = () => {
 export {
 	tableColorChanged,
 	tableColorFromStorage,
+	tableItemSelected,
 	tablePrice
 }

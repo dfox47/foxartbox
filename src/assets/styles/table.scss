@@ -8,24 +8,78 @@
 	}
 }
 
-.table_charger {
-	background-color: $c_text;
-	border-radius: 50%;
-	display: none;
-	left: 68%;
-	position: absolute;
-	top: 23%;
-	width: 8.3%;
-	z-index: 3;
+.table_item {
+	&__phone_holder {
+		display: none;
+		height: 1%;
+		left: 75%;
+		position: absolute;
+		top: 17%;
+		transform: rotate(30deg);
+		width: 5.7%;
+		z-index: 3;
 
-	&::after {
-		content: "";
-		display: block;
-		padding: 100% 0 0;
+		&.active {
+			display: block;
+		}
 	}
 
-	&.active {
-		display: block;
+	&__tablet_holder {
+		background-color: $c_gradient_2;
+		display: none;
+		height: 1%;
+		left: 83%;
+		position: absolute;
+		top: 19%;
+		transform: rotate(30deg);
+		width: 15%;
+		z-index: 3;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__whiteboard {
+		background-color: #fff;
+		border-radius: 4px;
+		bottom: 4%;
+		box-shadow: 0 0 3px #000;
+		display: none;
+		left: 2%;
+		position: absolute;
+		width: 24.5%;
+
+		&.active {
+			display: block;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			padding: 141% 0 0;
+		}
+	}
+
+	&__wireless_charger {
+		background-color: $c_text;
+		border-radius: 50%;
+		display: none;
+		left: 68%;
+		position: absolute;
+		top: 23%;
+		width: 8.3%;
+		z-index: 3;
+
+		&::after {
+			content: "";
+			display: block;
+			padding: 100% 0 0;
+		}
+
+		&.active {
+			display: block;
+		}
 	}
 }
 
@@ -64,21 +118,6 @@
 
 	&__item {
 		margin: 0 30px 30px 0;
-	}
-}
-
-.table_phone_holder {
-	display: none;
-	height: 1%;
-	left: 75%;
-	position: absolute;
-	top: 17%;
-	transform: rotate(30deg);
-	width: 5.7%;
-	z-index: 3;
-
-	&.active {
-		display: block;
 	}
 }
 
@@ -178,52 +217,22 @@
 	width: 40px;
 }
 
-.table_tablet_holder {
-	background-color: $c_gradient_2;
-	display: none;
-	height: 1%;
-	left: 83%;
-	position: absolute;
-	top: 19%;
-	transform: rotate(30deg);
-	width: 15%;
-	z-index: 3;
-
-	&.active {
-		display: block;
-	}
-}
-
 .table_title {
 	margin: 0 0 10px;
 }
 
 .table_total {
-	&__price {
-		font-size: 40px;
-		font-weight: 700;
-	}
+	font-size: 40px;
+	font-weight: 700;
 
-	&__title {}
-}
+	&__currency {}
 
-.table_whiteboard {
-	background-color: #fff;
-	border-radius: 4px;
-	bottom: 4%;
-	box-shadow: 0 0 3px #000;
-	display: none;
-	left: 2%;
-	position: absolute;
-	width: 24.5%;
+	&__price {}
 
-	&.active {
-		display: block;
-	}
-
-	&::after {
-		content: "";
-		display: block;
-		padding: 141% 0 0;
+	&__title {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		font-size: 20px;
+		font-weight: 400;
 	}
 }

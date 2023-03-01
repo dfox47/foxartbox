@@ -9,23 +9,13 @@
 					<input class="js-table-price" type="checkbox" data-price="200" checked>
 				</label>
 
-				<!-- Whiteboard -->
-				<div class="table_whiteboard js-table-checkbox-selector" title="Whiteboard" data-type="whiteboard"></div>
-
-				<!-- Phone holder -->
-				<div class="table_phone_holder js-table-checkbox-selector" title="phone holder" data-type="phone_holder"></div>
-
-				<!-- Tablet holder -->
-				<div class="table_tablet_holder js-table-checkbox-selector" title="tablet holder" data-type="tablet_holder"></div>
-
-				<!-- Charger -->
-				<div class="table_charger js-table-checkbox-selector" title="Hidden charger" data-type="charger"></div>
+				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item active table_item__' + tableOption.name" :title="tableOption.title" :data-type="tableOption.name"></div>
 
 				<div class="table_logo"></div>
 			</div>
 
+			<!-- Colors -->
 			<div class="table_options">
-				<!-- Color -->
 				<div class="table_options__item">
 					<div class="table_title">Table color:</div>
 
@@ -41,7 +31,7 @@
 			<div class="table_options">
 				<div class="table_options__item" v-for="tableOption in tableOptions" :key="tableOption.name">
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" :data-price="tableOption.price" @change="tablePrice()">
+						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" :data-price="tableOption.price" @change="tablePrice(); tableItemSelected(tableOption.name)">
 						<span class="checkbox__box"></span>
 
 						<span class="checkbox__title">{{ tableOption.title }} <sup>(+{{ tableOption.price }}€)</sup></span>
@@ -52,14 +42,14 @@
 			</div>
 
 			<div class="table_total">
-				<span class="table_total__title">Total: </span> <span class="table_total__price js-table-price-total">0</span> €
+				<span class="table_total__title">Total: </span> <span class="table_total__price js-table-price-total">0</span> <span class="table_total__currency">€</span>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import {tableColorChanged, tableColorFromStorage, tablePrice} from '../assets/js/table'
+import {tableColorChanged, tableColorFromStorage, tableItemSelected, tablePrice} from '../assets/js/table'
 
 export default {
 	created() {
@@ -82,6 +72,7 @@ export default {
 	},
 	methods: {
 		tableColorChanged,
+		tableItemSelected,
 		tablePrice
 	},
 	mounted() {
