@@ -1,13 +1,7 @@
-const tableColorChanged = () => {
-	document.querySelectorAll('.js-table-color').forEach((e) => {
-		if (e.checked) {
-			const tableColor = e.dataset.color
+const tableColorChanged = (color) => {
+	if (!color) return
 
-			document.querySelector('.js-table-preview').style.backgroundColor = tableColor
-
-			localStorage.setItem('tableColor', tableColor)
-		}
-	})
+	document.querySelector('.js-table-preview').dataset.theme = color
 
 	tablePrice()
 }
@@ -18,7 +12,7 @@ const tableColorFromStorage = () => {
 
 	if (!colorFromStorage) return
 
-	document.querySelector('.js-table-preview').style.backgroundColor = colorFromStorage
+	document.querySelector('.js-table-preview').dataset.theme = colorFromStorage
 
 	document.querySelectorAll('.js-table-color').forEach((e) => {
 		if (colorFromStorage === e.dataset.color) {
@@ -36,7 +30,7 @@ const tableItemSelected = (name) => {
 	document.querySelectorAll('.js-table-item[data-type="' + name + '"]').forEach((e) => {
 		console.log('checked-- | ', e.checked)
 
-		if (e.checked == true) {
+		if (e.checked === true) {
 			console.log('true')
 		}
 		else {
