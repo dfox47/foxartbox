@@ -4,11 +4,12 @@
 			<h1>Table</h1>
 
 			<div class="table_preview js-table-preview">
-				<!-- Base price -->
+				<!-- base price -->
 				<label class="hidden">
 					<input class="js-table-price" type="checkbox" data-price="200" checked>
 				</label>
 
+				<!-- options from data -->
 				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item active table_item__' + tableOption.name" :title="tableOption.title" :data-type="tableOption.name"></div>
 
 				<div class="table_logo"></div>
@@ -20,8 +21,8 @@
 					<div class="table_title">Table color:</div>
 
 					<div class="table_color_list">
-						<label class="checkbox_radio" v-for="tableColor in tableColors" :key="tableColor.title" @click="tableColorChanged()" :title="tableColor.title">
-							<input class="js-table-color js-table-price" type="radio" :value="tableColor.title" name="table_color" :data-color="tableColor.color" :data-price="tableColor.price">
+						<label class="checkbox_radio" v-for="tableColor in tableColors" :key="tableColor.title" @click="tableColorChanged(tableColor.title)" :title="tableColor.title">
+							<input class="js-table-price" type="radio" :value="tableColor.title" name="table_color" :data-price="tableColor.price">
 							<span :class="'table_color_item__' + tableColor.title"></span>
 						</label>
 					</div>
@@ -49,7 +50,12 @@
 </template>
 
 <script>
-import {tableColorChanged, tableColorFromStorage, tableItemSelected, tablePrice} from '../assets/js/table'
+import {
+	tableColorChanged,
+	tableColorFromStorage,
+	tableItemSelected,
+	tablePrice
+} from '../assets/js/table'
 
 export default {
 	created() {
@@ -76,7 +82,6 @@ export default {
 		tablePrice
 	},
 	mounted() {
-		tableColorChanged()
 		tableColorFromStorage()
 	}
 }
