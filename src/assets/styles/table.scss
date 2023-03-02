@@ -9,50 +9,40 @@
 }
 
 .table_item {
+	background-color: #fff;
+	box-shadow: 0 0 3px #000;
+	display: none;
+	position: absolute;
+	z-index: 3;
+
+	&.active {
+		display: block;
+	}
+
 	&__phone_holder {
-		display: none;
 		height: 1%;
 		left: 75%;
-		position: absolute;
 		top: 17%;
 		transform: rotate(30deg);
 		width: 5.7%;
-		z-index: 3;
-
-		&.active {
-			display: block;
-		}
 	}
 
 	&__tablet_holder {
-		background-color: $c_gradient_2;
 		display: none;
 		height: 1%;
 		left: 83%;
-		position: absolute;
 		top: 19%;
 		transform: rotate(30deg);
 		width: 15%;
-		z-index: 3;
-
-		&.active {
-			display: block;
-		}
 	}
 
 	&__whiteboard {
-		background-color: #fff;
 		border-radius: 4px;
 		bottom: 4%;
 		box-shadow: 0 0 3px #000;
 		display: none;
 		left: 2%;
-		position: absolute;
 		width: 24.5%;
-
-		&.active {
-			display: block;
-		}
 
 		&::after {
 			content: "";
@@ -62,23 +52,18 @@
 	}
 
 	&__wireless_charger {
-		background-color: $c_text;
+		background-color: #fff;
 		border-radius: 50%;
+		box-shadow: 0 0 3px #000;
 		display: none;
 		left: 68%;
-		position: absolute;
 		top: 23%;
 		width: 8.3%;
-		z-index: 3;
 
 		&::after {
 			content: "";
 			display: block;
 			padding: 100% 0 0;
-		}
-
-		&.active {
-			display: block;
 		}
 	}
 }
@@ -204,6 +189,10 @@
 
 	&[data-theme="black"] {
 		background-color: #000;
+
+		.table_logo {
+			filter: invert(100%);
+		}
 	}
 
 	&[data-theme="pink"] {
