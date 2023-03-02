@@ -8,6 +8,24 @@
 	}
 }
 
+.table_color_item {
+	&__black {
+		background-color: #000;
+	}
+
+	&__pink {
+		background: linear-gradient(135deg, $c_theme_cyperpunk, darken($c_theme_cyperpunk, 50%));
+	}
+
+	&__white {
+		background: linear-gradient(135deg, #fff, #eee);
+	}
+}
+
+.table_color_list {
+	display: flex;
+}
+
 .table_item {
 	background-color: #fff;
 	box-shadow: 0 0 3px #000;
@@ -66,24 +84,6 @@
 			padding: 100% 0 0;
 		}
 	}
-}
-
-.table_color_item {
-	&__black {
-		background-color: #000;
-	}
-
-	&__pink {
-		background: linear-gradient(135deg, $c_theme_cyperpunk, darken($c_theme_cyperpunk, 50%));
-	}
-
-	&__white {
-		background: linear-gradient(135deg, #fff, #eee);
-	}
-}
-
-.table_color_list {
-	display: flex;
 }
 
 .table_logo {
