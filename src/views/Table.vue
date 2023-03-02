@@ -35,10 +35,10 @@
 						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" :data-price="tableOption.price" @change="tablePrice(); tableItemSelected(tableOption.name)">
 						<span class="checkbox__box"></span>
 
-						<span class="checkbox__title">{{ tableOption.title }} <sup>(+{{ tableOption.price }}€)</sup></span>
+						<span class="checkbox__title">{{ tableOption.title }} <sup v-if="tableOption.price">(+{{ tableOption.price }}€)</sup></span>
 					</label>
 
-					<div class="table_question js-table-question" :data-type="tableOption.name">?</div>
+					<div class="table_question js-table-question" v-if="tableOption.desc" :data-type="tableOption.name">?</div>
 				</div>
 			</div>
 
@@ -69,10 +69,10 @@ export default {
 				{title: 'white',    price: 3}
 			],
 			tableOptions: [
-				{title: 'Whiteboard',       price: '10',    name: 'whiteboard',         desc: ''},
+				{title: 'Whiteboard',       price: '10',    name: 'whiteboard',         desc: 'some text'},
 				{title: 'Wireless charger', price: '10',    name: 'wireless_charger',   desc: ''},
-				{title: 'Phone holder',     price: '5',     name: 'phone_holder',       desc: ''},
-				{title: 'Tablet holder',    price: '5',     name: 'tablet_holder',      desc: ''}
+				{title: 'Phone holder',     price: '',      name: 'phone_holder',       desc: ''},
+				{title: 'Tablet holder',    price: '',      name: 'tablet_holder',      desc: ''}
 			]
 		}
 	},
