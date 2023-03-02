@@ -64,9 +64,9 @@ export default {
 	data() {
 		return {
 			tableColors: [
-				{title: 'black',    color: '#000',      price: 1},
-				{title: 'pink',     color: '#ee0979',   price: 2},
-				{title: 'white',    color: '#fff',      price: 3}
+				{title: 'black',    price: 1},
+				{title: 'pink',     price: 2},
+				{title: 'white',    price: 3}
 			],
 			tableOptions: [
 				{title: 'Whiteboard',       price: '10',    name: 'whiteboard',         desc: ''},
