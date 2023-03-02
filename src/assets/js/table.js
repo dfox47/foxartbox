@@ -6,7 +6,6 @@ const tableColorChanged = (color) => {
 	tablePrice()
 }
 
-// table color from local storage
 const tableColorFromStorage = () => {
 	const colorFromStorage = localStorage.getItem('tableColor')
 
