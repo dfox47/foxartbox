@@ -10,7 +10,7 @@
 				</label>
 
 				<!-- options from data -->
-				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item active table_item__' + tableOption.name" :title="tableOption.title" :data-type="tableOption.name"></div>
+				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item js-table-item table_item__' + tableOption.name" :title="tableOption.title" :data-type="tableOption.name"></div>
 
 				<div class="table_logo"></div>
 			</div>
@@ -32,7 +32,7 @@
 			<div class="table_options">
 				<div class="table_options__item" v-for="tableOption in tableOptions" :key="tableOption.name">
 					<label class="checkbox">
-						<input class="js-table-checkbox js-table-price" type="checkbox" data-type="tablet_holder" :data-price="tableOption.price" @change="tablePrice(); tableItemSelected(tableOption.name)">
+						<input class="js-table-option js-table-price" type="checkbox" :data-type="tableOption.name" :data-price="tableOption.price" @change="tablePrice(); tableItemSelected(tableOption.name)">
 						<span class="checkbox__box"></span>
 
 						<span class="checkbox__title">{{ tableOption.title }} <sup v-if="tableOption.price">(+{{ tableOption.price }}€)</sup></span>
