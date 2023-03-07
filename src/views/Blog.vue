@@ -21,6 +21,21 @@ export default {
 	},
 	created() {
 		document.title = "Blog | Foxartbox"
+	},
+	methods: {
+		listDir() {
+			const illustrations = require.context(
+				'@/assets/i/icons',
+				true,
+				/^.*\.svg$/
+			)
+
+			console.log(illustrations.keys())
+		}
+	},
+	mounted() {
+		// highlight menu item on inner pages
+		// this.listDir()
 	}
 }
 </script>

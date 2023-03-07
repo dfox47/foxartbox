@@ -23,7 +23,7 @@ const tableColorFromStorage = () => {
 }
 
 const tableItemSelected = (name) => {
-	document.querySelector('.js-table-item[data-type="' + name + '"]').classList.toggle('active', document.querySelector('.js-table-option[data-type="' + name + '"]').checked)
+	document.querySelector('.js-table-item__' + name).classList.toggle('active', document.querySelector('.js-table-option[data-type="' + name + '"]').checked)
 }
 
 const tablePrice = () => {

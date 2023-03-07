@@ -10,7 +10,7 @@
 				</label>
 
 				<!-- options from data -->
-				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item js-table-item table_item__' + tableOption.name" :title="tableOption.title" :data-type="tableOption.name"></div>
+				<div v-for="tableOption in tableOptions" :key="tableOption.name" :class="'table_item js-table-item__' + tableOption.name + ' table_item__' + tableOption.name" :title="tableOption.title"></div>
 
 				<div class="table_logo"></div>
 			</div>
@@ -72,7 +72,8 @@ export default {
 				{title: 'Whiteboard',       price: '10',    name: 'whiteboard',         desc: 'some text'},
 				{title: 'Wireless charger', price: '10',    name: 'wireless_charger',   desc: ''},
 				{title: 'Phone holder',     price: '',      name: 'phone_holder',       desc: ''},
-				{title: 'Tablet holder',    price: '',      name: 'tablet_holder',      desc: ''}
+				{title: 'Tablet holder',    price: '',      name: 'tablet_holder',      desc: ''},
+				{title: 'Vent holes',       price: '4',     name: 'vent_holes',         desc: ''}
 			]
 		}
 	},
