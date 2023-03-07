@@ -33,7 +33,22 @@
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
 
 		<div class="clock_list">
-			<div id="clock__1" class="clock">
+			<div id="clock__1" class="clock js-clock">
+				<div class="clock__border"></div>
+
+				<div class="clock_number clock_number__3">3</div>
+				<div class="clock_number clock_number__6">6</div>
+				<div class="clock_number clock_number__9">9</div>
+				<div class="clock_number clock_number__12">12</div>
+
+				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+
+				<div class="clock_numbers"></div>
+			</div>
+
+			<div id="clock__2" class="clock">
 				<div class="clock__border"></div>
 
 				<div class="clock_number clock_number__3">3</div>
