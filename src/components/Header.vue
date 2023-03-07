@@ -33,9 +33,7 @@
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
 
 		<div class="clock_list">
-			<div id="clock__1" class="clock js-clock">
-				<div class="clock__border"></div>
-
+			<div class="clock js-clock" data-gmt="7">
 				<div class="clock_number clock_number__3">3</div>
 				<div class="clock_number clock_number__6">6</div>
 				<div class="clock_number clock_number__9">9</div>
@@ -48,9 +46,20 @@
 				<div class="clock_numbers"></div>
 			</div>
 
-			<div id="clock__2" class="clock">
-				<div class="clock__border"></div>
+			<div class="clock js-clock" data-gmt="3">
+				<div class="clock_number clock_number__3">3</div>
+				<div class="clock_number clock_number__6">6</div>
+				<div class="clock_number clock_number__9">9</div>
+				<div class="clock_number clock_number__12">12</div>
 
+				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+
+				<div class="clock_numbers"></div>
+			</div>
+
+			<div class="clock js-clock" data-gmt="2">
 				<div class="clock_number clock_number__3">3</div>
 				<div class="clock_number clock_number__6">6</div>
 				<div class="clock_number clock_number__9">9</div>
@@ -118,19 +127,19 @@ export default {
 		themeFromLocalStorage,
 
 		getNow: () => {
-			const $clock = document.getElementById('clock__1')
+			const $clocks = document.querySelectorAll('.js-clock')
 
-			if (!$clock) return
+			if (!$clocks) return
 
 			const today = new Date()
 
-			const rotation_hr       = 30 * today.getUTCHours() + today.getUTCMinutes() / 2
-			const rotation_min      = 6 * today.getUTCMinutes()
-			const rotation_sec      = 6 * today.getUTCSeconds()
+			$clocks.forEach((e) => {
+				const $gmt = e.dataset.gmt ? e.dataset.gmt : 0
 
-			$clock.querySelector('.js-clock-hours').style.transform     = `rotate(${rotation_hr}deg)`
-			$clock.querySelector('.js-clock-minutes').style.transform   = `rotate(${rotation_min}deg)`
-			$clock.querySelector('.js-clock-seconds').style.transform   = `rotate(${rotation_sec}deg)`
+				e.querySelector('.js-clock-hours').style.transform     = 'rotate(' + 30 * (today.getUTCHours() + $gmt) + today.getUTCMinutes() / 2 + 'deg)'
+				e.querySelector('.js-clock-minutes').style.transform   = 'rotate(' + 6 * today.getUTCMinutes() + 'deg)'
+				e.querySelector('.js-clock-seconds').style.transform   = 'rotate(' + 6 * today.getUTCSeconds() + 'deg)'
+			})
 
 			// this.timestamp = this.addZero(today.getUTCHours()) + ' | ' + this.addZero(today.getUTCMinutes()) + ' | ' + this.addZero(today.getUTCSeconds())
 		},
