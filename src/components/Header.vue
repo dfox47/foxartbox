@@ -32,7 +32,7 @@
 
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
 
-		<div class="clock_wrap">
+		<div class="clock_list">
 			<div id="clock__1" class="clock">
 				<div class="clock__border"></div>
 
@@ -102,27 +102,22 @@ export default {
 		themeChange,
 		themeFromLocalStorage,
 
-		getNow: function() {
-			const today             = new Date()
+		getNow: () => {
+			const $clock = document.getElementById('clock__1')
 
-			const $clock            = document.getElementById('clock__1')
-			const $clockHours       = $clock.querySelector('.js-clock-hours')
-			const $clockMinutes     = $clock.querySelector('.js-clock-minutes')
-			const $clockSeconds     = $clock.querySelector('.js-clock-seconds')
+			if (!$clock) return
 
-			const rotation_hr   = 30 * today.getUTCHours() + today.getUTCMinutes() / 2
-			const rotation_min  = 6 * today.getUTCMinutes()
-			const rotation_sec  = 6 * today.getUTCSeconds()
+			const today = new Date()
 
-			console.log('rotation_hr | ', rotation_hr)
-			console.log('rotation_min | ', rotation_min)
-			console.log('rotation_sec | ', rotation_sec)
+			const rotation_hr       = 30 * today.getUTCHours() + today.getUTCMinutes() / 2
+			const rotation_min      = 6 * today.getUTCMinutes()
+			const rotation_sec      = 6 * today.getUTCSeconds()
 
-			$clockHours.style.transform = `rotate(${rotation_hr}deg)`
-			$clockMinutes.style.transform = `rotate(${rotation_min}deg)`
-			$clockSeconds.style.transform = `rotate(${rotation_sec}deg)`
+			$clock.querySelector('.js-clock-hours').style.transform     = `rotate(${rotation_hr}deg)`
+			$clock.querySelector('.js-clock-minutes').style.transform   = `rotate(${rotation_min}deg)`
+			$clock.querySelector('.js-clock-seconds').style.transform   = `rotate(${rotation_sec}deg)`
 
-			this.timestamp      = this.addZero(today.getUTCHours()) + ":" + this.addZero(today.getUTCMinutes()) + ":" + this.addZero(today.getUTCSeconds())
+			// this.timestamp = this.addZero(today.getUTCHours()) + ' | ' + this.addZero(today.getUTCMinutes()) + ' | ' + this.addZero(today.getUTCSeconds())
 		},
 
 		addZero: (i) => {

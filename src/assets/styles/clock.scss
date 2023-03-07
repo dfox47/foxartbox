@@ -31,7 +31,6 @@
 		left: 48.5%;
 		top: 25%;
 		height: 25%;
-		transform: rotate(45deg);
 		width: 8px;
 		z-index: 1;
 	}
@@ -40,18 +39,24 @@
 		height: 35%;
 		left: 48.5%;
 		top: 16%;
-		transform: rotate(30deg);
 		z-index: 2;
 	}
 
 	&__seconds {
-		background-color: red;
+		background-color: $c_main;
 		height: 40%;
 		left: 48.5%;
 		top: 10%;
-		transform: rotate(90deg);
 		z-index: 3;
 	}
+}
+
+.clock_list {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 250px 0;
 }
 
 .clock_number {
@@ -93,12 +98,4 @@
 	font-weight: 700;
 	justify-content: center;
 	padding: 20px 0;
-}
-
-.clock_wrap {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 250px 0;
 }
