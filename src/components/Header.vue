@@ -33,43 +33,55 @@
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
 
 		<div class="clock_list">
-			<div class="clock js-clock" data-gmt="7">
-				<div class="clock_number clock_number__3">3</div>
-				<div class="clock_number clock_number__6">6</div>
-				<div class="clock_number clock_number__9">9</div>
-				<div class="clock_number clock_number__12">12</div>
+			<div class="clock js-clock" data-gmt="1">
+				<div class="clock__title">Moscow</div>
 
-				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
-				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
-				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+				<div class="clock_analog">
+					<div class="clock_number clock_number__3">3</div>
+					<div class="clock_number clock_number__6">6</div>
+					<div class="clock_number clock_number__9">9</div>
+					<div class="clock_number clock_number__12">12</div>
 
-				<div class="clock_numbers"></div>
-			</div>
+					<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+					<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+					<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+				</div>
 
-			<div class="clock js-clock" data-gmt="3">
-				<div class="clock_number clock_number__3">3</div>
-				<div class="clock_number clock_number__6">6</div>
-				<div class="clock_number clock_number__9">9</div>
-				<div class="clock_number clock_number__12">12</div>
-
-				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
-				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
-				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
-
-				<div class="clock_numbers"></div>
+				<div class="clock_digital js-clock-digital"></div>
 			</div>
 
 			<div class="clock js-clock" data-gmt="2">
-				<div class="clock_number clock_number__3">3</div>
-				<div class="clock_number clock_number__6">6</div>
-				<div class="clock_number clock_number__9">9</div>
-				<div class="clock_number clock_number__12">12</div>
+				<div class="clock__title">New York</div>
 
-				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
-				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
-				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+				<div class="clock_analog">
+					<div class="clock_number clock_number__3">3</div>
+					<div class="clock_number clock_number__6">6</div>
+					<div class="clock_number clock_number__9">9</div>
+					<div class="clock_number clock_number__12">12</div>
 
-				<div class="clock_numbers"></div>
+					<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+					<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+					<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+				</div>
+
+				<div class="clock_digital js-clock-digital"></div>
+			</div>
+
+			<div class="clock js-clock" data-gmt="3">
+				<div class="clock__title">Sofia</div>
+
+				<div class="clock_analog">
+					<div class="clock_number clock_number__3">3</div>
+					<div class="clock_number clock_number__6">6</div>
+					<div class="clock_number clock_number__9">9</div>
+					<div class="clock_number clock_number__12">12</div>
+
+					<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+					<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+					<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+				</div>
+
+				<div class="clock_digital js-clock-digital"></div>
 			</div>
 
 			<div class="clock_time">{{ timestamp }}</div>
@@ -136,9 +148,15 @@ export default {
 			$clocks.forEach((e) => {
 				const $gmt = e.dataset.gmt ? e.dataset.gmt : 0
 
-				e.querySelector('.js-clock-hours').style.transform     = 'rotate(' + 30 * (today.getUTCHours() + $gmt) + today.getUTCMinutes() / 2 + 'deg)'
-				e.querySelector('.js-clock-minutes').style.transform   = 'rotate(' + 6 * today.getUTCMinutes() + 'deg)'
-				e.querySelector('.js-clock-seconds').style.transform   = 'rotate(' + 6 * today.getUTCSeconds() + 'deg)'
+				let clockHours = today.getUTCHours() + +$gmt
+
+				if (clockHours > 23) {
+					clockHours = clockHours - 24
+				}
+
+				e.querySelector('.js-clock-hours').style.transform     = 'rotate(' + (30 * clockHours + today.getUTCMinutes() / 2) + 'deg)'
+				e.querySelector('.js-clock-minutes').style.transform   = 'rotate(' + (6 * today.getUTCMinutes()) + 'deg)'
+				e.querySelector('.js-clock-seconds').style.transform   = 'rotate(' + (6 * today.getUTCSeconds()) + 'deg)'
 			})
 
 			// this.timestamp = this.addZero(today.getUTCHours()) + ' | ' + this.addZero(today.getUTCMinutes()) + ' | ' + this.addZero(today.getUTCSeconds())

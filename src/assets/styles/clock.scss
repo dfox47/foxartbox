@@ -1,4 +1,14 @@
 .clock {
+	margin: 0 20px;
+
+	&__title {
+		font-size: 16px;
+		margin: 0 0 1em;
+		text-align: center;
+	}
+}
+
+.clock_analog {
 	border: 1px solid #000;
 	border-radius: 50%;
 	height: 200px;
@@ -51,10 +61,17 @@
 	}
 }
 
+.clock_digital {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 100%;
+	width: 100%;
+}
+
 .clock_list {
 	align-items: center;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	padding: 250px 0;
 }
