@@ -13,9 +13,9 @@
 				<ul class="topmenu_list">
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
 						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
-                           class="topmenu_list__link js-topmenu-link"
-                           @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()"
-                           :href="menuItem.href">{{ menuItem.title }}
+                            class="topmenu_list__link js-topmenu-link"
+                            @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()"
+                            :href="menuItem.href">{{ menuItem.title }}
 						</a>
 					</li>
 				</ul>
@@ -31,6 +31,25 @@
 		</div>
 
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
+
+		<div class="clock_wrap">
+			<div id="clock__1" class="clock">
+				<div class="clock__border"></div>
+
+				<div class="clock_number clock_number__3">3</div>
+				<div class="clock_number clock_number__6">6</div>
+				<div class="clock_number clock_number__9">9</div>
+				<div class="clock_number clock_number__12">12</div>
+
+				<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
+				<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
+				<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
+
+				<div class="clock_numbers"></div>
+			</div>
+
+			<div class="clock_time">{{ timestamp }}</div>
+		</div>
 	</div>
 </template>
 
@@ -44,22 +63,20 @@ import {phone} from '../assets/js/config'
 
 export default {
 	name: 'Header',
+	beforeUnmount() {
+		clearInterval(this.getNow)
+	},
 	created() {
 		window.addEventListener('scroll', this.handleScroll)
 
 		// check if there is theme at localStorage
 		this.themeFromLocalStorage()
+
+		setInterval(this.getNow, 1000)
 	},
 	data() {
 		return {
 			activeId : '',
-			themeItems: [
-				{name: 'theme_standart',        title: 'Default theme',         class: '1'},
-				{name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
-				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'},
-				{name: 'theme_forest',          title: 'Forest theme',          class: '4'},
-				{name: 'theme_yellow',          title: 'Yellow theme',          class: '5'}
-			],
 			menuItems: [
 				{title: 'Home',         href: '/#top'},
 				{title: 'About',        href: '/#about'},
@@ -68,7 +85,15 @@ export default {
 				{title: 'Contacts',     href: '/#contacts'},
 				// {title: 'Blog',         href: '/blog'}
 			],
-			phone
+			phone,
+			themeItems: [
+				{name: 'theme_standart',        title: 'Default theme',         class: '1'},
+				{name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
+				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'},
+				{name: 'theme_forest',          title: 'Forest theme',          class: '4'},
+				{name: 'theme_yellow',          title: 'Yellow theme',          class: '5'}
+			],
+			timestamp: ''
 		}
 	},
 	methods: {
@@ -76,6 +101,35 @@ export default {
 		scrollTo,
 		themeChange,
 		themeFromLocalStorage,
+
+		getNow: function() {
+			const today             = new Date()
+			// const $clock            = document.getElementById('clock__1')
+			// const $clockHours       = $clock.querySelector('.js-clock-hours')
+			// const $clockSeconds     = $clock.querySelector('.js-clock-seconds')
+			// const $clockMinutes     = $clock.querySelector('.js-clock-minutes')
+
+			const rotation_hr   = 30 * today.getUTCHours() + today.getUTCMinutes() / 2
+			const rotation_min  = 6 * today.getUTCMinutes()
+			const rotation_sec  = 6 * today.getUTCSeconds()
+
+			console.log('rotation_hr | ', rotation_hr)
+			console.log('rotation_min | ', rotation_min)
+			console.log('rotation_sec | ', rotation_sec)
+
+			// $clockHours.style.transform = `rotate(${rotation_hr}deg)`
+			// $clockSeconds.style.transform = `rotate(${rotation_sec}deg)`
+
+			this.timestamp      = this.addZero(today.getUTCHours()) + ":" + this.addZero(today.getUTCMinutes()) + ":" + this.addZero(today.getUTCSeconds())
+		},
+
+		addZero: (i) => {
+			if (i < 10) {
+				i = "0" + i
+			}
+
+			return i
+		},
 
 		// on scroll
 		handleScroll() {
