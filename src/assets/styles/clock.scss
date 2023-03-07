@@ -1,0 +1,103 @@
+.clock {
+	border: 1px solid #000;
+	border-radius: 50%;
+	height: 200px;
+	position: relative;
+	width: 200px;
+	z-index: 1;
+
+	&::after {
+		background-color: #000;
+		border-radius: 50%;
+		content: "";
+		height: 10px;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 10px;
+		z-index: 5;
+	}
+}
+
+.clock_arrow {
+	background-color: #000;
+	border-radius: 10px;
+	position: absolute;
+	transform-origin: bottom;
+	width: 3px;
+
+	&__hours {
+		left: 48.5%;
+		top: 25%;
+		height: 25%;
+		transform: rotate(45deg);
+		width: 8px;
+		z-index: 1;
+	}
+
+	&__minutes {
+		height: 35%;
+		left: 48.5%;
+		top: 16%;
+		transform: rotate(30deg);
+		z-index: 2;
+	}
+
+	&__seconds {
+		background-color: red;
+		height: 40%;
+		left: 48.5%;
+		top: 10%;
+		transform: rotate(90deg);
+		z-index: 3;
+	}
+}
+
+.clock_number {
+	font-size: 16px;
+	padding: 4px;
+	position: absolute;
+	z-index: 3;
+
+	&__3 {
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__6 {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__9 {
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__12 {
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+}
+
+.clock_time {
+	align-items: center;
+	display: flex;
+	font-size: 30px;
+	font-weight: 900;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.clock_wrap {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 250px 0;
+}
