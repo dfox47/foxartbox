@@ -104,10 +104,11 @@ export default {
 
 		getNow: function() {
 			const today             = new Date()
-			// const $clock            = document.getElementById('clock__1')
-			// const $clockHours       = $clock.querySelector('.js-clock-hours')
-			// const $clockSeconds     = $clock.querySelector('.js-clock-seconds')
-			// const $clockMinutes     = $clock.querySelector('.js-clock-minutes')
+
+			const $clock            = document.getElementById('clock__1')
+			const $clockHours       = $clock.querySelector('.js-clock-hours')
+			const $clockMinutes     = $clock.querySelector('.js-clock-minutes')
+			const $clockSeconds     = $clock.querySelector('.js-clock-seconds')
 
 			const rotation_hr   = 30 * today.getUTCHours() + today.getUTCMinutes() / 2
 			const rotation_min  = 6 * today.getUTCMinutes()
@@ -117,8 +118,9 @@ export default {
 			console.log('rotation_min | ', rotation_min)
 			console.log('rotation_sec | ', rotation_sec)
 
-			// $clockHours.style.transform = `rotate(${rotation_hr}deg)`
-			// $clockSeconds.style.transform = `rotate(${rotation_sec}deg)`
+			$clockHours.style.transform = `rotate(${rotation_hr}deg)`
+			$clockMinutes.style.transform = `rotate(${rotation_min}deg)`
+			$clockSeconds.style.transform = `rotate(${rotation_sec}deg)`
 
 			this.timestamp      = this.addZero(today.getUTCHours()) + ":" + this.addZero(today.getUTCMinutes()) + ":" + this.addZero(today.getUTCSeconds())
 		},
