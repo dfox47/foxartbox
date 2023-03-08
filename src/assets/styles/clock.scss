@@ -1,6 +1,27 @@
 .clock {
 	margin: 30px;
 
+	&--dark {
+		.clock_analog {
+			background-color: #000;
+			color: #fff;
+
+			&::after {
+				background-color: #fff;
+			}
+		}
+
+		.clock_arrow {
+			&__hours {
+				background-color: #fff;
+			}
+
+			&__minutes {
+				background-color: #fff;
+			}
+		}
+	}
+
 	&__title {
 		font-size: 22px;
 		font-weight: 700;

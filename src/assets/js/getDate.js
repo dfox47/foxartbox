@@ -17,6 +17,11 @@ const getDate = () => {
 			clockHours = clockHours - 24
 		}
 
+		// dark mode
+		if (clockHours > 19 || clockHours < 8) {
+			e.classList.add('clock--dark')
+		}
+
 		e.querySelector('.js-clock-hours').style.transform     = 'rotate(' + (30 * clockHours + today.getUTCMinutes() / 2) + 'deg)'
 		e.querySelector('.js-clock-minutes').style.transform   = 'rotate(' + (6 * clockMinutes) + 'deg)'
 		e.querySelector('.js-clock-seconds').style.transform   = 'rotate(' + (6 * clockSeconds) + 'deg)'
