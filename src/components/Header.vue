@@ -31,25 +31,6 @@
 		</div>
 
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
-
-		<div class="clock_list">
-			<div class="clock js-clock" v-for="city in clockLocations" :key="city.name" :data-gmt="city.gmt">
-				<div class="clock__title">{{ city.name }}</div>
-
-				<div class="clock_analog">
-					<div class="clock_number clock_number__3">3</div>
-					<div class="clock_number clock_number__6">6</div>
-					<div class="clock_number clock_number__9">9</div>
-					<div class="clock_number clock_number__12">12</div>
-
-					<div class="clock_arrow clock_arrow__seconds js-clock-seconds"></div>
-					<div class="clock_arrow clock_arrow__minutes js-clock-minutes"></div>
-					<div class="clock_arrow clock_arrow__hours js-clock-hours"></div>
-				</div>
-
-				<div class="clock_digital js-clock-digital"></div>
-			</div>
-		</div>
 	</div>
 </template>
 
@@ -71,8 +52,6 @@ export default {
 
 		// check if there is theme at localStorage
 		this.themeFromLocalStorage()
-
-		setInterval(this.getNow, 1000)
 	},
 	data() {
 		return {
@@ -92,11 +71,6 @@ export default {
 				{name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'},
 				{name: 'theme_forest',          title: 'Forest theme',          class: '4'},
 				{name: 'theme_yellow',          title: 'Yellow theme',          class: '5'}
-			],
-			clockLocations: [
-				{name: 'New York',  gmt: '-5'},
-				{name: 'Sofia',     gmt: '+2'},
-				{name: 'Moscow',    gmt: '+3'}
 			]
 		}
 	},
@@ -105,32 +79,6 @@ export default {
 		scrollTo,
 		themeChange,
 		themeFromLocalStorage,
-
-		getNow: () => {
-			const $clocks = document.querySelectorAll('.js-clock')
-
-			if (!$clocks) return
-
-			const today = new Date()
-			const clockMinutes  = today.getUTCMinutes()
-			const clockSeconds  = today.getUTCSeconds()
-
-			$clocks.forEach((e) => {
-				const $gmt = e.dataset.gmt ? e.dataset.gmt : 0
-
-				let clockHours = today.getUTCHours() + +$gmt
-
-				if (clockHours > 23) {
-					clockHours = clockHours - 24
-				}
-
-				e.querySelector('.js-clock-hours').style.transform     = 'rotate(' + (30 * clockHours + today.getUTCMinutes() / 2) + 'deg)'
-				e.querySelector('.js-clock-minutes').style.transform   = 'rotate(' + (6 * clockMinutes) + 'deg)'
-				e.querySelector('.js-clock-seconds').style.transform   = 'rotate(' + (6 * clockSeconds) + 'deg)'
-
-				e.querySelector('.js-clock-digital').innerHTML = ('0' + clockHours).slice(-2) + ':' + ('0' + clockMinutes).slice(-2)
-			})
-		},
 
 		// on scroll
 		handleScroll() {
