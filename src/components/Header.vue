@@ -44,9 +44,6 @@ import {phone} from '../assets/js/config'
 
 export default {
 	name: 'Header',
-	beforeUnmount() {
-		clearInterval(this.getNow)
-	},
 	created() {
 		window.addEventListener('scroll', this.handleScroll)
 
