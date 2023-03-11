@@ -1,7 +1,7 @@
 <template>
 	<div id="about" class="about js-block-scroll">
 		<div class="wrap">
-			<h2>About</h2>
+			<h2>About me</h2>
 
 			<img class="about_main_img" src="../assets/i/avatar.jpg" alt="Denis FOX">
 

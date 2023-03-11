@@ -55,7 +55,7 @@ export default {
 			activeId : '',
 			menuItems: [
 				{title: 'Home',         href: '/#top'},
-				{title: 'About',        href: '/#about'},
+				{title: 'About me',     href: '/#about'},
 				{title: 'Projects',     href: '/#projects'},
 				// {title: 'Process',      href: '/#process'},
 				{title: 'Contacts',     href: '/#contacts'},
