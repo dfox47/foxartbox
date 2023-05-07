@@ -34,7 +34,7 @@ export default {
 		return {
 			clockLocations: [
 				{name: 'New York',  gmt: '-5'},
-				{name: 'Sofia',     gmt: '+2'},
+				{name: 'Sofia',     gmt: '+3'},
 				{name: 'Tokyo',     gmt: '+9'}
 			]
 		}
