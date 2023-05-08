@@ -2,6 +2,10 @@
 	<div id="contacts" class="contacts js-block-scroll">
 		<h2>Contacts</h2>
 
+		<p class="text-center">
+			Contact with me and you will get fast website without errors.
+		</p>
+
 		<div class="contacts__content">
 			<ul class="contacts_links">
 				<li class="contacts_links__item" v-for="(contactsLink) in contactsLinks" :key="contactsLink.href">
