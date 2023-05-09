@@ -3,7 +3,7 @@
 		<h2>Contacts</h2>
 
 		<p class="text-center">
-			Contact with me and you will get fast website without errors.
+			Contact with me and you will get fast website with clean code.
 		</p>
 
 		<div class="contacts__content">
