@@ -81,7 +81,8 @@ export default {
 						{src: require('../assets/i/projects/chocolana/3.jpg')},
 						{src: require('../assets/i/projects/chocolana/4.jpg')},
 						{src: require('../assets/i/projects/chocolana/5.jpg')},
-						{src: require('../assets/i/projects/chocolana/6.jpg')}
+						{src: require('../assets/i/projects/chocolana/6.jpg')},
+						{src: require('../assets/i/projects/chocolana/7.jpg')}
 					]
 				},
 				{
