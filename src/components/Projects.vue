@@ -101,6 +101,21 @@ export default {
 					]
 				},
 				{
+					name: 'Villathassos',
+					desc: 'Premium villa on Thassos for sale.',
+					href: 'villathassos.com',
+					id: 2,
+					mainImg: require('../assets/i/projects/villathassos/0.jpg'),
+					price: '2500 € | 1 month',
+					title: 'Villa Pirin Golf',
+					images: [
+						{src: require('../assets/i/projects/villathassos/1.jpg')},
+						{src: require('../assets/i/projects/villathassos/2.jpg')},
+						{src: require('../assets/i/projects/villathassos/3.jpg')},
+						{src: require('../assets/i/projects/villathassos/4.jpg')}
+					]
+				},
+				{
 					name: 'P3week',
 					desc: 'International forum web site on the topic of cooperation between the state and private business (public-private enterprise). A redesign of the existing site was made in order to improve usability.',
 					href: 'p3week.ru',
