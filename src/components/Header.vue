@@ -21,7 +21,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><img src="../assets/i/icons/logo_4.svg" alt=""></a>
+					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><img src="../assets/i/icons/logo_4.svg" alt="" loading="lazy"></a>
 
 					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
