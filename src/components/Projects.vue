@@ -72,7 +72,7 @@ export default {
 					desc: 'Website for the pastry shop «Chocolana» with the ability to create a personalized chocolate set. Food photography, design and programming.',
 					href: 'chocolana.com',
 					id: 4,
-					mainImg: require('../assets/i/projects/chocolana/0.png'),
+					mainImg: require('../assets/i/projects/chocolana/0.jpg'),
 					price: '3500 € | 3 months',
 					title: 'Chocolana online shop',
 					images: [
@@ -90,7 +90,7 @@ export default {
 					desc: 'Elegant design solution for a premium villa booking. Web-site presents facilities and gives an overview of the main features.',
 					href: 'villabansko.com',
 					id: 3,
-					mainImg: require('../assets/i/projects/villabansko/0.png'),
+					mainImg: require('../assets/i/projects/villabansko/0.jpg'),
 					price: '2500 € | 1 month',
 					title: 'Villa Pirin Golf',
 					images: [
@@ -120,7 +120,7 @@ export default {
 					desc: 'International forum web site on the topic of cooperation between the state and private business (public-private enterprise). A redesign of the existing site was made in order to improve usability.',
 					href: 'p3week.ru',
 					id: 1,
-					mainImg: require('../assets/i/projects/p3week/0.png'),
+					mainImg: require('../assets/i/projects/p3week/0.jpg'),
 					price: '7800 € | 4 months',
 					title: 'P3week forum',
 					images: [
