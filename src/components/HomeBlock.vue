@@ -3,7 +3,7 @@
 		<canvas id="projector" class="home_block__bg" width="1266" height="941"></canvas>
 
 		<div class="home_block__content js-home-block-content">
-			<img class="logo" src="../assets/i/icons/logo_4.svg" alt="" />
+			<img class="logo" src="../assets/i/icons/logo_4.svg" alt="" loading="lazy">
 			<div class="home_block__desc js-home-block-desc">Foxartbox</div>
 			<div class="home_block__slogan js-random-slogan"></div>
 			<a class="btn btn__link js-scroll-to" @click.prevent="scrollTo('about')">About me</a>
