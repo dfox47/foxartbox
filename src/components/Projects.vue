@@ -26,7 +26,7 @@
 						<p><a class="project__link" :href="'//' + project.href" target="_blank">www.{{ project.href }}</a></p>
 
 						<div class="project_images">
-							<img class="project_images__item" v-for="img in project.images" :src="img.src" alt="" :key="img.src">
+							<img class="project_images__item" v-for="img in project.images" :src="img.src" alt="" :key="img.src" loading="lazy">
 						</div>
 					</div>
 				</a>
