@@ -5,7 +5,7 @@
 
 			<ul class="social_links">
 				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
-					<a class="social_links__link" :href="footerLink.href" target="_blank" :title="footerLink.title"><img :src="footerLink.icon" alt="" /></a>
+					<a class="social_links__link" :href="footerLink.href" target="_blank" :title="footerLink.title"><img :src="footerLink.icon" alt="" loading="lazy"></a>
 				</li>
 			</ul>
 
