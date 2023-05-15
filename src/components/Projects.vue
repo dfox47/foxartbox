@@ -7,28 +7,12 @@
 				<a
 					:key="project.name"
 					:style="'background-image: url(' + project.mainImg + ');'"
-					@click="popupShow(project.id)"
+					@click="popupProjectShow(project.title, project.price, project.desc, project.href, project.images)"
 					class="projects_list__link"
 					href="javascript:void(0);"
 					v-for="project in projects"
 				>
 					<span class="projects_list__title">{{ project.name }}</span>
-
-					<div class="hidden js-project-desc" :data-popup="project.id">
-						<div class="project__title">
-							<h3>{{ project.title }}</h3>
-
-							<div class="project__price">{{ project.price }}</div>
-						</div>
-
-						<p class="project__desc">{{ project.desc }}</p>
-
-						<p><a class="project__link" :href="'//' + project.href" target="_blank">www.{{ project.href }}</a></p>
-
-						<div class="project_images">
-							<img class="project_images__item" v-for="img in project.images" :src="img.src" alt="" :key="img.src" loading="lazy">
-						</div>
-					</div>
 				</a>
 			</div>
 		</div>
@@ -46,7 +30,7 @@
 </template>
 
 <script>
-import {popupHide, popupShow} from '../assets/js/popup'
+import {popupHide, popupProjectShow, popupShow} from '../assets/js/popup'
 
 export default {
 	name: 'Projects',
@@ -138,7 +122,8 @@ export default {
 	},
 	methods: {
 		popupHide,
-		popupShow,
+		popupProjectShow,
+		popupShow
 	}
 }
 </script>
