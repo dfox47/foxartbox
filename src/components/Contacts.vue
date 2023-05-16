@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
 import {email} from '../assets/js/config'
 import {phone} from '../assets/js/config'
 
@@ -33,6 +34,9 @@ export default {
 				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',   title: phone}
 			]
 		}
+	},
+	mounted () {
+		imgScroll()
 	}
 }
 </script>

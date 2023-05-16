@@ -3,10 +3,14 @@
 		<div class="wrap">
 			<h2>About me</h2>
 
-			<img class="about_main_img" src="../assets/i/avatar.jpg" alt="Denis FOX">
+			<span class="about_main_img js-img-scroll" :data-src="require('../assets/i/avatar.jpg')"></span>
 
 			<ul class="about_list">
-				<li class="about_list__item" v-for="aboutItem in aboutItems" :key="aboutItem.title"><a class="about_list__link" :href="aboutItem.link" target="_blank"><img class="about_list__img" :src="aboutItem.img" alt="" :title="aboutItem.title"></a></li>
+				<li class="about_list__item" v-for="aboutItem in aboutItems" :key="aboutItem.title">
+					<a class="about_list__link" :href="aboutItem.link" target="_blank">
+						<span class="about_list__img js-img-scroll" :data-src="aboutItem.img" :data-title="aboutItem.title"></span>
+					</a>
+				</li>
 			</ul>
 
 			<p>My name is Denis FOX.</p>
@@ -33,6 +37,8 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
+
 export default {
 	name: 'About',
 	data() {
@@ -57,6 +63,9 @@ export default {
 				{title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
 			],
 		}
+	},
+	mounted () {
+		imgScroll()
 	}
 }
 </script>
