@@ -3,7 +3,7 @@
 		<canvas id="projector" class="home_block__bg" width="1266" height="941"></canvas>
 
 		<div class="home_block__content js-home-block-content">
-			<img class="logo" src="../assets/i/icons/logo_4.svg" alt="" loading="lazy">
+			<span class="logo js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')"></span>
 			<div class="home_block__desc js-home-block-desc">Foxartbox</div>
 			<div class="home_block__slogan js-random-slogan"></div>
 			<a class="btn btn__link js-scroll-to" @click.prevent="scrollTo('about')">About me</a>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
 import scrollTo from '../assets/js/scrollTo'
 
 export default {
@@ -44,6 +45,7 @@ export default {
 				randomSlogan()
 			}, delay)
 		})
+		imgScroll()
 	},
 	methods: {
 		scrollTo

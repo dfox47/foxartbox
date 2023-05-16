@@ -5,7 +5,7 @@
 
 			<ul class="social_links">
 				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
-					<a class="social_links__link" :href="footerLink.href" target="_blank" :title="footerLink.title"><img :src="footerLink.icon" alt="" loading="lazy"></a>
+					<a class="social_links__link" :href="footerLink.href" target="_blank" :title="footerLink.title"><span class="js-img-scroll" :data-src="footerLink.icon"></span></a>
 				</li>
 			</ul>
 
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
 import scrollTo from '../assets/js/scrollTo'
 import {phone} from '../assets/js/config'
 
@@ -38,6 +39,9 @@ export default {
 	},
 	methods: {
 		scrollTo,
-	}
+	},
+	mounted () {
+		imgScroll()
+	},
 }
 </script>
