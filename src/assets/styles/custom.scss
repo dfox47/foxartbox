@@ -7,13 +7,23 @@
 // Standart class [START]
 body {
 	font-family: $font_main;
+	font-size: 14px;
+	margin: 0 auto;
+	min-height: 100%;
+	overflow-x: hidden;
+	padding: 0;
+	position: relative;
 }
 
 h1 {
 	color: #fff;
 	font-size: 30px;
 	font-weight: 300;
+	line-height: 1.2;
 	margin: 0 0 1em;
+	padding: 0;
+	text-align: center;
+	text-indent: 0;
 	text-transform: uppercase;
 }
 
@@ -30,6 +40,8 @@ h2 {
 	padding: .3em 0;
 	position: relative;
 	text-align: center;
+	text-indent: 0;
+	text-transform: uppercase;
 
 	@media #{$tablet} {
 		font-size: 70px;
@@ -55,7 +67,12 @@ h3 {
 }
 
 h4 {
+	color: #000;
 	font-size: 20px;
+	font-weight: normal;
+	line-height: 100%;
+	margin: 0 0 5%;
+	text-align: center;
 }
 
 h5 {
@@ -67,6 +84,12 @@ h5 {
 
 html {
 	font-family: $font_main;
+	font-size: 14px;
+	margin: 0 auto;
+	min-height: 100%;
+	overflow-x: hidden;
+	padding: 0;
+	position: relative;
 }
 // Standart class [END]
 

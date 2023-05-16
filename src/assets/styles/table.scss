@@ -1,7 +1,9 @@
 .table {
 	background-color: rgba(#000, .1);
+	display: table;
 	min-height: 100vh;
 	padding: 150px 0;
+	width: 100%;
 
 	h1 {
 		color: $c_text;
