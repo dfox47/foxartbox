@@ -16,7 +16,7 @@
 			<p class="footer_copyright">© 2010 - {{ new Date().getFullYear() }}</p>
 
 			<p class="footer_logo">
-				<a class="footer_logo__link" href="#top" @click.prevent="scrollTo('top')"><img class="footer_logo__img" src="../assets/i/icons/logo_4.svg" alt="" loading="lazy"></a>
+				<a class="footer_logo__link" href="#top" @click.prevent="scrollTo('top')"><span class="footer_logo__img js-img-scroll" data-src="../assets/i/icons/logo_4.svg"></span></a>
 			</p>
 		</div>
 	</div>
