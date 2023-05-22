@@ -1,7 +1,7 @@
 const imgScroll = () => {
 	const changeImgSrc = () => {
 		document.querySelectorAll('.js-img-scroll').forEach((e) => {
-			if (window.pageYOffset + window.innerHeight > e.offsetTop) {
+			if (window.pageYOffset + window.innerHeight > e.getBoundingClientRect().top) {
 				e.classList.remove('js-img-scroll')
 
 				// create img element
@@ -10,31 +10,32 @@ const imgScroll = () => {
 
 				// copy all classes from span to img
 				if ($classList) {
-					$classList.split(' ').forEach((e) => {
-						$img.classList.add(e)
+					$classList.split(' ').forEach((c) => {
+						$img.classList.add(c)
 					})
 				}
 
-				$img.src = e.dataset.src
+				if (e.dataset.src) {
+					$img.src = e.dataset.src
 
-				// append img
-				e.after($img)
+					// alt text
+					$img.alt = e.dataset.title ? e.dataset.title : ''
 
-				// remove span
-				e.remove()
+					// append img
+					e.after($img)
+
+					// remove main element (span)
+					e.remove()
+				}
 			}
 		})
 	}
 
-	changeImgSrc()
+	window.addEventListener('orientationChange', changeImgSrc)
 
-	window.addEventListener('resize', function() {
-		changeImgSrc()
-	})
+	window.addEventListener('resize', changeImgSrc)
 
-	window.addEventListener('scroll', function() {
-		changeImgSrc()
-	})
+	window.addEventListener('scroll', changeImgSrc)
 }
 
 export default imgScroll
