@@ -24,9 +24,9 @@ export default {
 			const randomSlogan = () => {
 				const slogans = [
 					"Fast websites",
-					"Mobile friendly",
-					"W3C standards",
+					"Mobile friendly. Only",
 					"Satisfied client. Always",
+					"W3C standards",
 					"Websites support"
 				]
 
