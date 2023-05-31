@@ -36,6 +36,8 @@ const imgScroll = () => {
 	window.addEventListener('resize', changeImgSrc)
 
 	window.addEventListener('scroll', changeImgSrc)
+
+	changeImgSrc()
 }
 
 export default imgScroll
