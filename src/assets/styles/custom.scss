@@ -665,6 +665,10 @@ html {
 	}
 }
 
+.content {
+	min-height: 300px;
+}
+
 .content_inner {
 	min-height: 500px;
 	padding: 150px 0 100px;
@@ -672,6 +676,11 @@ html {
 	h1 {
 		color: #000;
 	}
+}
+
+.error {
+	padding: 100px 0;
+	min-height: 500px;
 }
 
 .gotop {
@@ -720,6 +729,12 @@ html {
 		&::before {
 			background-color: #fff;
 		}
+	}
+}
+
+.h1 {
+	&--dark {
+		color: $c_text;
 	}
 }
 
