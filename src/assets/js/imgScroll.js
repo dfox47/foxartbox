@@ -5,8 +5,11 @@ const imgScroll = () => {
 				e.classList.remove('js-img-scroll')
 
 				// create img element
-				let $img            = document.createElement('img')
+				const $img          = document.createElement('img')
 				let $classList      = e.className
+				const $src          = e.dataset.src
+
+				if (!$src) return
 
 				// copy all classes from span to img
 				if ($classList) {
@@ -15,18 +18,16 @@ const imgScroll = () => {
 					})
 				}
 
-				if (e.dataset.src) {
-					$img.src = e.dataset.src
+				$img.src = $src
 
-					// alt text
-					$img.alt = e.dataset.title ? e.dataset.title : ''
+				// alt text
+				$img.alt = e.title ? e.title : ''
 
-					// append img
-					e.after($img)
+				// append img
+				e.after($img)
 
-					// remove main element (span)
-					e.remove()
-				}
+				// remove main element (span)
+				e.remove()
 			}
 		})
 	}
