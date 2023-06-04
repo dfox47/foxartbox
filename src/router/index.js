@@ -12,6 +12,11 @@ const routes = [
 		path: '/blog'
 	},
 	{
+		component: Error404,
+		name: 'Error404',
+		path: '/:pathMatch(.*)*'
+	},
+	{
 		component: Home,
 		name: 'Home',
 		path: '/'
@@ -20,11 +25,6 @@ const routes = [
 		component: Table,
 		name: 'Table',
 		path: '/table'
-	},
-	{
-		component: Error404,
-		name: 'Error404',
-		path: '/:pathMatch(.*)*'
 	}
 ]
 
