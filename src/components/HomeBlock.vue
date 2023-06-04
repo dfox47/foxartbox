@@ -23,6 +23,7 @@ export default {
 
 			const randomSlogan = () => {
 				const slogans = [
+					"Eat. Sleep. Code. Repeat",
 					"Fast websites",
 					"Mobile friendly. Only",
 					"Satisfied client. Always",
