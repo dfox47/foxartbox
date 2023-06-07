@@ -17,9 +17,7 @@
 
 			<p>I'm a frontend developer.</p>
 
-			<p>I'm doing fast & adaptive websites by w3c standards.</p>
-
-			<p>Love to make different projects with simple solutions</p>
+			<p>10 years in web development. I make fast &amp; adaptive websites by w3c standards.</p>
 
 			<h3>GITHUB</h3>
 
@@ -27,11 +25,11 @@
 
 			<h3>Main skills:</h3>
 
-			<p>Vue (Vuetify, Vue router), JS, HTML, CSS (less/scss), gulp, Figma, CMS Wordpress</p>
+			<p>JS, HTML, CSS (less/scss), vue (Vuetify, Vue router), gulp, Figma, CMS Wordpress</p>
 
 			<h3>Additional skills</h3>
 
-			<p>PHP, JAVA, SAP Hybris, Adobe Illustrator / Photoshop / Indesign, Gimp, Git, Python, CMS Shopify, CMS Joomla, CMS OpenCart, PixelPerfect, Bootstrap</p>
+			<p>SEO, PHP, JAVA, SAP Hybris, Adobe Photoshop, Gimp, Git, Python, CMS Shopify, CMS Joomla, CMS OpenCart, Bootstrap</p>
 		</div>
 	</div>
 </template>
@@ -50,17 +48,17 @@ export default {
 				{title: 'HTML',                 img: require('../assets/i/icons/html.svg'),             link: '//en.wikipedia.org/wiki/HTML'},
 				{title: 'CSS',                  img: require('../assets/i/icons/css.svg'),              link: '//en.wikipedia.org/wiki/CSS'},
 				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg'),             link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
-				{title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
+				// {title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
 				{title: 'Figma',                img: require('../assets/i/icons/figma.svg'),            link: '//en.wikipedia.org/wiki/Figma_(software)'},
 				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg'),             link: '//en.wikipedia.org/wiki/Gulp.js'},
-				{title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
-				{title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
+				// {title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
+				// {title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
 				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg'),        link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
-				{title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
+				// {title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
 				{title: 'Wordpress',            img: require('../assets/i/icons/wordpress.svg'),        link: '//en.wikipedia.org/wiki/WordPress'},
-				{title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
-				{title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
-				{title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
+				// {title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
+				// {title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
+				// {title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
 			],
 		}
 	},
