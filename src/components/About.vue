@@ -25,11 +25,11 @@
 
 			<h3>Main skills:</h3>
 
-			<p>JS, HTML, CSS (less/scss), vue (Vuetify, Vue router), gulp, Figma, CMS Wordpress</p>
+			<p>JS, HTML, CSS (+SCSS), Vue, gulp, Figma</p>
 
 			<h3>Additional skills</h3>
 
-			<p>SEO, PHP, JAVA, SAP Hybris, Adobe Photoshop, Gimp, Git, Python, CMS Shopify, CMS Joomla, CMS OpenCart, Bootstrap</p>
+			<p>SEO, PHP, Gimp, Git</p>
 		</div>
 	</div>
 </template>
