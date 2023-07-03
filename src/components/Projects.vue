@@ -40,7 +40,7 @@ export default {
 				{
 					name: 'ODD',
 					desc: 'Example of search based on Vue.js',
-					href: '',
+					href: 'odd.foxartbox.com',
 					id: 6,
 					mainImg: require('../assets/i/projects/odd/0.jpg'),
 					price: '',
