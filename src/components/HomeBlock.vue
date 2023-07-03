@@ -21,12 +21,6 @@ import scrollTo from '../assets/js/scrollTo'
 export default {
 	name: 'HomeBlock',
 	mounted () {
-		for (let i = 0; i < 3; i++) {
-			setTimeout(() => {
-				console.log('i | ', i)
-			}, 100)
-		}
-
 		imgScroll()
 		randomSlogan()
 	},
