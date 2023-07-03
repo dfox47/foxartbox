@@ -21,7 +21,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><img src="../assets/i/icons/logo_4.svg" alt="" loading="lazy"></a>
+					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span class="js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')"></span></a>
 
 					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
 import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
 import themeChange from '../assets/js/themeChange'
@@ -118,14 +119,16 @@ export default {
 		},
 
 		topmenuItemHighlight() {
-			const topmenuItem = document.querySelector('.js-topmenu-link[href="' + window.location.pathname + '"]')
+			const $topmenuItem = document.querySelector('.js-topmenu-link[href="' + window.location.pathname + '"]')
 
-			if (!topmenuItem) return
+			if (!$topmenuItem) return
 
-			topmenuItem.classList.add('active')
+			$topmenuItem.classList.add('active')
 		}
 	},
 	mounted() {
+		imgScroll()
+
 		// highlight menu item on inner pages
 		this.topmenuItemHighlight()
 	},
