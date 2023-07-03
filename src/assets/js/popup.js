@@ -19,9 +19,13 @@ const popupShow = (id) => {
 // show project popup with data at link
 const popupProjectShow = (title, price, desc, href, images) => {
 	const $popupContent = document.querySelector('.js-popup-content')
-	let imagesList = ''
 
 	if (!$popupContent) return
+
+	let imagesList = ''
+	const projectPrice = price ? '<div class="project__price">' + price + '</div>' : ''
+	const description = desc ? '<p class="project__desc">' + desc + '</p>' : ''
+	const link = href ? '<p><a class="project__link" href="//' + href + '" target="_blank">www.' + href + '</a></p>' : ''
 
 	images.forEach((e) => {
 		imagesList += '<img class="project_images__item" src="' + e.src + '" alt="" loading="lazy">'
@@ -29,10 +33,10 @@ const popupProjectShow = (title, price, desc, href, images) => {
 
 	$popupContent.innerHTML = '<div class="project__title">' +
 		'<h3>' + title +  '</h3>' +
-		'<div class="project__price">' + price + '</div>' +
+		projectPrice +
 		'</div>' +
-		'<p class="project__desc">' + desc + '</p>' +
-		'<p><a class="project__link" href="//' + href + '" target="_blank">www.' + href + '</a></p>' +
+		description +
+		link +
 		'<div class="project_images">' + imagesList + '</div>'
 
 	// show popup
