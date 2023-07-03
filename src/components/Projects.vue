@@ -38,6 +38,18 @@ export default {
 		return {
 			projects: [
 				{
+					name: 'ODD',
+					desc: 'Example of search based on Vue.js',
+					href: '',
+					id: 6,
+					mainImg: require('../assets/i/projects/odd/0.jpg'),
+					price: '',
+					title: 'Search on vue.js',
+					images: [
+						{src: require('../assets/i/projects/odd/1.jpg')}
+					]
+				},
+				{
 					name: 'Brokertop',
 					desc: 'Rent or sale commercial and private objects of real estate.',
 					href: 'brokertop.ru',
