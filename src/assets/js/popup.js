@@ -23,8 +23,6 @@ const popupProjectShow = (title, price, desc, href, images) => {
 
 	if (!$popupContent) return
 
-	console.log('images | ', images)
-
 	images.forEach((e) => {
 		imagesList += '<img class="project_images__item" src="' + e.src + '" alt="" loading="lazy">'
 	})
