@@ -23,6 +23,9 @@ const imgScroll = () => {
 				// alt text
 				$img.alt = e.title ? e.title : ''
 
+				// title
+				$img.title = e.title ? e.title : ''
+
 				// append img
 				e.after($img)
 
