@@ -1,6 +1,17 @@
 <template>
 	<div class="content_inner">
 		<div class="wrap">
+			<carousel class="slider_x" :items-to-show="1">
+				<slide v-for="slide in slides" :key="slide.id">
+					<div v-html="slide.content"></div>
+				</slide>
+
+				<template #addons>
+					<navigation />
+					<pagination />
+				</template>
+			</carousel>
+
 			<h1>Table</h1>
 
 			<div class="table_preview js-table-preview">
@@ -56,13 +67,32 @@ import {
 	tableItemSelected,
 	tablePrice
 } from '../assets/js/table'
+import {
+	Carousel,
+	Slide,
+	Pagination,
+	Navigation
+} from 'vue3-carousel'
 
 export default {
+	components: {
+		Carousel,
+		Navigation,
+		Pagination,
+		Slide
+	},
 	created() {
 		document.title = "Table | Foxartbox"
 	},
 	data() {
 		return {
+			slides: [
+				{id: '1', title: 'Vue 3 Introduction',  content: '<span class="js-img-scroll" :data-src="require(\'../assets/i/projects/brokertop/1.jpg\')" :title="slide.title"></span>'},
+				{id: '2', title: 'Vue 3 Components',    content: 'Know the components'},
+				{id: '3', title: 'Vue 3 Conditional',   content: 'Rendering Conditionally'},
+				{id: '4', title: 'Vue 3 Reactivity',    content: 'VueJS is Reactive'},
+				{id: '5', title: 'Vue 3 Compute',       content: 'VueJS uses computed properties'},
+			],
 			tableColors: [
 				{title: 'black',    price: 1},
 				{title: 'pink',     price: 2},
