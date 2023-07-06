@@ -217,6 +217,25 @@
 	width: 40px;
 }
 
+.table_slider {
+	padding: 20px 0;
+
+	&__count {
+		color: red;
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: 3;
+	}
+
+	&__img {
+		object-fit: contain;
+		height: 600px;
+		position: relative;
+		width: 100%;
+	}
+}
+
 .table_title {
 	margin: 0 0 10px;
 }

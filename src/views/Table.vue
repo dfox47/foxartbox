@@ -1,16 +1,23 @@
 <template>
 	<div class="content_inner">
 		<div class="wrap">
-			<carousel class="slider_x" :items-to-show="1">
-				<slide v-for="slide in slides" :key="slide.id">
-					<div v-html="slide.content"></div>
+			<carousel
+                class="table_slider"
+                :items-to-show="1"
+                :wrapAround="true"
+			>
+				<slide v-for="slide in 84" :key="slide">
+					<span class="table_slider__img js-img-scroll" :data-src="require('../assets/i/table/' + slide + '.jpg')" title=""></span>
 				</slide>
+
+				<div class="table_slider__count" :data-x="slidesCount">*** {{ slidesCount }}</div>
 
 				<template #addons>
 					<navigation />
-					<pagination />
 				</template>
 			</carousel>
+
+
 
 			<h1>Table</h1>
 
@@ -61,16 +68,18 @@
 </template>
 
 <script>
+import imgScroll from '../assets/js/imgScroll'
 import {
 	tableColorChanged,
 	tableColorFromStorage,
 	tableItemSelected,
 	tablePrice
 } from '../assets/js/table'
+
+// https://ismail9k.github.io/vue3-carousel/configs.html
 import {
 	Carousel,
 	Slide,
-	Pagination,
 	Navigation
 } from 'vue3-carousel'
 
@@ -78,7 +87,6 @@ export default {
 	components: {
 		Carousel,
 		Navigation,
-		Pagination,
 		Slide
 	},
 	created() {
@@ -86,13 +94,6 @@ export default {
 	},
 	data() {
 		return {
-			slides: [
-				{id: '1', title: 'Vue 3 Introduction',  content: '<span class="js-img-scroll" :data-src="require(\'../assets/i/projects/brokertop/1.jpg\')" :title="slide.title"></span>'},
-				{id: '2', title: 'Vue 3 Components',    content: 'Know the components'},
-				{id: '3', title: 'Vue 3 Conditional',   content: 'Rendering Conditionally'},
-				{id: '4', title: 'Vue 3 Reactivity',    content: 'VueJS is Reactive'},
-				{id: '5', title: 'Vue 3 Compute',       content: 'VueJS uses computed properties'},
-			],
 			tableColors: [
 				{title: 'black',    price: 1},
 				{title: 'pink',     price: 2},
@@ -113,6 +114,7 @@ export default {
 		tablePrice
 	},
 	mounted() {
+		imgScroll()
 		tableColorFromStorage()
 	}
 }
