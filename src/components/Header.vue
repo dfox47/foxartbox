@@ -11,6 +11,10 @@
 
 			<div class="wrap">
 				<ul class="topmenu_list">
+<!--					<li class="topmenu_list__item">-->
+<!--						<a class="topmenu_list__link topmenu_list__link&#45;&#45;logo js-topmenu-link" href="#top"><span class="js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')" title="home"></span></a>-->
+<!--					</li>-->
+
 					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
 						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
                             class="topmenu_list__link js-topmenu-link"
@@ -40,6 +44,8 @@ import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
 import themeChange from '../assets/js/themeChange'
 import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
+
+import 'vue3-carousel/dist/carousel.css'
 
 import {phone} from '../assets/js/config'
 
@@ -133,7 +139,7 @@ export default {
 		this.topmenuItemHighlight()
 	},
 	unmounted() {
-		window.removeEventListener('scroll', this.handleScroll);
+		window.removeEventListener('scroll', this.handleScroll)
 	}
 }
 </script>
