@@ -3,14 +3,13 @@
 		<div class="wrap">
 			<carousel
                 class="table_slider"
+                ref="myCarousel"
                 :items-to-show="1"
                 :wrapAround="true"
 			>
 				<slide v-for="slide in 84" :key="slide">
 					<span class="table_slider__img js-img-scroll" :data-src="require('../assets/i/table/' + slide + '.jpg')" title=""></span>
 				</slide>
-
-				<div class="table_slider__count" :data-x="slidesCount">*** {{ slidesCount }}</div>
 
 				<template #addons>
 					<navigation />

@@ -564,6 +564,21 @@ html {
 	}
 }
 
+.carousel {
+	&__sr-only {
+		background: rgba(#fff, .5);
+		bottom: 10px;
+		clip: auto;
+		font-size: 12px;
+		height: auto;
+		margin: 10px auto;
+		padding: 10px;
+		position: absolute;
+		right: 0;
+		width: auto;
+	}
+}
+
 .checkbox {
 	align-items: center;
 	cursor: pointer;
