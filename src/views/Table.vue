@@ -1,6 +1,10 @@
 <template>
 	<div class="content_inner">
 		<div class="wrap">
+			<h1>Table</h1>
+
+			<h2>Example</h2>
+
 			<carousel
                 class="table_slider"
                 ref="myCarousel"
@@ -18,7 +22,7 @@
 
 
 
-			<h1>Table</h1>
+			<h2>Constructor</h2>
 
 			<div class="table_preview js-table-preview">
 				<!-- base price -->
