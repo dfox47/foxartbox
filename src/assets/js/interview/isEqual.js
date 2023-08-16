@@ -11,17 +11,15 @@ const isEqual = () => {
 	const isMirrored = (str) => {
 		if (!str) return
 
-		let isEqual = true
-
 		const arrayFromStr = str.replace(/[^a-zA-Z0-9]+/g, '').split('')
 
 		for (let i = 0; i < arrayFromStr.length; i++) {
 			if (arrayFromStr[i] !== arrayFromStr.slice().reverse()[i]) {
-				isEqual = false
+				return false
 			}
 		}
 
-		return isEqual
+		return true
 	}
 }
 
