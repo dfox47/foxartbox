@@ -49,6 +49,16 @@ import 'vue3-carousel/dist/carousel.css'
 
 import {phone} from '../assets/js/config'
 
+// for interview
+// import flatten from '../assets/js/interview/flatten'
+// import isUnique from '../assets/js/interview/isUnique'
+// import removeDuplicates from '../assets/js/interview/removeDuplicates'
+// import highestFrequency from '../assets/js/interview/highestFrequency'
+// import anagrams from '../assets/js/interview/anagrams'
+// import search from '../assets/js/interview/search'
+// import isBalanced from '../assets/js/interview/isBalanced'
+import sleep from '../assets/js/interview/sleep'
+
 export default {
 	name: 'Header',
 	created() {
@@ -137,6 +147,17 @@ export default {
 
 		// highlight menu item on inner pages
 		this.topmenuItemHighlight()
+
+		// *** interview JS [START]
+		// flatten()
+		// isUnique()
+		// removeDuplicates()
+		// highestFrequency()
+		// anagrams()
+		// search()
+		// isBalanced()
+		sleep()
+		// *** interview JS [END]
 	},
 	unmounted() {
 		window.removeEventListener('scroll', this.handleScroll)
