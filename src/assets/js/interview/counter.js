@@ -10,7 +10,7 @@ const counter = () => {
 	 */
 	const createCounter = (n) => {
 		return () => {
-			console.log('x | ', n)
+			console.log(n)
 
 			n++
 		}
