@@ -62,7 +62,8 @@ import {phone} from '../assets/js/config'
 // import removeDuplicates from '../assets/js/interview/removeDuplicates'
 // import search from '../assets/js/interview/search'
 // import sleep from '../assets/js/interview/sleep'
-import allowOneFunctionCall from '../assets/js/interview/allowOneFunctionCall'
+// import allowOneFunctionCall from '../assets/js/interview/allowOneFunctionCall'
+import returnLengthOfArgumentsPassed from '../assets/js/interview/returnLengthOfArgumentsPassed'
 
 export default {
 	name: 'Header',
@@ -154,6 +155,7 @@ export default {
 		this.topmenuItemHighlight()
 
 		// *** interview JS [START]
+		// allowOneFunctionCall()
 		// anagrams()
 		// applyTransformOverEachElementInArray()
 		// arrayPrototypeLast()
@@ -166,7 +168,7 @@ export default {
 		// removeDuplicates()
 		// search()
 		// sleep()
-		allowOneFunctionCall()
+		returnLengthOfArgumentsPassed()
 		// *** interview JS [END]
 	},
 	unmounted() {
