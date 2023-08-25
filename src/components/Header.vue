@@ -59,7 +59,8 @@ import {phone} from '../assets/js/config'
 // import search from '../assets/js/interview/search'
 // import sleep from '../assets/js/interview/sleep'
 // import counter from '../assets/js/interview/counter'
-import arrayPrototypeLast from '../assets/js/interview/array-prototype-last'
+// import arrayPrototypeLast from '../assets/js/interview/array-prototype-last'
+import filterFromArr from '../assets/js/interview/filterElementsFromArray'
 
 export default {
 	name: 'Header',
@@ -152,6 +153,7 @@ export default {
 
 		// *** interview JS [START]
 		// anagrams()
+		// arrayPrototypeLast()
 		// counter()
 		// flatten()
 		// highestFrequency()
@@ -160,7 +162,7 @@ export default {
 		// removeDuplicates()
 		// search()
 		// sleep()
-		arrayPrototypeLast()
+		filterFromArr()
 		// *** interview JS [END]
 	},
 	unmounted() {
