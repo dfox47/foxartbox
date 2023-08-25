@@ -7,7 +7,7 @@ const returnLengthOfArgumentsPassed = () => {
 	 * @return {number}
 	 */
 
-	const argumentsLength = function(...args) {
+	const argumentsLength = (...args) => {
 		let countLength = 0
 
 		for (let i = 0; i < args.length; i++) {
