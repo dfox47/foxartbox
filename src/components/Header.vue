@@ -51,6 +51,9 @@ import {phone} from '../assets/js/config'
 
 // for interview
 // import anagrams from '../assets/js/interview/anagrams'
+// import arrayPrototypeLast from '../assets/js/interview/array-prototype-last'
+// import counter from '../assets/js/interview/counter'
+// import filterFromArr from '../assets/js/interview/filterElementsFromArray'
 // import flatten from '../assets/js/interview/flatten'
 // import highestFrequency from '../assets/js/interview/highestFrequency'
 // import isBalanced from '../assets/js/interview/isBalanced'
@@ -58,9 +61,7 @@ import {phone} from '../assets/js/config'
 // import removeDuplicates from '../assets/js/interview/removeDuplicates'
 // import search from '../assets/js/interview/search'
 // import sleep from '../assets/js/interview/sleep'
-// import counter from '../assets/js/interview/counter'
-// import arrayPrototypeLast from '../assets/js/interview/array-prototype-last'
-import filterFromArr from '../assets/js/interview/filterElementsFromArray'
+import applyTransformOverEachElementInArray from '../assets/js/interview/applyTransformOverEachElementInArray'
 
 export default {
 	name: 'Header',
@@ -155,6 +156,7 @@ export default {
 		// anagrams()
 		// arrayPrototypeLast()
 		// counter()
+		// filterFromArr()
 		// flatten()
 		// highestFrequency()
 		// isBalanced()
@@ -162,7 +164,7 @@ export default {
 		// removeDuplicates()
 		// search()
 		// sleep()
-		filterFromArr()
+		applyTransformOverEachElementInArray()
 		// *** interview JS [END]
 	},
 	unmounted() {
