@@ -50,21 +50,7 @@ import 'vue3-carousel/dist/carousel.css'
 import {phone} from '../assets/js/config'
 
 // for interview
-// import anagrams from '../assets/js/interview/anagrams'
-// import applyTransformOverEachElementInArray from '../assets/js/interview/applyTransformOverEachElementInArray'
-// import arrayPrototypeLast from '../assets/js/interview/array-prototype-last'
-// import counter from '../assets/js/interview/counter'
-// import filterFromArr from '../assets/js/interview/filterElementsFromArray'
-// import flatten from '../assets/js/interview/flatten'
-// import highestFrequency from '../assets/js/interview/highestFrequency'
-// import isBalanced from '../assets/js/interview/isBalanced'
-// import isUnique from '../assets/js/interview/isUnique'
-// import removeDuplicates from '../assets/js/interview/removeDuplicates'
-// import search from '../assets/js/interview/search'
-// import sleep from '../assets/js/interview/sleep'
-// import allowOneFunctionCall from '../assets/js/interview/allowOneFunctionCall'
-// import arrayReduceTransformation from '../assets/js/interview/arrayReduceTransformation'
-import functionComposition from '../assets/js/interview/functionComposition'
+import toBeOrNotToBe from '../assets/js/interview/toBeOrNotToBe'
 
 export default {
 	name: 'Header',
@@ -156,22 +142,7 @@ export default {
 		this.topmenuItemHighlight()
 
 		// *** interview JS [START]
-		// allowOneFunctionCall()
-		// anagrams()
-		// applyTransformOverEachElementInArray()
-		// arrayPrototypeLast()
-		// counter()
-		// filterFromArr()
-		// flatten()
-		// highestFrequency()
-		// isBalanced()
-		// isUnique()
-		// removeDuplicates()
-		// returnLengthOfArgumentsPassed()
-		// search()
-		// sleep()
-		functionComposition()
-		// arrayReduceTransformation()
+		toBeOrNotToBe()
 		// *** interview JS [END]
 	},
 	unmounted() {
