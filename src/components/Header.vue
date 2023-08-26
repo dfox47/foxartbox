@@ -63,7 +63,7 @@ import {phone} from '../assets/js/config'
 // import search from '../assets/js/interview/search'
 // import sleep from '../assets/js/interview/sleep'
 // import allowOneFunctionCall from '../assets/js/interview/allowOneFunctionCall'
-import returnLengthOfArgumentsPassed from '../assets/js/interview/returnLengthOfArgumentsPassed'
+import arrayReduceTransformation from '../assets/js/interview/arrayReduceTransformation'
 
 export default {
 	name: 'Header',
@@ -166,9 +166,10 @@ export default {
 		// isBalanced()
 		// isUnique()
 		// removeDuplicates()
+		// returnLengthOfArgumentsPassed()
 		// search()
 		// sleep()
-		returnLengthOfArgumentsPassed()
+		arrayReduceTransformation()
 		// *** interview JS [END]
 	},
 	unmounted() {
