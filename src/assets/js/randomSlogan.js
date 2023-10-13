@@ -1,11 +1,12 @@
 const randomSlogan = () => {
 	document.querySelectorAll('.js-random-slogan').forEach((e) => {
-		const delay = 3000
+		const delay = 4000
 
 		const randomSlogan = () => {
 			const slogans = [
 				"Eat. Sleep. Code. Repeat",
 				"Fast websites",
+				"Believe in miracles & JavaScript",
 				"Mobile friendly. Only",
 				"Satisfied client. Always",
 				"W3C standards",
