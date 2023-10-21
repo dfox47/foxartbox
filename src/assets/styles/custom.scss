@@ -348,8 +348,14 @@ html {
 		}
 	}
 
+	.clock_arrow {
+		&__seconds {
+			background-color: $c_theme_forest;
+		}
+	}
+
 	.footer {
-		background: linear-gradient(-45deg, $c_theme_forest, darken($c_theme_forest, 30%), lighten($c_theme_forest, 30%), $c_theme_forest);
+		background: linear-gradient(-45deg, $c_theme_forest, $c_gradient_home_start, lighten($c_gradient_home_start, 30%), $c_theme_forest);
 		background-size: 400% 400%;
 	}
 
@@ -367,7 +373,7 @@ html {
 	}
 
 	.home_block {
-		background: linear-gradient(-45deg, $c_theme_forest, lighten($c_theme_forest, 50%), $c_theme_forest);
+		background: linear-gradient(-45deg, $c_theme_forest, $c_gradient_home_start, $c_theme_forest);
 		background-size: 400% 400%;
 	}
 
@@ -385,11 +391,16 @@ html {
 
 	.topmenu_list {
 		&__link {
-			color: #fff;
+			color: $c_gradient_home_start;
 			opacity: 1;
 
+			&:hover,
+			&.active {
+				color: #fff;
+			}
+
 			&::after {
-				background-color: lighten($c_theme_forest, 20%);
+				background-color: $c_gradient_home_start;
 			}
 		}
 
@@ -409,7 +420,7 @@ html {
 	}
 
 	.topmenu_phone {
-		color: #fff;
+		color: $c_gradient_home_start;
 	}
 }
 
