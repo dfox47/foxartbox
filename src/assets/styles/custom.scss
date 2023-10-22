@@ -289,14 +289,15 @@ html {
 
 	.btn {
 		&__link {
-			background-color: lighten($c_theme_forest, 15%);
-			border: 1px solid rgba(#fff, .99);
-			color: #fff;
+			background-color: $c_theme_forest;
+			border: 1px solid rgba($c_gradient_home_start, .99);
+			color: $c_gradient_home_start;
 			font-size: 15px;
 			letter-spacing: .26em;
 
 			&:hover {
-				background-color: lighten($c_theme_forest, 30%);
+				background-color: $c_gradient_home_start;
+				color: #fff;
 			}
 		}
 
@@ -858,7 +859,7 @@ html {
 		}
 
 		&--type-4 {
-			background: linear-gradient(-45deg, $c_theme_forest, lighten($c_theme_forest, 50%));
+			background: linear-gradient(-45deg, $c_gradient_home_start, $c_theme_forest);
 		}
 
 		&--type-5 {
