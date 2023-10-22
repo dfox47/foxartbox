@@ -185,8 +185,8 @@
 
 .projects_list {
 	display: grid;
-	grid-gap: 30px;
-	grid-template-columns: repeat(2, 1fr);
+	row-gap: 30px;
+	grid-template-columns: repeat(3, 1fr);
 	position: relative;
 
 	&__link {

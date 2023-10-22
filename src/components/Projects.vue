@@ -2,7 +2,7 @@
 	<div id="projects" class="js-block-scroll">
 		<h2>Projects</h2>
 
-		<div class="wrap">
+		<div class="wrap2">
 			<div class="projects_list">
 				<a
 					:key="project.name"
@@ -38,15 +38,20 @@ export default {
 		return {
 			projects: [
 				{
-					name: 'ODD',
-					desc: 'Example of search based on Vue.js',
-					href: 'odd.foxartbox.com',
-					id: 6,
-					mainImg: require('../assets/i/projects/odd/0.jpg'),
-					price: '',
-					title: 'Search on vue.js',
+					name: 'https://tatyanavoilokova.com',
+					desc: 'Welcome to Tatyana Voilkova Photography, where moments come to life in stunning images. She is passionate about freezing time, creating memories, and telling stories through the art of photography.',
+					href: 'tatyanavoilokova.com',
+					id: 1,
+					mainImg: require('../assets/i/projects/tatyanavoilokova/0.jpg'),
+					price: '1500 € | 3 weeks',
+					title: 'Tatyana Voilokova',
 					images: [
-						{src: require('../assets/i/projects/odd/1.jpg')}
+						{src: require('../assets/i/projects/tatyanavoilokova/1.jpg')},
+						{src: require('../assets/i/projects/tatyanavoilokova/2.jpg')},
+						{src: require('../assets/i/projects/tatyanavoilokova/3.jpg')},
+						{src: require('../assets/i/projects/tatyanavoilokova/4.jpg')},
+						{src: require('../assets/i/projects/tatyanavoilokova/5.jpg')},
+						{src: require('../assets/i/projects/tatyanavoilokova/6.jpg')}
 					]
 				},
 				{
@@ -91,9 +96,7 @@ export default {
 					title: 'Villa Pirin Golf',
 					images: [
 						{src: require('../assets/i/projects/villabansko/1.jpg')},
-						{src: require('../assets/i/projects/villabansko/2.jpg')},
-						{src: require('../assets/i/projects/villabansko/3.jpg')},
-						{src: require('../assets/i/projects/villabansko/4.jpg')}
+						{src: require('../assets/i/projects/villabansko/2.jpg')}
 					]
 				},
 				{
@@ -127,6 +130,18 @@ export default {
 						{src: require('../assets/i/projects/p3week/5.jpg')},
 						{src: require('../assets/i/projects/p3week/6.jpg')},
 						{src: require('../assets/i/projects/p3week/7.jpg')}
+					]
+				},
+				{
+					name: 'ODD',
+					desc: 'Example of search based on Vue.js',
+					href: 'odd.foxartbox.com',
+					id: 6,
+					mainImg: require('../assets/i/projects/odd/0.jpg'),
+					price: '',
+					title: 'Search on vue.js',
+					images: [
+						{src: require('../assets/i/projects/odd/1.jpg')}
 					]
 				}
 			]
