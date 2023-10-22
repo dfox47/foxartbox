@@ -38,7 +38,7 @@ export default {
 		return {
 			projects: [
 				{
-					name: 'https://tatyanavoilokova.com',
+					name: 'Tatyana Voilokova',
 					desc: 'Welcome to Tatyana Voilkova Photography, where moments come to life in stunning images. She is passionate about freezing time, creating memories, and telling stories through the art of photography.',
 					href: 'tatyanavoilokova.com',
 					id: 1,
