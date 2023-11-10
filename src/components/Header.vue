@@ -42,6 +42,7 @@
 import imgScroll from '../assets/js/imgScroll'
 import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
+import svgInline from '../assets/js/svgInline'
 import themeChange from '../assets/js/themeChange'
 import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
 
@@ -137,6 +138,7 @@ export default {
 	},
 	mounted() {
 		imgScroll()
+		svgInline()
 
 		// highlight menu item on inner pages
 		this.topmenuItemHighlight()

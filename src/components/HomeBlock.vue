@@ -5,6 +5,7 @@
 
 			<div class="home_block__content js-home-block-content">
 				<span class="logo js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')"></span>
+				<span class="logo js-svg-inline" :data-src="require('../assets/i/icons/logo_4.svg')"></span>
 				<div class="home_block__desc js-home-block-desc">Foxartbox</div>
 				<div class="home_block__slogan js-random-slogan"></div>
 				<a class="btn btn__link js-scroll-to" @click.prevent="scrollTo('about')">About me</a>
