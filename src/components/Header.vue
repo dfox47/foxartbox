@@ -50,7 +50,7 @@ import 'vue3-carousel/dist/carousel.css'
 import {phone} from '../assets/js/config'
 
 // for interview
-import toBeOrNotToBe from '../assets/js/interview/toBeOrNotToBe'
+// import toBeOrNotToBe from '../assets/js/interview/toBeOrNotToBe'
 
 export default {
 	name: 'Header',
@@ -142,7 +142,7 @@ export default {
 		this.topmenuItemHighlight()
 
 		// *** interview JS [START]
-		toBeOrNotToBe()
+		// toBeOrNotToBe()
 		// *** interview JS [END]
 	},
 	unmounted() {
