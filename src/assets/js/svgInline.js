@@ -1,8 +1,4 @@
 const svgInline = () => {
-	console.log('convertImages - start')
-	console.log('convertImages - start')
-	console.log('convertImages - start')
-
 	const images = document.querySelectorAll('.js-svg-inline')
 
 	if (!images) return
@@ -20,15 +16,11 @@ const svgInline = () => {
 
 				if (image.className) svg.classList = image.classList
 
+				svg.classList.remove('js-svg-inline')
+
 				if (!image.parentNode) return
 
 				image.parentNode.replaceChild(svg, image)
-			})
-			.then(() => {
-				image.classList.add('active')
-
-				image.classList.remove('js-svg-inline')
-				image.classList.add('xxxxxxxxxxxxx')
 			})
 			.catch(error => console.error(error))
 	})

@@ -1,9 +1,19 @@
-@keyframes pawAnimation {
+@keyframes pawFadeIn {
 	0% {
 		opacity: 0;
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes pawNail {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -14,94 +24,43 @@
 	position: relative;
 	width: 330px;
 
-	&.active {
-		&__item {
-			animation: pawAnimation 1s ease-in-out forwards;
-			fill: #fff;
-			opacity: 0;
-			transition: $transition;
-
-			&--bottom {
-				fill: #000;
-				animation-delay: .9s;
-			}
-
-			&--finger_1 {
-				animation-delay: 1.1s;
-			}
-
-			&--finger_2 {
-				animation-delay: 1.3s;
-			}
-
-			&--finger_3 {
-				animation-delay: 1.5s;
-			}
-
-			&--finger_4 {
-				animation-delay: 1.7s;
-			}
-
-			&--nail_1 {
-				animation-delay: 2s;
-				transform: translateY(5%);
-			}
-
-			&--nail_2 {
-				animation-delay: 2.2s;
-			}
-
-			&--nail_3 {
-				animation-delay: 2.4s;
-			}
-
-			&--nail_4 {
-				animation-delay: 2.6s;
-			}
-		}
-	}
-
 	&__item {
-		animation: pawAnimation 1s ease-in-out forwards;
 		fill: #fff;
 		opacity: 0;
 		transition: $transition;
 
 		&--bottom {
+			animation: 2s pawFadeIn forwards;
 			animation-delay: .9s;
 		}
 
 		&--finger_1 {
+			animation: 2s pawFadeIn forwards;
 			animation-delay: 1.1s;
 		}
 
 		&--finger_2 {
+			animation: 2s pawFadeIn forwards;
 			animation-delay: 1.3s;
 		}
 
 		&--finger_3 {
+			animation: 2s pawFadeIn forwards;
 			animation-delay: 1.5s;
 		}
 
 		&--finger_4 {
+			animation: 2s pawFadeIn forwards;
 			animation-delay: 1.7s;
 		}
 
-		&--nail_1 {
-			animation-delay: 2s;
-			transform: translateY(5%);
-		}
-
-		&--nail_2 {
-			animation-delay: 2.2s;
-		}
-
-		&--nail_3 {
-			animation-delay: 2.4s;
-		}
-
+		&--nail_1,
+		&--nail_2,
+		&--nail_3,
 		&--nail_4 {
-			animation-delay: 2.6s;
+			animation: .5s pawNail forwards;
+			animation-delay: 3.5s;
+			transform: translateY(10%);
 		}
 	}
 
