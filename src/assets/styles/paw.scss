@@ -1,0 +1,112 @@
+@keyframes pawAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.paw {
+	display: inline-block;
+	height: 330px;
+	margin: 70px 0 25px;
+	position: relative;
+	width: 330px;
+
+	&.active {
+		&__item {
+			animation: pawAnimation 1s ease-in-out forwards;
+			fill: #fff;
+			opacity: 0;
+			transition: $transition;
+
+			&--bottom {
+				fill: #000;
+				animation-delay: .9s;
+			}
+
+			&--finger_1 {
+				animation-delay: 1.1s;
+			}
+
+			&--finger_2 {
+				animation-delay: 1.3s;
+			}
+
+			&--finger_3 {
+				animation-delay: 1.5s;
+			}
+
+			&--finger_4 {
+				animation-delay: 1.7s;
+			}
+
+			&--nail_1 {
+				animation-delay: 2s;
+				transform: translateY(5%);
+			}
+
+			&--nail_2 {
+				animation-delay: 2.2s;
+			}
+
+			&--nail_3 {
+				animation-delay: 2.4s;
+			}
+
+			&--nail_4 {
+				animation-delay: 2.6s;
+			}
+		}
+	}
+
+	&__item {
+		animation: pawAnimation 1s ease-in-out forwards;
+		fill: #fff;
+		opacity: 0;
+		transition: $transition;
+
+		&--bottom {
+			animation-delay: .9s;
+		}
+
+		&--finger_1 {
+			animation-delay: 1.1s;
+		}
+
+		&--finger_2 {
+			animation-delay: 1.3s;
+		}
+
+		&--finger_3 {
+			animation-delay: 1.5s;
+		}
+
+		&--finger_4 {
+			animation-delay: 1.7s;
+		}
+
+		&--nail_1 {
+			animation-delay: 2s;
+			transform: translateY(5%);
+		}
+
+		&--nail_2 {
+			animation-delay: 2.2s;
+		}
+
+		&--nail_3 {
+			animation-delay: 2.4s;
+		}
+
+		&--nail_4 {
+			animation-delay: 2.6s;
+		}
+	}
+
+	@media #{$mobile} {
+		height: 290px;
+		width: 290px;
+	}
+}

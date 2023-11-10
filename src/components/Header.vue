@@ -4,8 +4,8 @@
 
 		<div class="topmenu js-topmenu">
 			<ul class="theme_change">
-				<li class="theme_change__item" v-for="themeItem in themeItems" :key="themeItem.name">
-					<a class="theme_change__link" :class="'theme_change__link--type-' + themeItem.class" @click.prevent="themeChange(themeItem.name)" href="javascript:void(0);" :title="themeItem.title"></a>
+				<li v-for="themeItem in themeItems" :key="themeItem.name" class="theme_change__item">
+					<a :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" href="javascript:void(0);" @click.prevent="themeChange(themeItem.name)"></a>
 				</li>
 			</ul>
 
@@ -15,23 +15,23 @@
 <!--						<a class="topmenu_list__link topmenu_list__link&#45;&#45;logo js-topmenu-link" href="#top"><span class="js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')" title="home"></span></a>-->
 <!--					</li>-->
 
-					<li class="topmenu_list__item" v-for="menuItem in menuItems" :key="menuItem.title">
+					<li v-for="menuItem in menuItems" :key="menuItem.title" class="topmenu_list__item">
 						<a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
+                            :href="menuItem.href"
                             class="topmenu_list__link js-topmenu-link"
-                            @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()"
-                            :href="menuItem.href">{{ menuItem.title }}
+                            @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()">{{ menuItem.title }}
 						</a>
 					</li>
 				</ul>
 
 				<div class="topmenu_mobile">
-					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span class="js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')"></span></a>
+					<a class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></a>
 
 					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
 			</div>
 
-			<a class="topmenu_phone" :href="'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', '')">{{ phone }}</a>
+			<a :href="'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', '')" class="topmenu_phone">{{ phone }}</a>
 		</div>
 
 		<div class="topmenu_fade" @click="mobileMenuToggle"></div>
@@ -42,7 +42,6 @@
 import imgScroll from '../assets/js/imgScroll'
 import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
-import svgInline from '../assets/js/svgInline'
 import themeChange from '../assets/js/themeChange'
 import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
 
@@ -138,7 +137,6 @@ export default {
 	},
 	mounted() {
 		imgScroll()
-		svgInline()
 
 		// highlight menu item on inner pages
 		this.topmenuItemHighlight()

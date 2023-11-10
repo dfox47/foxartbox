@@ -770,29 +770,10 @@ html {
 	width: 1px;
 }
 
-.logo {
-	display: inline-block;
-	filter: invert(100%);
-	height: 330px;
-	margin: 70px 0 25px;
-	position: relative;
-	width: 330px;
-
-	@media #{$mobile} {
-		height: 290px;
-		width: 290px;
-	}
-}
-
 .page-id-138 {
 	.entry-header {
 		display: none;
 	}
-}
-
-.paw {
-	color: grey;
-	fill: violet;
 }
 
 .qr_code {
