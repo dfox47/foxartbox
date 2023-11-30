@@ -29,6 +29,7 @@ $transition:                all .3s ease-in-out;
 // @medias
 $desktop:               'only screen and (max-width: 1279px)';
 $mobile:                'only screen and (max-width: 767px)';
+$mobile_min:            'only screen and (min-width: 767px)';
 $mobile_s:              'only screen and (max-width: 500px)';
 $tablet:                'only screen and (max-width: 1023px)';
 
