@@ -40,6 +40,7 @@
 
 <script>
 import imgScroll from '../assets/js/imgScroll'
+import imgBg from '../assets/js/imgBg'
 import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
 import themeChange from '../assets/js/themeChange'
@@ -137,6 +138,7 @@ export default {
 	},
 	mounted() {
 		imgScroll()
+		imgBg()
 
 		// highlight menu item on inner pages
 		this.topmenuItemHighlight()
