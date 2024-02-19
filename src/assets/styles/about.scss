@@ -75,7 +75,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 1rem auto;
+	margin: 0 auto;
 	max-height: 0;
 	max-width: 30rem;
 	overflow: hidden;
@@ -115,6 +115,8 @@
 }
 
 .about_skills_wrap {
+	padding: 0 0 2rem;
+
 	&.active {
 		.about_skills_more {
 			span {
