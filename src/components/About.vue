@@ -5,13 +5,27 @@
 
 			<div :data-src="require('../assets/i/avatar.jpg')" class="about_main_img js-img-bg"></div>
 
-			<ul class="about_list">
-				<li v-for="aboutItem in aboutItems" :key="aboutItem.title" class="about_list__item">
-					<a :href="aboutItem.link" class="about_list__link" target="_blank">
-						<span :data-src="aboutItem.img" :data-title="aboutItem.title" class="about_list__img js-img-scroll"></span>
-					</a>
-				</li>
-			</ul>
+			<div :class="{ 'active': aboutActive }" class="about_skills_wrap">
+				<ul class="about_skills">
+					<li v-for="aboutItem in aboutItems" :key="aboutItem.title" class="about_skills__item">
+						<a :href="aboutItem.link" class="about_skills__link" target="_blank">
+							<span :data-src="aboutItem.img" :title="aboutItem.title" class="about_skills__img js-img-scroll"></span>
+						</a>
+					</li>
+				</ul>
+
+				<ul class="about_skills_all">
+					<li v-for="item in aboutItemsAll" :key="item.title" class="about_skills_all__item">
+						<a :href="item.link" class="about_skills_all__link" target="_blank">
+							<span :data-src="item.img" :title="item.title" class="about_skills_all__img js-img-scroll"></span>
+						</a>
+					</li>
+				</ul>
+
+				<p class="text-center">
+					<a class="about_skills_more btn btn__main js-about-skills-more" href="javascript:void(0);" @click="aboutSkillsMore"><span>All skills</span><span>Show less</span></a>
+				</p>
+			</div>
 
 			<div class="about__content">
 				<p>My name is Denis FOX.</p>
@@ -44,28 +58,37 @@ export default {
 	data() {
 		return {
 			aboutItems: [
-				{title: 'vue',                  img: require('../assets/i/icons/vue.svg'),              link: '//vuejs.org/'},
 				{title: 'JS',                   img: require('../assets/i/icons/js.svg'),               link: '//www.javascript.com/'},
-				{title: 'git',                  img: require('../assets/i/icons/git.svg'),              link: '//en.wikipedia.org/wiki/Git'},
 				{title: 'HTML',                 img: require('../assets/i/icons/html.svg'),             link: '//en.wikipedia.org/wiki/HTML'},
 				{title: 'CSS',                  img: require('../assets/i/icons/css.svg'),              link: '//en.wikipedia.org/wiki/CSS'},
-				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg'),             link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
-				// {title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
 				{title: 'Figma',                img: require('../assets/i/icons/figma.svg'),            link: '//en.wikipedia.org/wiki/Figma_(software)'},
-				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg'),             link: '//en.wikipedia.org/wiki/Gulp.js'},
-				// {title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
-				// {title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
-				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg'),        link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
-				// {title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
-				{title: 'Wordpress',            img: require('../assets/i/icons/wordpress.svg'),        link: '//en.wikipedia.org/wiki/WordPress'},
-				// {title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
-				// {title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
-				// {title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
 			],
+			aboutItemsAll: [
+				{title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
+				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg'),        link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
+				{title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
+				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg'),             link: '//en.wikipedia.org/wiki/Gulp.js'},
+				{title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
+				{title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
+				{title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
+				{title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
+				{title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
+				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg'),             link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
+				{title: 'Wordpress',            img: require('../assets/i/icons/wordpress.svg'),        link: '//en.wikipedia.org/wiki/WordPress'},
+				{title: 'git',                  img: require('../assets/i/icons/git.svg'),              link: '//en.wikipedia.org/wiki/Git'},
+				{title: 'vue',                  img: require('../assets/i/icons/vue.svg'),              link: '//vuejs.org/'},
+			],
+			aboutActive: false
+		}
+	},
+	methods: {
+		aboutSkillsMore() {
+			this.aboutActive = !this.aboutActive
 		}
 	},
 	mounted () {
 		imgScroll()
+		// this.aboutSkillsMore()
 	}
 }
 </script>
