@@ -3,33 +3,35 @@
 		<div class="wrap">
 			<h2>About me</h2>
 
-			<span class="about_main_img js-img-scroll" :data-src="require('../assets/i/avatar.jpg')"></span>
+			<div :data-src="require('../assets/i/avatar.jpg')" class="about_main_img js-img-bg"></div>
 
 			<ul class="about_list">
-				<li class="about_list__item" v-for="aboutItem in aboutItems" :key="aboutItem.title">
-					<a class="about_list__link" :href="aboutItem.link" target="_blank">
-						<span class="about_list__img js-img-scroll" :data-src="aboutItem.img" :data-title="aboutItem.title"></span>
+				<li v-for="aboutItem in aboutItems" :key="aboutItem.title" class="about_list__item">
+					<a :href="aboutItem.link" class="about_list__link" target="_blank">
+						<span :data-src="aboutItem.img" :data-title="aboutItem.title" class="about_list__img js-img-scroll"></span>
 					</a>
 				</li>
 			</ul>
 
-			<p>My name is Denis FOX.</p>
+			<div class="about__content">
+				<p>My name is Denis FOX.</p>
 
-			<p>I'm a frontend developer.</p>
+				<p>I'm a web-developer.</p>
 
-			<p>10 years in web development. I make fast &amp; adaptive websites by w3c standards.</p>
+				<p>10 years in web development. I make fast &amp; adaptive websites by w3c standards.</p>
 
-			<h3>GITHUB</h3>
+				<h3>GITHUB</h3>
 
-			<p><a href="//github.com/dfox47" target="_blank">github.com/dfox47</a></p>
+				<p><a href="//github.com/dfox47" target="_blank">github.com/dfox47</a></p>
 
-			<h3>Main skills:</h3>
+				<h3>Main skills:</h3>
 
-			<p>JS, HTML, CSS (+SCSS), Vue, gulp, Figma</p>
+				<p>JS, HTML, CSS, Figma</p>
 
-			<h3>Additional skills</h3>
+				<h3>Additional skills</h3>
 
-			<p>SEO, PHP, Gimp, Git</p>
+				<p>SEO, PHP, Gimp, Git</p>
+			</div>
 		</div>
 	</div>
 </template>
