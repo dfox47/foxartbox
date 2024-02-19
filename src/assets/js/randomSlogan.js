@@ -4,9 +4,10 @@ const randomSlogan = () => {
 
 		const randomSlogan = () => {
 			const slogans = [
+				"Believe in miracles & JavaScript",
+				"Earned. Not given",
 				"Eat. Sleep. Code. Repeat",
 				"Fast websites",
-				"Believe in miracles & JavaScript",
 				"Mobile friendly. Only",
 				"Satisfied client. Always",
 				"W3C standards",
