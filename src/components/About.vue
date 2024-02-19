@@ -22,7 +22,7 @@
 
 				<h3>GITHUB</h3>
 
-				<p><a href="//github.com/dfox47" target="_blank">github.com/dfox47</a></p>
+				<p><a href="//github.com/dfox47" target="_blank" title="my GIT repo">github.com/dfox47</a></p>
 
 				<h3>Main skills:</h3>
 
