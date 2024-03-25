@@ -783,7 +783,9 @@ html {
 }
 
 .qr_code {
+	height: 100px;
 	margin: 0 0 50px;
+	width: 100px;
 }
 
 .singular {
@@ -795,6 +797,11 @@ html {
 .social_links {
 	margin: 0 0 40px;
 
+	&__img {
+		height: 40px;
+		width: 40px;
+	}
+
 	&__item {
 		display: inline-block;
 		margin: 0 20px;
@@ -803,6 +810,11 @@ html {
 
 	&__link {
 		text-decoration: none;
+
+		img {
+			height: 40px;
+			width: 40px;
+		}
 
 		&:hover {
 			opacity: .7;

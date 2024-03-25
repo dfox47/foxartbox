@@ -25,7 +25,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<button class="topmenu_mobile__logo" type="button" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></button>
+					<span class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></span>
 
 					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
@@ -47,7 +47,7 @@ import themeChange from '../assets/js/themeChange'
 import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
 
 import 'vue3-carousel/dist/carousel.css'
-
+// import { meta } from 'vue-meta';
 import {phone} from '../assets/js/config'
 
 // for interview
@@ -149,6 +149,15 @@ export default {
 	},
 	unmounted() {
 		window.removeEventListener('scroll', this.handleScroll)
-	}
+	},
+	metaInfo: {
+		// Set the meta description for this component
+		meta: [
+			{
+				name: 'description',
+				content: 'Web-sites development. Fast & simple. By Dennis FOX',
+			},
+		],
+	},
 }
 </script>

@@ -1,13 +1,13 @@
 <template>
 	<div class="footer">
 		<div class="wrap">
-			<a class="gotop" href="#top" @click.prevent="scrollTo('top')"></a>
+			<span class="gotop" @click.prevent="scrollTo('top')"></span>
 
-			<span class="qr_code js-img-scroll" :data-src="require('../assets/i/qr_code.svg')"></span>
+			<span :data-src="require('../assets/i/qr_code.svg')" class="qr_code js-img-scroll"></span>
 
 			<ul class="social_links">
-				<li class="social_links__item" v-for="(footerLink) in footerLinks" :key="footerLink.href">
-					<a class="social_links__link" :href="footerLink.href" target="_blank" :title="footerLink.title"><span class="js-img-scroll" :data-src="footerLink.icon"></span></a>
+				<li v-for="(footerLink) in footerLinks" :key="footerLink.href" class="social_links__item">
+					<a :href="footerLink.href" :title="footerLink.title" class="social_links__link" target="_blank"><span :data-src="footerLink.icon" class="social_links__img js-img-scroll"></span></a>
 				</li>
 			</ul>
 
@@ -18,7 +18,7 @@
 			<p class="footer_copyright">© 2010 - {{ new Date().getFullYear() }}</p>
 
 			<p class="footer_logo">
-				<a class="footer_logo__link" href="#top" @click.prevent="scrollTo('top')"><span class="footer_logo__img js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')"></span></a>
+				<span class="footer_logo__link" @click.prevent="scrollTo('top')"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="footer_logo__img js-img-scroll"></span></span>
 			</p>
 		</div>
 	</div>
