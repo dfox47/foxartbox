@@ -13,7 +13,7 @@ const password        = config.password
 const port            = config.port
 const user            = config.user
 
-const remoteFolder    = '/foxartbox.com/public_html/'
+const remoteFolder    = '/domains/foxartbox.com/public_html/'
 const localFolder     = 'dist/'
 
 function getFtpConnection() {
