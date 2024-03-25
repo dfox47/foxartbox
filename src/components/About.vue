@@ -23,7 +23,7 @@
 				</ul>
 
 				<p class="text-center">
-					<a class="about_skills_more btn btn__main js-about-skills-more" href="javascript:void(0);" @click="aboutSkillsMore"><span>All skills</span><span>Show less</span></a>
+					<button class="about_skills_more btn btn__main js-about-skills-more" @click="aboutSkillsMore"><span>All skills</span><span>Show less</span></button>
 				</p>
 			</div>
 
