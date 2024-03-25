@@ -1,0 +1,59 @@
+.theme_change {
+	display: flex;
+	font-size: 1rem;
+	left: .5rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	&__item {
+		margin: 0 .5rem 0 0;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		background-color: #000;
+		border-radius: 50%;
+		box-shadow: 0 0 3px #000;
+		cursor: pointer;
+		display: block;
+		height: 24px;
+		width: 24px;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		&--type-1 {
+			background: $c_theme_cyperpunk;
+		}
+
+		&--type-2 {
+			background: linear-gradient(-45deg, #000, #fff);
+		}
+
+		&--type-3 {
+			background: linear-gradient(-45deg, $c_gradient_home_start, $c_theme_cyperpunk);
+		}
+
+		&--type-4 {
+			background: linear-gradient(-45deg, $c_gradient_home_start, $c_theme_forest);
+		}
+
+		&--type-5 {
+			background: linear-gradient(-45deg, darken($c_theme_yellow, 50%), $c_theme_yellow, lighten($c_theme_yellow, 50%));
+		}
+	}
+
+	@media #{$mobile} {
+		left: 90px;
+	}
+
+	@media #{$mobile_s} {
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}

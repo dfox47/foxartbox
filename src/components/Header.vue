@@ -5,7 +5,7 @@
 		<div class="topmenu js-topmenu">
 			<ul class="theme_change">
 				<li v-for="themeItem in themeItems" :key="themeItem.name" class="theme_change__item">
-					<a :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" href="javascript:void(0);" @click.prevent="themeChange(themeItem.name)"></a>
+					<button :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" @click.prevent="themeChange(themeItem.name)"></button>
 				</li>
 			</ul>
 
