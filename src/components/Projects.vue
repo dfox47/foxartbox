@@ -4,16 +4,15 @@
 
 		<div class="wrap2">
 			<div class="projects_list">
-				<a
+				<button
+					v-for="project in projects"
 					:key="project.name"
 					:style="'background-image: url(' + project.mainImg + ');'"
-					@click="popupProjectShow(project.title, project.price, project.desc, project.href, project.images)"
 					class="projects_list__link"
-					href="javascript:void(0);"
-					v-for="project in projects"
+					@click="popupProjectShow(project.title, project.price, project.desc, project.href, project.images)"
 				>
 					<span class="projects_list__title">{{ project.name }}</span>
-				</a>
+				</button>
 			</div>
 		</div>
 	</div>
