@@ -5,7 +5,7 @@
 		<div class="topmenu js-topmenu">
 			<ul class="theme_change">
 				<li v-for="themeItem in themeItems" :key="themeItem.name" class="theme_change__item">
-					<button :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" @click.prevent="themeChange(themeItem.name)"></button>
+					<span :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" @click.prevent="themeChange(themeItem.name)"></span>
 				</li>
 			</ul>
 
@@ -25,7 +25,7 @@
 				</ul>
 
 				<div class="topmenu_mobile">
-					<button class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></button>
+					<button class="topmenu_mobile__logo" type="button" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></button>
 
 					<div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
 				</div>
