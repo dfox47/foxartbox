@@ -57,6 +57,7 @@ export default {
 	name: 'About',
 	data() {
 		return {
+			aboutActive: false,
 			aboutItems: [
 				{title: 'JS',                   img: require('../assets/i/icons/js.svg'),               link: '//www.javascript.com/'},
 				{title: 'HTML',                 img: require('../assets/i/icons/html.svg'),             link: '//en.wikipedia.org/wiki/HTML'},
@@ -88,8 +89,7 @@ export default {
 				{title: 'vue',                  img: require('../assets/i/icons/vue.svg'),              link: '//vuejs.org/'},
 				{title: 'yext',                 img: require('../assets/i/icons/yext.svg'),             link: '//www.yext.com/index.html'},
 				{title: 'gimp',                 img: require('../assets/i/icons/gimp.svg'),             link: '//en.wikipedia.org/wiki/GIMP'},
-			],
-			aboutActive: false
+			]
 		}
 	},
 	methods: {

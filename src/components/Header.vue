@@ -68,6 +68,7 @@ export default {
 				{title: 'Home',         href: '/#top'},
 				{title: 'About me',     href: '/#about'},
 				{title: 'Projects',     href: '/#projects'},
+				{title: 'Pagespeed',     href: '/#pagespeed'},
 				// {title: 'Process',      href: '/#process'},
 				{title: 'Contacts',     href: '/#contacts'},
 				// {title: 'Blog',         href: '/blog'}
