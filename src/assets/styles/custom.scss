@@ -122,6 +122,16 @@ html {
 		}
 	}
 
+	.carousel_wrap {
+		filter: grayscale(100%);
+	}
+
+	.clock_arrow {
+		&__seconds {
+			background-color: $c_text;
+		}
+	}
+
 	.contacts_links {
 		&__img {
 			filter: grayscale(100%);
@@ -143,7 +153,9 @@ html {
 	}
 
 	.project {
-		&__img {
+		&__img,
+		&__link,
+		&__price {
 			filter: grayscale(100%);
 		}
 	}
@@ -158,6 +170,14 @@ html {
 		&::before {
 			background: linear-gradient(to right, #000, #fff);
 		}
+	}
+
+	.project_images {
+		filter: grayscale(100%);
+	}
+
+	.projects_list {
+		filter: grayscale(100%);
 	}
 }
 
@@ -184,12 +204,6 @@ html {
 		}
 
 		&__main {
-			border-radius: 0;
-			color: #fff;
-			font-size: 15px;
-			padding: 30px 0;
-			z-index: 0;
-
 			&:hover {
 				color: #fff;
 
@@ -203,9 +217,6 @@ html {
 
 			span {
 				border: 1px solid rgba($c_theme_cyperpunk, .99);
-				display: inline-block;
-				padding: 16px 42px;
-				position: relative;
 
 				&::after {
 					background-color: $c_theme_cyperpunk;
@@ -229,7 +240,6 @@ html {
 				}
 			}
 		}
-
 	}
 
 	.gotop {
@@ -308,12 +318,6 @@ html {
 		}
 
 		&__main {
-			border-radius: 0;
-			color: #fff;
-			font-size: 15px;
-			padding: 30px 0;
-			z-index: 0;
-
 			&:hover {
 				color: #fff;
 
@@ -327,9 +331,6 @@ html {
 
 			span {
 				border: 1px solid rgba($c_theme_forest, .99);
-				display: inline-block;
-				padding: 16px 42px;
-				position: relative;
 
 				&::after {
 					background-color: $c_theme_forest;
@@ -454,11 +455,7 @@ html {
 		}
 
 		&__main {
-			border-radius: 0;
 			color: #000;
-			font-size: 15px;
-			padding: 30px 0;
-			z-index: 0;
 
 			&:hover {
 				color: #fff;
@@ -473,9 +470,6 @@ html {
 
 			span {
 				border: 1px solid rgba($c_theme_yellow, .99);
-				display: inline-block;
-				padding: 16px 42px;
-				position: relative;
 
 				&::after {
 					background-color: $c_theme_yellow;
