@@ -36,10 +36,11 @@ export default {
 	data() {
 		return {
 			pageSpeedSlides: [
-				{href: '/',                 img: require('../assets/i/pagespeed/1.png'),   title: 'Foxartbox'},
-				{href: '//algatech.net/',   img: require('../assets/i/pagespeed/3.png'),   title: 'Algatech'},
-				{href: '',                  img: require('../assets/i/pagespeed/4.png'),   title: 'Foxartbox'},
-				{href: '//brokertop.ru/',   img: require('../assets/i/pagespeed/2.png'),   title: 'Brokertop'},
+				{href: '/',                     img: require('../assets/i/pagespeed/1.png'),   title: 'Foxartbox'},
+				{href: '//villathassos.com/',   img: require('../assets/i/pagespeed/6.png'),   title: 'Villa Thassos'},
+				{href: '//algatech.net/',       img: require('../assets/i/pagespeed/3.png'),   title: 'Algatech'},
+				{href: '',                      img: require('../assets/i/pagespeed/4.png'),   title: 'Foxartbox'},
+				{href: '//brokertop.ru/',       img: require('../assets/i/pagespeed/2.png'),   title: 'Brokertop'},
 			]
 		}
 	}
