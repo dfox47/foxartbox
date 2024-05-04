@@ -43,7 +43,18 @@ const randomSlogan = () => {
 	grad.addColorStop(0, '#640d6b')
 	grad.addColorStop(1, '#ee0979')
 
-	ctx.font = '700 98px Arial, Helvetica, sans-serif'
+	const windowWidth = window.innerWidth
+
+	let fontSize = 100
+
+	if (windowWidth < 660) {
+		fontSize = 50
+	}
+	else if (windowWidth < 980) {
+		fontSize = 70
+	}
+
+	ctx.font = '700 ' + fontSize + 'px Arial, Helvetica, sans-serif'
 	ctx.fillStyle = grad
 	ctx.textAlign = 'center'
 	ctx.textBaseline = 'middle'
