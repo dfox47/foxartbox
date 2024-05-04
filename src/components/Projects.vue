@@ -130,18 +130,6 @@ export default {
 						{src: require('../assets/i/projects/p3week/6.jpg')},
 						{src: require('../assets/i/projects/p3week/7.jpg')}
 					]
-				},
-				{
-					name: 'ODD',
-					desc: 'Example of search based on Vue.js',
-					href: 'odd.foxartbox.com',
-					id: 6,
-					mainImg: require('../assets/i/projects/odd/0.jpg'),
-					price: '',
-					title: 'Search on vue.js',
-					images: [
-						{src: require('../assets/i/projects/odd/1.jpg')}
-					]
 				}
 			]
 		}

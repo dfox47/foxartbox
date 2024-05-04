@@ -1,7 +1,7 @@
 const imgScroll = () => {
 	const changeImgSrc = () => {
 		document.querySelectorAll('.js-img-scroll').forEach((e) => {
-			if (window.pageYOffset + window.innerHeight > e.getBoundingClientRect().top) {
+			if (window.pageYOffset + window.innerHeight >= e.getBoundingClientRect().top) {
 				e.classList.remove('js-img-scroll')
 
 				// create img element
@@ -20,11 +20,15 @@ const imgScroll = () => {
 
 				$img.src = $src
 
-				// alt text
-				$img.alt = e.title ? e.title : ''
+				const $title = e.title
 
-				// title
-				$img.title = e.title ? e.title : ''
+				if ($title) {
+					// alt text
+					$img.alt = $title
+
+					// title
+					$img.title = $title
+				}
 
 				// append img
 				e.after($img)
@@ -36,9 +40,7 @@ const imgScroll = () => {
 	}
 
 	window.addEventListener('orientationChange', changeImgSrc)
-
 	window.addEventListener('resize', changeImgSrc)
-
 	window.addEventListener('scroll', changeImgSrc)
 
 	changeImgSrc()

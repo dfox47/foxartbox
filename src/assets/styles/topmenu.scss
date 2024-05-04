@@ -137,7 +137,7 @@
 		display: block;
 	}
 
-	@media #{$mobile} {
+	@media #{$tablet} {
 		background-color: #fff;
 		box-shadow: 0 4px 7px #000;
 		display: none;
@@ -169,7 +169,7 @@
 			margin: 0 10px 0 0;
 			width: 40px;
 
-			@media #{$mobile} {
+			@media #{$tablet} {
 				filter: invert(0);
 			}
 		}
@@ -211,7 +211,7 @@
 		}
 	}
 
-	@media #{$mobile} {
+	@media #{$tablet} {
 		display: flex;
 	}
 }
@@ -267,7 +267,7 @@
 		opacity: 1;
 	}
 
-	@media #{$mobile} {
+	@media #{$tablet} {
 		right: 90px;
 	}
 
