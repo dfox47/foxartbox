@@ -15,6 +15,7 @@
 
 <script>
 import imgScroll from '../assets/js/imgScroll'
+import logoCanvas from '../assets/js/logoCanvas'
 import randomSlogan from '../assets/js/randomSlogan'
 import scrollTo from '../assets/js/scrollTo'
 import svgInline from '../assets/js/svgInline'
@@ -23,6 +24,7 @@ export default {
 	name: 'HomeBlock',
 	mounted () {
 		imgScroll()
+		logoCanvas()
 		randomSlogan()
 		svgInline()
 	},
