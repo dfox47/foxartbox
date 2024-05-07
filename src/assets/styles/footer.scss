@@ -35,6 +35,8 @@
 	justify-content: center;
 
 	&__link {
+		cursor: pointer;
+
 		&:hover {
 			.footer_logo__img {
 				filter: invert(0);
@@ -44,9 +46,9 @@
 
 	&__img {
 		filter: invert(100%);
-		height: 20px;
+		height: 30px;
 		transition: $transition;
-		width: 20px;
+		width: 150px;
 	}
 }
 

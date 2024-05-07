@@ -18,7 +18,7 @@
 			<p class="footer_copyright">© 2010 - {{ new Date().getFullYear() }}</p>
 
 			<p class="footer_logo">
-				<span class="footer_logo__link" @click.prevent="scrollTo('top')"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="footer_logo__img js-img-scroll"></span></span>
+				<span class="footer_logo__link" @click.prevent="scrollTo('top')"><span :data-src="require('../assets/i/icons/logo_5s.svg')" class="footer_logo__img js-img-scroll"></span></span>
 			</p>
 		</div>
 	</div>

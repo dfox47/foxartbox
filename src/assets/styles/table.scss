@@ -89,8 +89,8 @@
 }
 
 .table_logo {
-	background-size: contain;
 	background: url(#{$icons}/logo_4.svg) no-repeat center scroll transparent;
+	background-size: contain;
 	bottom: 10px;
 	height: 40px;
 	position: absolute;
