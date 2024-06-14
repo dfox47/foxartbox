@@ -12,6 +12,7 @@
 					@click="popupProjectShow(project.title, project.price, project.desc, project.href, project.images)"
 				>
 					<span class="projects_list__title">{{ project.name }}</span>
+					<span class="projects_list__price">{{ project.price }}</span>
 				</button>
 			</div>
 		</div>

@@ -185,7 +185,7 @@
 
 .projects_list {
 	display: grid;
-	row-gap: 30px;
+	gap: 2rem;
 	grid-template-columns: repeat(3, 1fr);
 	position: relative;
 
@@ -230,10 +230,23 @@
 		}
 	}
 
+	&__price {
+		background-color: $c_main;
+		border-bottom: 2px solid #fff;
+		border-left: 2px solid #fff;
+		color: #fff;
+		font-size: 1.1rem;
+		padding: .5em 1em;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 3;
+	}
+
 	&__title {
 		color: #fff;
 		display: block;
-		font-size: 24px;
+		font-size: 1.5rem;
 		font-weight: 800;
 		left: 50%;
 		letter-spacing: 10em;
@@ -243,6 +256,7 @@
 		top: 50%;
 		transform: translate(-50%,-50%);
 		transition: $transition;
+		white-space: nowrap;
 		z-index: 5;
 	}
 
