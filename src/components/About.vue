@@ -65,13 +65,16 @@ export default {
 				{title: 'Figma',                img: require('../assets/i/icons/figma.svg'),            link: '//en.wikipedia.org/wiki/Figma_(software)'},
 			],
 			aboutItemsAll: [
+				{title: 'Adobe Experience Manager', img: require('../assets/i/icons/aem.svg'),          link: '//business.adobe.com/blog/basics/adobe-experience-manager'},
 				{title: 'Adobe Indesign',       img: require('../assets/i/icons/indesign.svg'),         link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
 				{title: 'Adobe Photoshop',      img: require('../assets/i/icons/photoshop.svg'),        link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
 				{title: 'Adobe illustrator',    img: require('../assets/i/icons/illustrator.svg'),      link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
+				{title: 'Docker',               img: require('../assets/i/icons/docker.svg'),           link: '//www.docker.com/'},
 				{title: 'Gulp',                 img: require('../assets/i/icons/gulp.svg'),             link: '//en.wikipedia.org/wiki/Gulp.js'},
 				{title: 'LESS',                 img: require('../assets/i/icons/less.svg'),             link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
 				{title: 'Linux',                img: require('../assets/i/icons/linux.svg'),            link: '//en.wikipedia.org/wiki/Linux'},
 				{title: 'MacOS',                img: require('../assets/i/icons/macos.svg'),            link: '//en.wikipedia.org/wiki/MacOS'},
+				{title: 'Nuxt',                 img: require('../assets/i/icons/nuxt.svg'),             link: '//nuxt.com/'},
 				{title: 'Python',               img: require('../assets/i/icons/python.svg'),           link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
 				{title: 'SAP Hybris',           img: require('../assets/i/icons/hybris.svg'),           link: '//en.wikipedia.org/wiki/Hybris_(company)'},
 				{title: 'SASS',                 img: require('../assets/i/icons/sass.svg'),             link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
@@ -79,6 +82,7 @@ export default {
 				{title: 'bitrix',               img: require('../assets/i/icons/bitrix.svg'),           link: '//ru.wikipedia.org/wiki/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124'},
 				{title: 'confluence',           img: require('../assets/i/icons/confluence.svg'),       link: '//en.wikipedia.org/wiki/Confluence_(software)'},
 				{title: 'filezilla',            img: require('../assets/i/icons/filezilla.svg'),        link: '//filezilla-project.org/'},
+				{title: 'gimp',                 img: require('../assets/i/icons/gimp.svg'),             link: '//en.wikipedia.org/wiki/GIMP'},
 				{title: 'git',                  img: require('../assets/i/icons/git.svg'),              link: '//en.wikipedia.org/wiki/Git'},
 				{title: 'jira',                 img: require('../assets/i/icons/jira.svg'),             link: '//en.wikipedia.org/wiki/Jira_(software)'},
 				{title: 'joomla',               img: require('../assets/i/icons/joomla.svg'),           link: '//en.wikipedia.org/wiki/Joomla'},
@@ -88,7 +92,6 @@ export default {
 				{title: 'service now',          img: require('../assets/i/icons/snow.svg'),             link: '//en.wikipedia.org/wiki/ServiceNow'},
 				{title: 'vue',                  img: require('../assets/i/icons/vue.svg'),              link: '//vuejs.org/'},
 				{title: 'yext',                 img: require('../assets/i/icons/yext.svg'),             link: '//www.yext.com/index.html'},
-				{title: 'gimp',                 img: require('../assets/i/icons/gimp.svg'),             link: '//en.wikipedia.org/wiki/GIMP'},
 			]
 		}
 	},
