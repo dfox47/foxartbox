@@ -24,26 +24,18 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import imgScroll from '../assets/js/imgScroll'
 import scrollTo from '../assets/js/scrollTo'
+import {onMounted} from 'vue'
 import {phone} from '../assets/js/config'
 
-export default {
-	data() {
-		return {
-			footerLinks: [
-				{href: '//web.facebook.com/foxartbox/',         icon: require('../assets/i/icons/fb.svg'),      title: 'Facebook'},
-				{href: '//www.instagram.com/denis_fox_web/',    icon: require('../assets/i/icons/inst.svg'),    title: 'Instagram'}
-			],
-			phone
-		}
-	},
-	methods: {
-		scrollTo
-	},
-	mounted () {
-		imgScroll()
-	}
-}
+const footerLinks = [
+  { href: '//web.facebook.com/foxartbox/', icon: require('../assets/i/icons/fb.svg'), title: 'Facebook' },
+  { href: '//www.instagram.com/denis_fox_web/', icon: require('../assets/i/icons/inst.svg'), title: 'Instagram' }
+]
+
+onMounted(() => {
+  imgScroll()
+})
 </script>
