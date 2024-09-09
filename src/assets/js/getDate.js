@@ -13,8 +13,6 @@ const getDate = () => {
 
 		let clockHours = today.getUTCHours() + +$gmt
 
-		console.log('clockHours | ', clockHours)
-
 		if (clockHours > 23) {
 			clockHours = clockHours - 24
 		}

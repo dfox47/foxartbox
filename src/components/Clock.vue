@@ -31,7 +31,7 @@ import getDate from '../assets/js/getDate'
 import {API_KEY, BASE_URL} from '../constants'
 
 const clockLocations = ref([
-  {name: 'New York', gmt: '-5', cityShort: 'Moscow'},
+  {name: 'New York', gmt: '-5', cityShort: 'New York'},
   {name: 'Sofia', gmt: '+3', cityShort: 'Sofia'},
   {name: 'Tokyo', gmt: '+9', cityShort: 'Tokyo'}
 ])
