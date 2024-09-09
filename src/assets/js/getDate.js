@@ -5,16 +5,21 @@ const getDate = () => {
 	if (!$clocks) return
 
 	const today = new Date()
-	const clockMinutes  = today.getUTCMinutes()
-	const clockSeconds  = today.getUTCSeconds()
+	const clockMinutes = today.getUTCMinutes()
+	const clockSeconds = today.getUTCSeconds()
 
 	$clocks.forEach((e) => {
 		const $gmt = e.dataset.gmt ? e.dataset.gmt : 0
 
 		let clockHours = today.getUTCHours() + +$gmt
 
+		console.log('clockHours | ', clockHours)
+
 		if (clockHours > 23) {
 			clockHours = clockHours - 24
+		}
+		else if (clockHours < 0) {
+			clockHours = clockHours + 24
 		}
 
 		// dark mode
