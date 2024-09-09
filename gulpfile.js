@@ -1,11 +1,11 @@
 // npm install -g gulp-cli
 // npm install gulp vinyl-ftp gulp-util --save-dev
 
-const fs              = require('fs')
-const config          = JSON.parse(fs.readFileSync('../config.json'))
-const ftp             = require('vinyl-ftp')
-const gulp            = require('gulp')
-const gutil           = require('gulp-util')
+const fs = require('fs')
+const config = JSON.parse(fs.readFileSync('../config.json'))
+const ftp = require('vinyl-ftp')
+const gulp = require('gulp')
+const gutil = require('gulp-util')
 
 // FTP config
 const host            = config.host
