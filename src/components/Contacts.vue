@@ -19,24 +19,19 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import imgScroll from '../assets/js/imgScroll'
 import {email} from '../assets/js/config'
 import {phone} from '../assets/js/config'
+import {onMounted} from 'vue'
 
-export default {
-	name: 'Contacts',
-	data() {
-		return {
-			contactsLinks: [
-				{href: 'mailto:' + email,           icon: require('../assets/i/icons/email.svg'),       title: email},
-				{href: '//t.me/dfoxweb',            icon: require('../assets/i/icons/telegram.svg'),    title: '@dfoxweb'},
-				{href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''),    icon: '',   title: phone}
-			]
-		}
-	},
-	mounted () {
-		imgScroll()
-	}
-}
+onMounted(() => {
+  imgScroll()
+})
+
+const contactsLinks = [
+  {href: 'mailto:' + email, icon: require('../assets/i/icons/email.svg'), title: email},
+  {href: '//t.me/dfoxweb', icon: require('../assets/i/icons/telegram.svg'), title: '@dfoxweb'},
+  {href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''), icon: '', title: phone}
+]
 </script>
