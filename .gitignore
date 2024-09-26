@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+./public/.htaccess
+./public/0dirtqcntczf11cqr243qd50fxlpg2.html
