@@ -17,15 +17,15 @@ const remoteFolder    = '/domains/foxartbox.com/public_html/'
 const localFolder     = 'dist/'
 
 function getFtpConnection() {
-	return ftp.create({
-		host:           host,
-		log:            gutil.log,
-		password:       password,
-		parallel:       3,
-		port:           port,
-		timeout:        99999999,
-		user:           user
-	});
+  return ftp.create({
+    host:           host,
+    log:            gutil.log,
+    password:       password,
+    parallel:       3,
+    port:           port,
+    timeout:        99999999,
+    user:           user
+  });
 }
 
 const conn = getFtpConnection()
@@ -33,12 +33,12 @@ const conn = getFtpConnection()
 
 
 gulp.task('dist', function () {
-	return gulp.src(localFolder + '**/*')
-		.pipe(conn.dest(remoteFolder))
+  return gulp.src(localFolder + '**/*')
+    .pipe(conn.dest(remoteFolder))
 })
 
 gulp.task('watch', function() {
-	gulp.watch(localFolder + '**/*', gulp.series('dist'))
+  gulp.watch(localFolder + '**/*', gulp.series('dist'))
 })
 
 gulp.task('default', gulp.series('watch'))
