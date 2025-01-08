@@ -1,20 +1,20 @@
 // scroll to the block with ID
 const scrollTo = (id) => {
-	if (!id) return
+  if (!id) return
 
-	const e = document.getElementById(id.replace('/#', '').replace('#', ''))
+  const e = document.getElementById(id.replace('/#', '').replace('#', ''))
 
-	// if there is no element with ID to scroll
-	if (!e) {
-		window.location.href = id
+  // if there is no element with ID to scroll
+  if (!e) {
+    window.location.href = id
 
-		return
-	}
+    return
+  }
 
-	// scroll to element
-	e.scrollIntoView({
-		behavior: 'smooth'
-	})
+  // scroll to element
+  e.scrollIntoView({
+    behavior: 'smooth'
+  })
 }
 
 export default scrollTo

@@ -1,49 +1,49 @@
 const imgScroll = () => {
-	const changeImgSrc = () => {
-		document.querySelectorAll('.js-img-scroll').forEach((e) => {
-			if (window.pageYOffset + window.innerHeight >= e.getBoundingClientRect().top) {
-				e.classList.remove('js-img-scroll')
+  const changeImgSrc = () => {
+    document.querySelectorAll('.js-img-scroll').forEach((e) => {
+      if (window.pageYOffset + window.innerHeight >= e.getBoundingClientRect().top) {
+        e.classList.remove('js-img-scroll')
 
-				// create img element
-				const $img          = document.createElement('img')
-				let $classList      = e.className
-				const $src          = e.dataset.src
+        // create img element
+        const $img          = document.createElement('img')
+        let $classList      = e.className
+        const $src          = e.dataset.src
 
-				if (!$src) return
+        if (!$src) return
 
-				// copy all classes from span to img
-				if ($classList) {
-					$classList.split(' ').forEach((c) => {
-						$img.classList.add(c)
-					})
-				}
+        // copy all classes from span to img
+        if ($classList) {
+          $classList.split(' ').forEach((c) => {
+            $img.classList.add(c)
+          })
+        }
 
-				$img.src = $src
+        $img.src = $src
 
-				const $title = e.title
+        const $title = e.title
 
-				if ($title) {
-					// alt text
-					$img.alt = $title
+        if ($title) {
+          // alt text
+          $img.alt = $title
 
-					// title
-					$img.title = $title
-				}
+          // title
+          $img.title = $title
+        }
 
-				// append img
-				e.after($img)
+        // append img
+        e.after($img)
 
-				// remove main element (span)
-				e.remove()
-			}
-		})
-	}
+        // remove main element (span)
+        e.remove()
+      }
+    })
+  }
 
-	window.addEventListener('orientationChange', changeImgSrc)
-	window.addEventListener('resize', changeImgSrc)
-	window.addEventListener('scroll', changeImgSrc)
+  window.addEventListener('orientationChange', changeImgSrc)
+  window.addEventListener('resize', changeImgSrc)
+  window.addEventListener('scroll', changeImgSrc)
 
-	changeImgSrc()
+  changeImgSrc()
 }
 
 export default imgScroll

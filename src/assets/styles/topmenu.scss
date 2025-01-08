@@ -1,277 +1,277 @@
 .topmenu {
-	background-color: #fff;
-	box-shadow: 0 0 7px #000;
-	font-size: 16px;
-	left: 0;
-	position: fixed;
-	text-transform: uppercase;
-	top: 0;
-	transition: $transition;
-	width: 100%;
-	z-index: 9;
+  background-color: #fff;
+  box-shadow: 0 0 7px #000;
+  font-size: 16px;
+  left: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  transition: $transition;
+  width: 100%;
+  z-index: 9;
 
-	&__bg {
-		background-color: rgba($c_gradient_home_start, .8);
-		display: none;
-		height: 100%;
-		left: 0;
-		position: fixed;
-		top: 0;
-		transition: $transition;
-		width: 100%;
-		z-index: 8;
-	}
+  &__bg {
+    background-color: rgba($c_gradient_home_start, .8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: $transition;
+    width: 100%;
+    z-index: 8;
+  }
 }
 
 .topmenu_active {
-	.topmenu {
-		background-color: #fff;
-	}
+  .topmenu {
+    background-color: #fff;
+  }
 
-	.topmenu_list {
-		a,
-		a:visited {
-			color: #000;
+  .topmenu_list {
+    a,
+    a:visited {
+      color: #000;
 
-			&.active {
-				color: #fff;
-			}
-		}
-	}
+      &.active {
+        color: #fff;
+      }
+    }
+  }
 
-	.topmenu_mobile__toggle,
-	.topmenu_mobile__toggle:visited {
-		> span {
-			background-color: #000;
-		}
-	}
+  .topmenu_mobile__toggle,
+  .topmenu_mobile__toggle:visited {
+    > span {
+      background-color: #000;
+    }
+  }
 
-	.topmenu_mobile__logo,
-	.topmenu_mobile__logo:visited {
-		color: #000;
+  .topmenu_mobile__logo,
+  .topmenu_mobile__logo:visited {
+    color: #000;
 
-		img {
-			filter: invert(100%);
-		}
-	}
+    img {
+      filter: invert(100%);
+    }
+  }
 }
 
 .topmenu_fade {
-	background-color: #000;
-	display: none;
-	height: 100%;
-	left: 0;
-	opacity: .7;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 7;
+  background-color: #000;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: .7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 7;
 }
 
 .topmenu_list {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 
-	&__link {
-		color: #000;
-		display: block;
-		opacity: .7;
-		outline: 0 none;
-		padding: 10px 20px;
-		position: relative;
-		text-decoration: none;
+  &__link {
+    color: #000;
+    display: block;
+    opacity: .7;
+    outline: 0 none;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
 
-		&:hover,
-		&.active {
-			color: #fff;
-			opacity: 1;
-			text-decoration: none;
+    &:hover,
+    &.active {
+      color: #fff;
+      opacity: 1;
+      text-decoration: none;
 
-			&::after {
-				top: 0;
-			}
-		}
+      &::after {
+        top: 0;
+      }
+    }
 
-		&::after {
-			background-color: #000;
-			content: "";
-			display: block;
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: -150px;
-			transition: $transition;
-			width: 100%;
-			z-index: -1;
-		}
+    &::after {
+      background-color: #000;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -150px;
+      transition: $transition;
+      width: 100%;
+      z-index: -1;
+    }
 
-		&--logo {
-			opacity: 1;
+    &--logo {
+      opacity: 1;
 
-			img {
-				filter: invert(0);
-				width: 30px;
-				height: 30px;
-			}
-		}
+      img {
+        filter: invert(0);
+        width: 30px;
+        height: 30px;
+      }
+    }
 
-		@media #{$mobile} {
-			padding: 20px 30px;
-			text-align: center;
+    @media #{$mobile} {
+      padding: 20px 30px;
+      text-align: center;
 
-			&::after {
-				display: none;
-			}
+      &::after {
+        display: none;
+      }
 
-			&:hover,
-			&.active {
-				background-color: #000;
-				color: #fff;
-			}
-		}
-	}
+      &:hover,
+      &.active {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
 
-	&__item {
-		display: block;
-	}
+  &__item {
+    display: block;
+  }
 
-	@media #{$tablet} {
-		background-color: #fff;
-		box-shadow: 0 4px 7px #000;
-		display: none;
-		left: 0;
-		position: absolute;
-		top: 100%;
-		width: 100%;
-	}
+  @media #{$tablet} {
+    background-color: #fff;
+    box-shadow: 0 4px 7px #000;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
 }
 
 .topmenu_mobile {
-	align-items: center;
-	display: none;
-	justify-content: space-between;
+  align-items: center;
+  display: none;
+  justify-content: space-between;
 
-	&__logo {
-		align-items: center;
-		color: #000;
-		cursor: pointer;
-		display: flex;
-		padding: 4px 0;
-		text-decoration: none;
-		transition: $transition;
+  &__logo {
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    padding: 4px 0;
+    text-decoration: none;
+    transition: $transition;
 
-		img {
-			display: block;
-			height: 40px;
-			filter: invert(100%);
-			margin: 0 10px 0 0;
-			width: 40px;
+    img {
+      display: block;
+      height: 40px;
+      filter: invert(100%);
+      margin: 0 10px 0 0;
+      width: 40px;
 
-			@media #{$tablet} {
-				filter: invert(0);
-			}
-		}
+      @media #{$tablet} {
+        filter: invert(0);
+      }
+    }
 
-		&:hover {
-			opacity: .7;
-		}
-	}
+    &:hover {
+      opacity: .7;
+    }
+  }
 
-	&__toggle {
-		display: block;
-		cursor: pointer;
-		height: 40px;
-		position: relative;
-		text-decoration: none;
-		width: 40px;
+  &__toggle {
+    display: block;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    text-decoration: none;
+    width: 40px;
 
-		&::after,
-		&::before,
-		> span {
-			background-color: #000;
-			content: "";
-			display: block;
-			height: 2px;
-			left: 8px;
-			margin: 0 0 4px;
-			position: absolute;
-			top: 19px;
-			transition: $transition;
-			width: 22px;
-		}
+    &::after,
+    &::before,
+    > span {
+      background-color: #000;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 8px;
+      margin: 0 0 4px;
+      position: absolute;
+      top: 19px;
+      transition: $transition;
+      width: 22px;
+    }
 
-		&::after {
-			top: 13px;
-		}
+    &::after {
+      top: 13px;
+    }
 
-		&::before {
-			top: 25px;
-		}
-	}
+    &::before {
+      top: 25px;
+    }
+  }
 
-	@media #{$tablet} {
-		display: flex;
-	}
+  @media #{$tablet} {
+    display: flex;
+  }
 }
 
 .topmenu_mobile_active {
-	@media #{$mobile} {
-		.topmenu {
-			&__bg {
-				display: block;
-			}
-		}
+  @media #{$mobile} {
+    .topmenu {
+      &__bg {
+        display: block;
+      }
+    }
 
-		.topmenu_list {
-			display: block;
-		}
+    .topmenu_list {
+      display: block;
+    }
 
-		.topmenu_fade {
-			display: block;
-		}
+    .topmenu_fade {
+      display: block;
+    }
 
-		.topmenu_mobile {
-			&__toggle {
-				&::after {
-					top: 18px;
-					transform: rotate(-45deg);
-				}
+    .topmenu_mobile {
+      &__toggle {
+        &::after {
+          top: 18px;
+          transform: rotate(-45deg);
+        }
 
-				&::before {
-					top: 18px;
-					transform: rotate(45deg);
-				}
+        &::before {
+          top: 18px;
+          transform: rotate(45deg);
+        }
 
-				> span {
-					left: 100px;
-					opacity: 0;
-				}
-			}
-		}
-	}
+        > span {
+          left: 100px;
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
 
 .topmenu_phone {
-	color: #000;
-	font-size: 14px;
-	opacity: .7;
-	position: absolute;
-	right: 10px;
-	text-decoration: none;
-	top: 50%;
-	transform: translateY(-50%);
+  color: #000;
+  font-size: 14px;
+  opacity: .7;
+  position: absolute;
+  right: 10px;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
 
-	&:hover {
-		opacity: 1;
-	}
+  &:hover {
+    opacity: 1;
+  }
 
-	@media #{$tablet} {
-		right: 90px;
-	}
+  @media #{$tablet} {
+    right: 90px;
+  }
 
-	@media #{$mobile_s} {
-		display: none;
-	}
+  @media #{$mobile_s} {
+    display: none;
+  }
 }
