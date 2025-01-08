@@ -4,34 +4,38 @@
 // You may assume each function in the array accepts one integer as input and returns one integer as output.
 
 const functionComposition = () => {
-	/**
-	 * @param {Function[]} functions
-	 * @return {Function}
-	 */
+  /**
+   * @param {Function[]} functions
+   * @return {Function}
+   */
 
-	cosnt functions = [[x => x + 1, x => x * x, x => 2 * x], x = 4]
-	// Output: 65
+  let x = 0
 
-	const functions2 = [[x => 10 * x, x => 10 * x, x => 10 * x], x = 1]
-	// Output: 1000
+  // cosnt functions = [[x => x + 1, x => x * x, x => 2 * x], x = 4]
+  // Output: 65
 
-	const functions3 = [[], x = 42]
-	// Output: 42
+  const functions2 = [[x => 10 * x, x => 10 * x, x => 10 * x], x = 1]
+  // Output: 1000
 
-	const compose = function(functions) {
-		return function(x) {
-			return functions.reduceRight((result, fn) => fn(result), x)
-		}
-	}
+  const functions3 = [[], x = 42]
+  // Output: 42
 
-	compose(functions)
-	compose(functions2)
-	compose(functions3)
+  const compose = function(functions) {
+    return function(x) {
+      return functions.reduceRight((result, fn) => fn(result), x)
+    }
+  }
 
-	/**
-	 * const fn = compose([x => x + 1, x => 2 * x])
-	 * fn(4) // 9
-	 */
+  console.log('x | ', x)
+
+  // compose(functions)
+  compose(functions2)
+  compose(functions3)
+
+  /**
+   * const fn = compose([x => x + 1, x => 2 * x])
+   * fn(4) // 9
+   */
 }
 
 export default functionComposition

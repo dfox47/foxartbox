@@ -51,8 +51,7 @@
 </template>
 
 <script setup>
-import imgScroll from '../assets/js/imgScroll'
-import {ref, onMounted} from 'vue'
+import {ref} from 'vue'
 
 const aboutActive = ref(false)
 
@@ -98,8 +97,175 @@ const aboutItemsAll = [
 const aboutSkillsMore = () => {
   aboutActive.value = !aboutActive.value;
 }
-
-onMounted(() => {
-  imgScroll()
-})
 </script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/vars' as *;
+
+.about {
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 50px 0 100px;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+  }
+
+	&__link {
+    color: $c_text;
+  }
+}
+
+
+.about_skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 9rem;
+  padding: 3rem 0 0;
+
+  &__img {
+    display: block;
+    height: 50px;
+    object-fit: contain;
+    width: 50px;
+  }
+
+  &__item {
+    padding: 4px;
+  }
+
+  @media #{$mobile_min} {
+    &__img {
+      filter: grayscale(30%) brightness(.5);
+      transition: filter, height, width, margin-top, .2s cubic-bezier(.25, 1, .5, 1);
+      will-change: filter;
+    }
+
+    &__item {
+      &:has(+ .about_skills__item:hover) {
+        .about_skills__img {
+          filter: inherit;
+          height: 80px;
+          margin: -20px 0 0;
+          width: 80px;
+        }
+      }
+
+      &:hover {
+        .about_skills__img {
+          filter: inherit;
+          height: 100px;
+          margin: -40px 0 0;
+          width: 100px;
+        }
+
+        + .about_skills__item {
+          .about_skills__img {
+            filter: inherit;
+            height: 80px;
+            margin: -20px 0 0;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_skills_all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 0;
+  max-width: 50rem;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 1s cubic-bezier(0,1,0,1);
+
+  &__img {
+    display: block;
+    height: 6rem;
+    object-fit: contain;
+    padding: .7rem;
+    transition: $transition;
+    width: 6rem;
+
+    &:hover {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.about_skills_more {
+  span {
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+.about_skills_wrap {
+  padding: 0 0 2rem;
+
+  &.active {
+    .about_skills_more {
+      span {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
+    .about_skills_all {
+      max-height: 1000px;
+      transition: max-height 1.5s ease-in-out;
+    }
+  }
+}
+
+.about_main_img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 3rem auto;
+  max-width: 25rem;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+
+  &::after {
+    background: radial-gradient(ellipse at center,rgba(#fff,0) 0,rgba(#fff,0) 50%,#fff 70%,#fff 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding: 100% 0 0;
+    position: relative;
+    width: 100%;
+  }
+}
+</style>
