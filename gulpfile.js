@@ -23,7 +23,7 @@ function getFtpConnection() {
     password:       password,
     parallel:       3,
     port:           port,
-    timeout:        99999999,
+    timeout:        99999,
     user:           user
   });
 }
