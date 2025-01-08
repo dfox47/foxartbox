@@ -9,7 +9,7 @@
 				<ul class="about_skills">
 					<li v-for="aboutItem in aboutItems" :key="aboutItem.title" class="about_skills__item">
 						<a :href="aboutItem.link" class="about_skills__link" target="_blank">
-							<span :data-src="aboutItem.img" :title="aboutItem.title" class="about_skills__img js-img-scroll"></span>
+							<img :src="aboutItem.img" :title="aboutItem.title" class="about_skills__img" :alt="aboutItem.title">
 						</a>
 					</li>
 				</ul>
@@ -17,7 +17,8 @@
 				<ul class="about_skills_all">
 					<li v-for="item in aboutItemsAll" :key="item.title" class="about_skills_all__item">
 						<a :href="item.link" class="about_skills_all__link" target="_blank">
-							<span :data-src="item.img" :title="item.title" class="about_skills_all__img js-img-scroll"></span>
+							<img :src="item.img" :title="item.title" class="about_skills_all__img" :alt="item.title">
+              <span class="about_skills_all__title">{{ item.title }}</span>
 						</a>
 					</li>
 				</ul>
@@ -36,7 +37,7 @@
 
 				<h3>GITHUB</h3>
 
-				<p><a href="//github.com/dfox47" target="_blank" title="my GIT repo">github.com/dfox47</a></p>
+				<p><a class="about__link" href="//github.com/dfox47" target="_blank" title="my GIT repo">github.com/dfox47</a></p>
 
 				<h3>Main skills:</h3>
 
@@ -67,30 +68,30 @@ const aboutItemsAll = [
   {title: 'Adobe Indesign',    img: require('../assets/i/icons/indesign.svg'),   link: '//en.wikipedia.org/wiki/Adobe_InDesign'},
   {title: 'Adobe Photoshop',   img: require('../assets/i/icons/photoshop.svg'),  link: '//en.wikipedia.org/wiki/Adobe_Photoshop'},
   {title: 'Adobe illustrator', img: require('../assets/i/icons/illustrator.svg'),link: '//en.wikipedia.org/wiki/Adobe_Illustrator'},
+  {title: 'Bitrix',            img: require('../assets/i/icons/bitrix.svg'),     link: '//ru.wikipedia.org/wiki/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124'},
+  {title: 'Confluence',        img: require('../assets/i/icons/confluence.svg'), link: '//en.wikipedia.org/wiki/Confluence_(software)'},
   {title: 'Docker',            img: require('../assets/i/icons/docker.svg'),     link: '//www.docker.com/'},
+  {title: 'Filezilla',         img: require('../assets/i/icons/filezilla.svg'),  link: '//filezilla-project.org/'},
+  {title: 'Gimp',              img: require('../assets/i/icons/gimp.svg'),       link: '//en.wikipedia.org/wiki/GIMP'},
+  {title: 'Git',               img: require('../assets/i/icons/git.svg'),        link: '//en.wikipedia.org/wiki/Git'},
   {title: 'Gulp',              img: require('../assets/i/icons/gulp.svg'),       link: '//en.wikipedia.org/wiki/Gulp.js'},
+  {title: 'Jira',              img: require('../assets/i/icons/jira.svg'),       link: '//en.wikipedia.org/wiki/Jira_(software)'},
+  {title: 'Joomla',            img: require('../assets/i/icons/joomla.svg'),     link: '//en.wikipedia.org/wiki/Joomla'},
   {title: 'LESS',              img: require('../assets/i/icons/less.svg'),       link: '//en.wikipedia.org/wiki/Less_(stylesheet_language)'},
   {title: 'Linux',             img: require('../assets/i/icons/linux.svg'),      link: '//en.wikipedia.org/wiki/Linux'},
   {title: 'MacOS',             img: require('../assets/i/icons/macos.svg'),      link: '//en.wikipedia.org/wiki/MacOS'},
+  {title: 'Mysql',             img: require('../assets/i/icons/mysql.svg'),      link: '//en.wikipedia.org/wiki/MySQL'},
   {title: 'Nuxt',              img: require('../assets/i/icons/nuxt.svg'),       link: '//nuxt.com/'},
+  {title: 'Opencart',          img: require('../assets/i/icons/opencart.svg'),   link: '//en.wikipedia.org/wiki/OpenCart'},
+  {title: 'Php',               img: require('../assets/i/icons/php.svg'),        link: '//en.wikipedia.org/wiki/PHP'},
   {title: 'Python',            img: require('../assets/i/icons/python.svg'),     link: '//en.wikipedia.org/wiki/Python_(programming_language)'},
+  {title: 'React',             img: require('../assets/i/icons/react.svg'),      link: '//react.dev/'},
   {title: 'SAP Hybris',        img: require('../assets/i/icons/hybris.svg'),     link: '//en.wikipedia.org/wiki/Hybris_(company)'},
   {title: 'SASS',              img: require('../assets/i/icons/sass.svg'),       link: '//en.wikipedia.org/wiki/Sass_(stylesheet_language)'},
+  {title: 'Service now',       img: require('../assets/i/icons/snow.svg'),       link: '//en.wikipedia.org/wiki/ServiceNow'},
+  {title: 'Vue',               img: require('../assets/i/icons/vue.svg'),        link: '//vuejs.org/'},
   {title: 'Wordpress',         img: require('../assets/i/icons/wordpress.svg'),  link: '//en.wikipedia.org/wiki/WordPress'},
-  {title: 'bitrix',            img: require('../assets/i/icons/bitrix.svg'),     link: '//ru.wikipedia.org/wiki/%D0%91%D0%B8%D1%82%D1%80%D0%B8%D0%BA%D1%8124'},
-  {title: 'confluence',        img: require('../assets/i/icons/confluence.svg'), link: '//en.wikipedia.org/wiki/Confluence_(software)'},
-  {title: 'filezilla',         img: require('../assets/i/icons/filezilla.svg'),  link: '//filezilla-project.org/'},
-  {title: 'gimp',              img: require('../assets/i/icons/gimp.svg'),       link: '//en.wikipedia.org/wiki/GIMP'},
-  {title: 'git',               img: require('../assets/i/icons/git.svg'),        link: '//en.wikipedia.org/wiki/Git'},
-  {title: 'jira',              img: require('../assets/i/icons/jira.svg'),       link: '//en.wikipedia.org/wiki/Jira_(software)'},
-  {title: 'joomla',            img: require('../assets/i/icons/joomla.svg'),     link: '//en.wikipedia.org/wiki/Joomla'},
-  {title: 'mysql',             img: require('../assets/i/icons/mysql.svg'),      link: '//en.wikipedia.org/wiki/MySQL'},
-  {title: 'opencart',          img: require('../assets/i/icons/opencart.svg'),   link: '//en.wikipedia.org/wiki/OpenCart'},
-  {title: 'php',               img: require('../assets/i/icons/php.svg'),        link: '//en.wikipedia.org/wiki/PHP'},
-  {title: 'react',             img: require('../assets/i/icons/react.svg'),      link: '//react.dev/'},
-  {title: 'service now',       img: require('../assets/i/icons/snow.svg'),       link: '//en.wikipedia.org/wiki/ServiceNow'},
-  {title: 'vue',               img: require('../assets/i/icons/vue.svg'),        link: '//vuejs.org/'},
-  {title: 'yext',              img: require('../assets/i/icons/yext.svg'),       link: '//www.yext.com/index.html'},
+  {title: 'Yext',              img: require('../assets/i/icons/yext.svg'),       link: '//www.yext.com/index.html'},
 ]
 
 // Method to toggle `aboutActive`
@@ -201,9 +202,20 @@ const aboutSkillsMore = () => {
   }
 
   &__link {
+    color: $c_text;
+    display: block;
+    font-size: 0.8rem;
+    max-width: 84px;
+    text-align: center;
+    text-decoration: none;
+
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
     }
+  }
+
+  &__title {
+    display: block;
   }
 }
 
