@@ -11,10 +11,6 @@
 
       <div class="wrap">
         <ul class="topmenu_list">
-<!--					<li class="topmenu_list__item">-->
-<!--						<a class="topmenu_list__link topmenu_list__link&#45;&#45;logo js-topmenu-link" href="#top"><span class="js-img-scroll" :data-src="require('../assets/i/icons/logo_4.svg')" title="home"></span></a>-->
-<!--					</li>-->
-
           <li v-for="menuItem in menuItems" :key="menuItem.title" class="topmenu_list__item">
             <a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
                             :href="menuItem.href"
@@ -94,8 +90,8 @@ export default {
       // allow only on home page
       if (window.location.pathname !== '/') return
 
-      let blockId         = 'top'
-      let itemsProcessed  = 0
+      let blockId = 'top'
+      let itemsProcessed = 0
 
       document.querySelectorAll('.js-block-scroll').forEach((e, index, array) => {
         itemsProcessed++
@@ -156,9 +152,291 @@ export default {
     meta: [
       {
         name: 'description',
-        content: 'Web-sites development. Fast & simple. By Dennis FOX',
+        content: 'Web-sites development. Fast & simple. By Denis FOX',
       },
     ],
   },
 }
 </script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/vars' as *;
+
+.topmenu {
+  background-color: #fff;
+  box-shadow: 0 0 7px #000;
+  font-size: 16px;
+  left: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  transition: $transition;
+  width: 100%;
+  z-index: 9;
+
+  &__bg {
+    background-color: rgba($c_gradient_home_start, .8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: $transition;
+    width: 100%;
+    z-index: 8;
+  }
+}
+
+.topmenu_active {
+  .topmenu {
+    background-color: #fff;
+  }
+
+  .topmenu_list {
+    a,
+    a:visited {
+      color: #000;
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+
+  .topmenu_mobile__toggle,
+  .topmenu_mobile__toggle:visited {
+    > span {
+      background-color: #000;
+    }
+  }
+
+  .topmenu_mobile__logo,
+  .topmenu_mobile__logo:visited {
+    color: #000;
+
+    img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.topmenu_fade {
+  background-color: #000;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: .7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 7;
+}
+
+.topmenu_list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__link {
+    color: #000;
+    display: block;
+    opacity: .7;
+    outline: 0 none;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      color: #fff;
+      opacity: 1;
+      text-decoration: none;
+
+      &::after {
+        top: 0;
+      }
+    }
+
+    &::after {
+      background-color: #000;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -150px;
+      transition: $transition;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &--logo {
+      opacity: 1;
+
+      img {
+        filter: invert(0);
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @media #{$mobile} {
+      padding: 20px 30px;
+      text-align: center;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+
+  @media #{$tablet} {
+    background-color: #fff;
+    box-shadow: 0 4px 7px #000;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+}
+
+.topmenu_mobile {
+  align-items: center;
+  display: none;
+  justify-content: space-between;
+
+  &__logo {
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    padding: 4px 0;
+    text-decoration: none;
+    transition: $transition;
+
+    img {
+      display: block;
+      height: 40px;
+      filter: invert(100%);
+      margin: 0 10px 0 0;
+      width: 40px;
+
+      @media #{$tablet} {
+        filter: invert(0);
+      }
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    text-decoration: none;
+    width: 40px;
+
+    &::after,
+    &::before,
+    > span {
+      background-color: #000;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 8px;
+      margin: 0 0 4px;
+      position: absolute;
+      top: 19px;
+      transition: $transition;
+      width: 22px;
+    }
+
+    &::after {
+      top: 13px;
+    }
+
+    &::before {
+      top: 25px;
+    }
+  }
+
+  @media #{$tablet} {
+    display: flex;
+  }
+}
+
+.topmenu_mobile_active {
+  @media #{$mobile} {
+    .topmenu {
+      &__bg {
+        display: block;
+      }
+    }
+
+    .topmenu_list {
+      display: block;
+    }
+
+    .topmenu_fade {
+      display: block;
+    }
+
+    .topmenu_mobile {
+      &__toggle {
+        &::after {
+          top: 18px;
+          transform: rotate(-45deg);
+        }
+
+        &::before {
+          top: 18px;
+          transform: rotate(45deg);
+        }
+
+        > span {
+          left: 100px;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.topmenu_phone {
+  color: #000;
+  font-size: 14px;
+  opacity: .7;
+  position: absolute;
+  right: 10px;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media #{$tablet} {
+    right: 90px;
+  }
+
+  @media #{$mobile_s} {
+    display: none;
+  }
+}
+</style>

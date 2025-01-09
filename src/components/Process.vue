@@ -32,3 +32,50 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/vars' as *;
+
+
+.process {
+  counter-reset: process_counter;
+  display: grid;
+  font-size: 18px;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  list-style: none;
+  padding: 30px 0 0;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+  }
+
+  &__desc {}
+
+  &__item {
+    counter-increment: process_counter;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      content: '' counter(process_counter);
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1;
+      position: relative;
+      width: 100%;
+
+      @media #{$tablet} {
+        font-size: 60px;
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

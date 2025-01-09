@@ -19,8 +19,8 @@ $c_theme_cyperpunk:         #ee0979;
 $c_theme_forest:            #26d4b9;
 $c_theme_yellow:            #ffd500;
 
-$fontsFolder:               'assets/fonts/';
-$i:                         'assets/i';
+$fontsFolder:               '/assets/fonts/';
+$i:                         '/assets/i';
 $icons:                     $i + '/icons';
 $themeFolder:               '/wp-content/themes/foxartbox/';
 
@@ -28,11 +28,11 @@ $spacer:                    2rem;
 $transition:                all .3s ease-in-out;
 
 // @medias
-$desktop:               'only screen and (max-width: 1279px)';
-$mobile:                'only screen and (max-width: 767px)';
-$mobile_min:            'only screen and (min-width: 767px)';
-$mobile_s:              'only screen and (max-width: 500px)';
 $tablet:                'only screen and (max-width: 1023px)';
+$mobile_s:              'only screen and (max-width: 500px)';
+$mobile_min:            'only screen and (min-width: 767px)';
+$mobile:                'only screen and (max-width: 767px)';
+$desktop:               'only screen and (max-width: 1279px)';
 
 // fonts
 //$font_main:             'Open Sans', Arial, Helvetica, sans-serif;

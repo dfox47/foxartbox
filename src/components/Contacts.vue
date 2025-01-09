@@ -10,7 +10,7 @@
       <ul class="contacts_links">
         <li class="contacts_links__item" v-for="(contactsLink) in contactsLinks" :key="contactsLink.href">
           <a class="contacts_links__link" :href="contactsLink.href" target="_blank">
-            <span class="contacts_links__img js-img-scroll" :data-src="contactsLink.icon"></span>
+            <img class="contacts_links__img" :src="contactsLink.icon" :alt="contactsLink.title">
             <span>{{ contactsLink.title }}</span>
           </a>
         </li>
@@ -20,13 +20,7 @@
 </template>
 
 <script setup>
-import imgScroll from '../assets/js/imgScroll'
 import {email, phone} from '../assets/js/config'
-import {onMounted} from 'vue'
-
-onMounted(() => {
-  imgScroll()
-})
 
 const contactsLinks = [
   {href: 'mailto:' + email, icon: require('../assets/i/icons/email.svg'), title: email},
@@ -34,3 +28,71 @@ const contactsLinks = [
   {href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''), icon: '', title: phone}
 ]
 </script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/vars' as *;
+
+.contacts {
+  color: $c_text;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 100px 30px 50px;
+  position: relative;
+  transition: $transition;
+  width: 100%;
+  z-index: 3;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0 0 30px;
+    width: 100%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 73px 23px 0;
+  }
+}
+
+.contacts_links {
+  font-size: 20px;
+  margin: 30px 0;
+
+  &__img {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    max-width: 24px;
+    width: 100%;
+  }
+
+  &__item {
+    display: block;
+    margin: 0 0 11px;
+    position: relative;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    color: #000;
+    display: flex;
+    min-height: 23px;
+    padding: 0 0 0 40px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+</style>
