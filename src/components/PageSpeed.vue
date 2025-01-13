@@ -46,3 +46,114 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@use '../assets/styles/vars' as *;
+
+.carousel {
+  margin: 0 auto;
+  max-width: 800px;
+
+  &__liveregion {
+    display: none;
+  }
+
+  &__next,
+  &__prev {
+    background-color: #000;
+    border-radius: 50%;
+    height: 70px;
+    margin: 0;
+    opacity: .3;
+    transition: $transition;
+    width: 70px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::after,
+    &::before {
+      background-color: #fff;
+      border-radius: 4px;
+      content: "";
+      height: 4px;
+      left: 23px;
+      position: absolute;
+      width: 30px;
+    }
+
+    &::after {
+      top: 23px;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      top: 43px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__next {
+    background-color: #000;
+  }
+
+  &__prev {
+    background-color: #000;
+
+    &::after,
+    &::before {
+      left: 17px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__pagination {
+    margin: 3rem 0 0;
+  }
+
+  &__pagination-button {
+    border: 1px solid rgba(#000, .9);
+    border-radius: 50%;
+    height: 2rem;
+    margin: 0 .5rem;
+    transition: $transition;
+    width: 2rem;
+
+    &::after {
+      display: none;
+    }
+
+    &--active {
+      background-color: #000;
+    }
+  }
+}
+
+.carousel_wrap {
+  padding: 7rem 0 0;
+}
+
+.pagespeed_slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    padding: 60% 0 0;
+    position: relative;
+  }
+}
+
+</style>

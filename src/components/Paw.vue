@@ -1,0 +1,88 @@
+<template>
+  <span :data-src="require('../assets/i/icons/logo_4.svg')" class="paw js-svg-inline"></span>
+</template>
+
+<script setup>
+import svgInline from '../assets/js/svgInline'
+import {onMounted} from 'vue'
+
+onMounted (() => {
+  svgInline()
+})
+</script>
+
+<style lang="scss">
+@use '../assets/styles/vars' as *;
+
+@keyframes pawFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pawNail {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.paw {
+  display: inline-block;
+  height: 330px;
+  margin: 70px 0 25px;
+  position: relative;
+  width: 330px;
+
+  &__item {
+    fill: #fff;
+    opacity: 0;
+    transition: $transition;
+
+    &--bottom {
+      animation: 2s pawFadeIn forwards;
+      animation-delay: .9s;
+    }
+
+    &--finger_1 {
+      animation: 2s pawFadeIn forwards;
+      animation-delay: 1.1s;
+    }
+
+    &--finger_2 {
+      animation: 2s pawFadeIn forwards;
+      animation-delay: 1.3s;
+    }
+
+    &--finger_3 {
+      animation: 2s pawFadeIn forwards;
+      animation-delay: 1.5s;
+    }
+
+    &--finger_4 {
+      animation: 2s pawFadeIn forwards;
+      animation-delay: 1.7s;
+    }
+
+    &--nail_1,
+    &--nail_2,
+    &--nail_3,
+    &--nail_4 {
+      animation: .5s pawNail forwards;
+      animation-delay: 3.5s;
+      transform: translateY(10%);
+    }
+  }
+
+  @media #{$mobile} {
+    height: 290px;
+    width: 290px;
+  }
+}
+</style>

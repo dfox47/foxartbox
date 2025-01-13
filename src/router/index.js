@@ -3,7 +3,6 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Blog         from '../views/Blog'
 import Error404     from '../views/Error404'
 import Home         from '../views/Home'
-import Table        from '../views/Table'
 
 const routes = [
 	{
@@ -20,11 +19,6 @@ const routes = [
 		component: Home,
 		name: 'Home',
 		path: '/'
-	},
-	{
-		component: Table,
-		name: 'Table',
-		path: '/table'
 	}
 ]
 
