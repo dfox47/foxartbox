@@ -10,7 +10,7 @@
       <ul class="contacts_links">
         <li class="contacts_links__item" v-for="(contactsLink) in contactsLinks" :key="contactsLink.href">
           <a class="contacts_links__link" :href="contactsLink.href" target="_blank">
-            <img class="contacts_links__img" :src="contactsLink.icon" :alt="contactsLink.title">
+            <img class="contacts_links__img" :src="contactsLink.icon" alt="">
             <span>{{ contactsLink.title }}</span>
           </a>
         </li>
@@ -25,7 +25,7 @@ import {email, phone} from '../assets/js/config'
 const contactsLinks = [
   {href: 'mailto:' + email, icon: require('../assets/i/icons/email.svg'), title: email},
   {href: '//t.me/dfoxweb', icon: require('../assets/i/icons/telegram.svg'), title: '@dfoxweb'},
-  {href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''), icon: '', title: phone}
+  {href: 'tel:' + phone.replace(/[()-]/g, '').replaceAll(' ', ''), icon: require('../assets/i/icons/phone.svg'), title: phone}
 ]
 </script>
 
