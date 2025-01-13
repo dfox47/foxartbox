@@ -42,7 +42,7 @@ export default {
   display: grid;
   font-size: 18px;
   grid-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   list-style: none;
   padding: 30px 0 0;
@@ -51,8 +51,6 @@ export default {
   h3 {
     text-align: center;
   }
-
-  &__desc {}
 
   &__item {
     counter-increment: process_counter;

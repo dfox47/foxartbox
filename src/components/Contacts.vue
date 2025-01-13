@@ -36,7 +36,7 @@ const contactsLinks = [
   color: $c_text;
   margin: 0 auto;
   max-width: 980px;
-  padding: 100px 30px 50px;
+  padding: 5rem 30px 3rem;
   position: relative;
   transition: $transition;
   width: 100%;

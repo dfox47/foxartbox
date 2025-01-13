@@ -70,7 +70,7 @@ const footerLinks = [
   display: flex;
   justify-content: center;
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .footer_logo {

@@ -81,9 +81,9 @@ scrollTo()
     font-size: 98px;
     font-weight: 700;
     height: 110px;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     line-height: 1;
-    margin: 0 0 .25em;
+    margin: 0 0 0.25em;
     max-width: 660px;
     position: relative;
     text-transform: uppercase;

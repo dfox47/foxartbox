@@ -3,25 +3,21 @@
     <div id="top" class="js-block-scroll"></div>
 
     <div class="topmenu js-topmenu">
-      <ul class="theme_change">
-        <li v-for="themeItem in themeItems" :key="themeItem.name" class="theme_change__item">
-          <span :class="'theme_change__link--type-' + themeItem.class" :title="themeItem.title" class="theme_change__link" @click.prevent="themeChange(themeItem.name)"></span>
-        </li>
-      </ul>
+      <ThemeChange />
 
       <div class="wrap">
         <ul class="topmenu_list">
           <li v-for="menuItem in menuItems" :key="menuItem.title" class="topmenu_list__item">
             <a :class="{active: (menuItem.href | replace('/#', '') === activeId)}"
-                            :href="menuItem.href"
-                            class="topmenu_list__link js-topmenu-link"
-                            @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()">{{ menuItem.title }}
+              :href="menuItem.href"
+              class="topmenu_list__link js-topmenu-link"
+              @click.prevent="scrollTo(menuItem.href); mobileMenuToggle()">{{ menuItem.title }}
             </a>
           </li>
         </ul>
 
         <div class="topmenu_mobile">
-          <span class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><span :data-src="require('../assets/i/icons/logo_4.svg')" class="js-img-scroll"></span></span>
+          <span class="topmenu_mobile__logo" @click.prevent="scrollTo('top'); mobileMenuToggle()"><img :src="require('../assets/i/icons/logo_4.svg')" alt=""></span>
 
           <div class="topmenu_mobile__toggle" @click="mobileMenuToggle"><span></span></div>
         </div>
@@ -35,12 +31,12 @@
 </template>
 
 <script>
+import ThemeChange from './ThemeChange'
+
 import imgScroll from '../assets/js/imgScroll'
 import imgBg from '../assets/js/imgBg'
 import mobileMenuToggle from '../assets/js/mobileMenuToggle'
 import scrollTo from '../assets/js/scrollTo'
-import themeChange from '../assets/js/themeChange'
-import themeFromLocalStorage from '../assets/js/themeFromLocalStorage'
 
 import 'vue3-carousel/dist/carousel.css'
 // import { meta } from 'vue-meta';
@@ -51,11 +47,14 @@ import {phone} from '../assets/js/config'
 
 export default {
   name: 'Header',
+  components: {
+    ThemeChange
+  },
   created() {
     window.addEventListener('scroll', this.handleScroll)
 
     // check if there is theme at localStorage
-    this.themeFromLocalStorage()
+    // this.themeFromLocalStorage()
   },
   data() {
     return {
@@ -69,21 +68,12 @@ export default {
         {title: 'Contacts',     href: '/#contacts'},
         // {title: 'Blog',         href: '/blog'}
       ],
-      phone,
-      themeItems: [
-        {name: 'theme_standart',        title: 'Default theme',         class: '1'},
-        {name: 'theme_black_and_white', title: 'Black & white theme',   class: '2'},
-        {name: 'theme_cyperpunk',       title: 'Cyberpunk theme',       class: '3'},
-        {name: 'theme_forest',          title: 'Forest theme',          class: '4'},
-        {name: 'theme_yellow',          title: 'Yellow theme',          class: '5'}
-      ]
+      phone
     }
   },
   methods: {
     mobileMenuToggle,
     scrollTo,
-    themeChange,
-    themeFromLocalStorage,
 
     // on scroll
     handleScroll() {
@@ -159,7 +149,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/styles/vars' as *;
 
 .topmenu {
@@ -281,7 +271,7 @@ export default {
       }
     }
 
-    @media #{$mobile} {
+    @media #{$tablet} {
       padding: 20px 30px;
       text-align: center;
 
@@ -339,7 +329,7 @@ export default {
     }
 
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
@@ -381,7 +371,7 @@ export default {
 }
 
 .topmenu_mobile_active {
-  @media #{$mobile} {
+  @media #{$tablet} {
     .topmenu {
       &__bg {
         display: block;
@@ -398,13 +388,16 @@ export default {
 
     .topmenu_mobile {
       &__toggle {
-        &::after {
+        &::after,
+        &::before {
           top: 18px;
+        }
+
+        &::after {
           transform: rotate(-45deg);
         }
 
         &::before {
-          top: 18px;
           transform: rotate(45deg);
         }
 
@@ -420,7 +413,7 @@ export default {
 .topmenu_phone {
   color: #000;
   font-size: 14px;
-  opacity: .7;
+  opacity: 0.7;
   position: absolute;
   right: 10px;
   text-decoration: none;
