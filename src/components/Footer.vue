@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import scrollTo from '../assets/js/scrollTo'
 import {phone} from '../assets/js/config'
 

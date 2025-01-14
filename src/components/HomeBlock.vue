@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Paw from './Paw'
 import imgScroll from '../assets/js/imgScroll'
 import logoCanvas from '../assets/js/logoCanvas'
