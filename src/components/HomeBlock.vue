@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import Paw from './Paw'
 import imgScroll from '../assets/js/imgScroll'
 import logoCanvas from '../assets/js/logoCanvas'
@@ -30,7 +30,7 @@ onMounted (() => {
 scrollTo()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/styles/vars' as *;
 
 .home {

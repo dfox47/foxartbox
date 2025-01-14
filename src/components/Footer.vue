@@ -8,7 +8,7 @@
       <ul class="social_links">
         <li v-for="(footerLink) in footerLinks" :key="footerLink.href" class="social_links__item">
           <a :href="footerLink.href" :title="footerLink.title" class="social_links__link" target="_blank">
-            <img src="footerLink.icon" class="social_links__img" :alt="footerLink.title">
+            <img :src="footerLink.icon" class="social_links__img" :alt="footerLink.title">
           </a>
         </li>
       </ul>
@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import scrollTo from '../assets/js/scrollTo'
 import {phone} from '../assets/js/config'
 
